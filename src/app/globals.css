@@ -15,3 +15,29 @@ body {
     text-wrap: balance;
   }
 }
+
+.custom-button {
+  @apply text-greenDarkText text-xl;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  padding: 18px 31px;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button-no-border {
+  @apply bg-pinkLight;
+}
+
+.custom-button-border {
+  @apply bg-transparent border-2 border-pinkLight;
+}
+
+.custom-button:hover,
+.custom-button:focus {
+  @apply bg-beige;
+}
