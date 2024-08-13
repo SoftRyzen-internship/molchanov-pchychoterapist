@@ -16,16 +16,8 @@ body {
 }
 
 .custom-button {
-  @apply text-greenDarkText text-xl;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  line-height: 1;
-  padding: 18px 31px;
-  border-radius: 8px;
-  display: inline-block;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  @apply text-greenDarkText text-xl font-semibold tracking-[0.02em] leading-none py-[18px] px-[31px] 
+    rounded-lg inline-block text-center cursor-pointer transition-colors duration-300 ease-in-out;
 }
 
 .custom-button-no-border {
