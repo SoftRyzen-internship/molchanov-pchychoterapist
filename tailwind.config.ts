@@ -24,7 +24,7 @@ const config: Config = {
         beigeSkin: '#edaf8c',
         pinkLight: '#e2b8af',
         pinkSupperLight: '#fbefe9',
-        beige: "#cea49b",
+        beige: '#cea49b',
         grey: '#747474',
         greyLight: '#C5C5C5',
         redError: '#c34532',
