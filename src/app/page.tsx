@@ -9,7 +9,6 @@ const Home = () => {
 
       <button className="custom-button custom-button-border">Записатися</button>
 
-
       <div className="py-4">
         <Socials color="text-greenDarkText" hoverColor="hover:text-blue" />
       </div>
@@ -17,7 +16,6 @@ const Home = () => {
       <div className="bg-blue py-4">
         <Socials />
       </div>
-
     </main>
   );
 };
