@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import {  Montserrat, Geologica  } from 'next/font/google';
+import { Montserrat, Geologica } from 'next/font/google';
 import clsx from 'clsx';
 
 export const metadata: Metadata = {
@@ -29,8 +29,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(montserrat.variable, geologica.variable)}>
-      {children}
-    </body>
+        {children}
+      </body>
     </html>
   );
 }
