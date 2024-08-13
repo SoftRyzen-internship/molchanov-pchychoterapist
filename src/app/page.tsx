@@ -1,5 +1,12 @@
+import Logo from '@/components/ui/logo';
+
 const Home = () => {
-  return <main>Hello</main>;
+  return (
+    <main>
+      Hello
+      <Logo />
+    </main>
+  );
 };
 
 export default Home;
