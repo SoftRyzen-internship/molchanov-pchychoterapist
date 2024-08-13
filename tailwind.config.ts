@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        'sm': '480px', 
-        'md': '768px', 
-        'xl': '1280px',
+        sm: '480px',
+        md: '768px',
+        xl: '1280px',
       },
       colors: {
         greenDarkText: '#294945',
@@ -24,7 +24,7 @@ const config: Config = {
         beigeSkin: '#edaf8c',
         pinkLight: '#e2b8af',
         pinkSupperLight: '#fbefe9',
-        beige: "#cea49b",
+        beige: '#cea49b',
         grey: '#747474',
         greyLight: '#C5C5C5',
         redError: '#c34532',
@@ -34,7 +34,7 @@ const config: Config = {
       fontFamily: {
         montserrat: 'var(--font-montserrat), sans-serif',
         geologica: 'var(--font-geologica), sans-serif',
-      },      
+      },
       backgroundImage: {},
     },
   },
