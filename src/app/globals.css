@@ -16,8 +16,8 @@ body {
 }
 
 .custom-button {
-  @apply text-greenDarkText text-xl font-semibold tracking-[0.02em] leading-none py-[18px] px-[31px] 
-    rounded-lg inline-block text-center cursor-pointer transition-colors duration-300 ease-in-out;
+  @apply  text-greenDarkText text-xl font-semibold tracking-[0.02em]  h-[56px] min-w-[190px]
+    rounded-lg inline-block cursor-pointer transition-colors duration-300 ease-in-out;
 }
 
 .custom-button-no-border {
@@ -30,5 +30,5 @@ body {
 
 .custom-button:hover,
 .custom-button:focus {
-  @apply bg-beige;
+  @apply bg-beige border-beige;
 }
