@@ -1,5 +1,7 @@
 import Logo from '@/components/ui/logo';
+import ServiceCard from '@/components/ui/service-card';
 import Socials from '@/components/ui/socials';
+import services from '@/data/services/services.json';
 
 const Home = () => {
   return (
@@ -20,6 +22,12 @@ const Home = () => {
 
       <div className="bg-blue py-4">
         <Socials />
+      </div>
+
+      <div className="bg-blue py-4">
+        {services.map((service) => (
+          <ServiceCard key={service.id} title={service.title} />
+        ))}
       </div>
     </main>
   );
