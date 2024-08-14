@@ -1,5 +1,7 @@
+import UtilityCard from '@/components/common/utility-card';
 import Logo from '@/components/ui/logo';
 import Socials from '@/components/ui/socials';
+import cardData from '@/data/target-audience/utility-card-data.json';
 
 const Home = () => {
   return (
@@ -8,6 +10,7 @@ const Home = () => {
 
       <br />
 
+      <UtilityCard url={cardData[0].url} text={cardData[0].text} alt={cardData[0].alt} />
       <button className="custom-button custom-button-no-border">
         Записатися
       </button>
