@@ -1,5 +1,8 @@
-import Socials from '@/components/common/Socials/Socials';
+
 import NavMenu from '@/components/common/navMenu/navMenu';
+import Logo from '@/components/ui/logo';
+import Socials from '@/components/ui/socials';
+
 
 const Home = () => {
   const handleToggleModal = () => {
@@ -7,6 +10,10 @@ const Home = () => {
   };
   return (
     <main>
+      <Logo />
+
+      <br />
+
       <button className="custom-button custom-button-no-border">
         Записатися
       </button>
