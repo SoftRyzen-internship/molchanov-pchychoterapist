@@ -18,7 +18,7 @@ const Socials = ({
           className={clsx(
             color,
             hoverColor,
-            'fill-current transition-colors duration-300 ease'
+            'fill-current transition-colors duration-300'
           )}
           fillRule="evenodd"
           clipRule="evenodd"
@@ -30,7 +30,7 @@ const Socials = ({
           className={clsx(
             color,
             hoverColor,
-            'fill-current transition-colors duration-300 ease'
+            'fill-current transition-colors duration-300'
           )}
           fillRule="evenodd"
           clipRule="evenodd"
@@ -42,7 +42,7 @@ const Socials = ({
           className={clsx(
             color,
             hoverColor,
-            'stroke-current transition-colors duration-300 ease'
+            'stroke-current transition-colors duration-300'
           )}
           strokeWidth="2"
           strokeLinecap="round"
