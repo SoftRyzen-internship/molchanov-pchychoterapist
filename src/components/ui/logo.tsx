@@ -6,7 +6,7 @@ const Logo = () => {
   return (
     <Link
       href={'/'}
-      className="group inline-block cursor-pointer  transform transition-transform duration-300 hover:underline focus:underline"
+      className="group inline-block cursor-pointer   transition-all ease duration-300 hover:underline focus:underline"
     >
       <div className="inline-flex gap-[5.57px]  md:gap-2 items-center">
         <LogoSvg className="w-[28px] h-[28px] md:w-10 md:h-10 fill-pinkLight" />
