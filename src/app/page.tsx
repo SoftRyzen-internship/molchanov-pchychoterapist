@@ -10,7 +10,11 @@ const Home = () => {
 
       <br />
 
-      <UtilityCard url={cardData[0].url} text={cardData[0].text} alt={cardData[0].alt} />
+      <UtilityCard
+        url={cardData[0].url}
+        text={cardData[0].text}
+        alt={cardData[0].alt}
+      />
       <button className="custom-button custom-button-no-border">
         Записатися
       </button>
