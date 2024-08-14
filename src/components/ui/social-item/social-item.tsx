@@ -21,9 +21,15 @@ const SocialItem = ({
         aria-label={areaLabel}
         className={clsx(iconsColors, 'transition-colors duration-300')}
       >
-        {name === 'telegram' && <TelegramIcon className="h-6 w-6" />}
-        {name === 'instagram' && <InstagramIcon className="h-6 w-6" />}
-        {name === 'facebook' && <FacebookIcon className="h-6 w-6" />}
+        {name === 'telegram' && (
+          <TelegramIcon className="h-6 w-6" width={24} height={24} />
+        )}
+        {name === 'instagram' && (
+          <InstagramIcon className="h-6 w-6" width={24} height={24} />
+        )}
+        {name === 'facebook' && (
+          <FacebookIcon className="h-6 w-6" width={24} height={24} />
+        )}
       </a>
     </li>
   );
