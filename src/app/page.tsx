@@ -1,8 +1,6 @@
-
 import NavMenu from '@/components/common/navMenu/navMenu';
 import Logo from '@/components/ui/logo';
 import Socials from '@/components/ui/socials';
-
 
 const Home = () => {
   const handleToggleModal = () => {
