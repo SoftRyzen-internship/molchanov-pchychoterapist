@@ -12,8 +12,8 @@ const Home = () => {
 
       <UtilityCard
         url={cardData[0].url}
-        text={cardData[0].text}
-        alt={cardData[0].alt}
+        text={cardData[1].text}
+        alt={cardData[1].alt}
       />
       <button className="custom-button custom-button-no-border">
         Записатися
