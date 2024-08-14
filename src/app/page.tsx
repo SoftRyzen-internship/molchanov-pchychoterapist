@@ -1,6 +1,6 @@
 import UtilityCard from '@/components/common/utility-card';
 import Logo from '@/components/ui/logo';
-import Socials from '@/components/ui/socials';
+import Socials from '@/components/ui/socials/socials';
 import cardData from '@/data/target-audience/utility-card-data.json';
 
 const Home = () => {
@@ -22,11 +22,11 @@ const Home = () => {
       <button className="custom-button custom-button-border">Записатися</button>
 
       <div className="py-4">
-        <Socials color="text-greenDarkText" hoverColor="hover:text-blue" />
+        <Socials section="menu" />
       </div>
 
       <div className="bg-blue py-4">
-        <Socials />
+        <Socials section="footer" />
       </div>
     </main>
   );

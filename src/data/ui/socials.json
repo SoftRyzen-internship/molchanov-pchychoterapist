@@ -1,5 +1,17 @@
-{
-  "instagram": "https://www.instagram.com/sergey_molchanov_psychologist",
-  "telegram": "https://t.me/MolchanovSM",
-  "facebook": "https://www.facebook.com/Molchanov.Sergey92"
-}
+[
+  {
+    "name": "instagram",
+    "link": "https://www.instagram.com/sergey_molchanov_psychologist",
+    "areaLabel": "Посилання на Instagram"
+  },
+  {
+    "name": "telegram",
+    "link": "https://t.me/MolchanovSM",
+    "areaLabel": "Посилання на Telegram"
+  },
+  {
+    "name": "facebook",
+    "link": "https://www.facebook.com/Molchanov.Sergey92",
+    "areaLabel": "Посилання на Facebook"
+  }
+]
