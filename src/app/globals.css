@@ -41,8 +41,6 @@ body {
   @apply bg-beige;
 }
 
-
-
 .link-underline-animation {
   @apply relative inline-block overflow-hidden transition-colors duration-300;
 }
