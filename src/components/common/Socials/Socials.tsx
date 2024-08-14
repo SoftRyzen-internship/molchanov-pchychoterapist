@@ -15,7 +15,11 @@ const Socials = ({
     <div className={clsx('flex', gap)}>
       <a href={socials.instagram} target="_blank" rel="noopener noreferrer">
         <InstagramIcon
-          className={clsx(color, hoverColor, 'fill-current')}
+          className={clsx(
+            color,
+            hoverColor,
+            'fill-current transition-colors duration-300 ease'
+          )}
           fillRule="evenodd"
           clipRule="evenodd"
         />
@@ -23,7 +27,11 @@ const Socials = ({
 
       <a href={socials.telegram} target="_blank" rel="noopener noreferrer">
         <TelegramIcon
-          className={clsx(color, hoverColor, 'fill-current')}
+          className={clsx(
+            color,
+            hoverColor,
+            'fill-current transition-colors duration-300 ease'
+          )}
           fillRule="evenodd"
           clipRule="evenodd"
         />
@@ -31,7 +39,11 @@ const Socials = ({
 
       <a href={socials.facebook} target="_blank" rel="noopener noreferrer">
         <FacebookIcon
-          className={clsx(color, hoverColor, 'stroke-current')}
+          className={clsx(
+            color,
+            hoverColor,
+            'stroke-current transition-colors duration-300 ease'
+          )}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
