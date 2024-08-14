@@ -1,8 +1,11 @@
 import Socials from '@/components/common/Socials/Socials';
 
+import Logo from '@/components/ui/logo';
+
 const Home = () => {
   return (
     <main>
+      <Logo />
       <button className="custom-button custom-button-no-border">
         Записатися
       </button>
