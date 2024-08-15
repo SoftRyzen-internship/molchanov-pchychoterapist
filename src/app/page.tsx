@@ -3,7 +3,7 @@
 import Logo from '@/components/ui/logo';
 import Socials from '@/components/ui/socials/socials';
 import { useEffect, useState } from 'react';
-import getServices from '../../sanity/api/services';
+import { getServices } from '@/../sanity/api';
 
 const Home = () => {
   const [services, setServices] = useState([]);
