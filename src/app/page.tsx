@@ -4,6 +4,7 @@ import Socials from '@/components/ui/socials/socials';
 const Home = () => {
   return (
     <main>
+      <div className='container'>
       <Logo />
 
       <br />
@@ -20,6 +21,7 @@ const Home = () => {
 
       <div className="bg-blue py-4">
         <Socials section="footer" />
+      </div>
       </div>
     </main>
   );
