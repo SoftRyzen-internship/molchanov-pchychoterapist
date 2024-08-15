@@ -27,15 +27,15 @@ const Home = () => {
         </div>
 
         <NavMenu
-        ulClassName="flex space-x-[30px]"
-        linkClassName="text-[16px] text-greenDarkText"
-      />
-      <div className="bg-blue ">
-        <NavMenu
           ulClassName="flex space-x-[30px]"
-          linkClassName="text-[14px] text-white"
+          linkClassName="text-[16px] text-greenDarkText"
         />
-      </div>
+        <div className="bg-blue ">
+          <NavMenu
+            ulClassName="flex space-x-[30px]"
+            linkClassName="text-[14px] text-white"
+          />
+        </div>
       </div>
     </main>
   );
