@@ -42,41 +42,10 @@ body {
   @apply pb-2 border-b-[1.5px] border-grey text-base font-medium leading-[1.4] placeholder:text-base placeholder:font-medium placeholder:leading-[1.4] placeholder:text-grey focus:outline-none;
 }
 
-/* .checkbox {
-  position: relative;
-  margin-right: 12px;
-  margin-top: 4px;
-  cursor: pointer;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #37474f;
-  appearance: none;
-}
-
-.checkbox:checked::before {
-  display: block;
-}
-
-.checkbox:checked::after {
-  content: '';
-  position: absolute;
-  display: none;
-  left: 8px;
-  top: 4px;
-  width: 5px;
-  height: 10px;
-  border: solid #37474f;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-} */
-
 .checkbox-container {
   display: inline-block;
   position: relative;
   padding-left: 30px;
-  /* margin-bottom: 12px; */
-  cursor: pointer;
-  /* font-size: 22px; */
   user-select: none;
 }
 
@@ -84,11 +53,10 @@ body {
 .checkbox-container input {
   position: absolute;
   opacity: 0;
-  cursor: pointer;
 }
 
 /* Стили для кастомного чекбокса */
-.checkbox-container .checkmark {
+.checkmark {
   position: absolute;
   top: 2px;
   left: 0;
@@ -100,18 +68,18 @@ body {
 }
 
 /* Состояние при наведении и фокусе */
-.checkbox-container input:hover ~ .checkmark,
-.checkbox-container input:focus ~ .checkmark {
+.checkmark:hover,
+.checkmark:focus {
   border-color: #ffcdd2;
 }
 
 /* Отображение галочки при checked */
-.checkbox-container input:checked ~ .checkmark:after {
+.checkbox-container input:checked + .checkmark::after {
   display: block;
 }
 
 /* Стили для галочки */
-.checkbox-container .checkmark:after {
+.checkbox-container .checkmark::after {
   content: '';
   position: absolute;
   display: none;
@@ -131,7 +99,6 @@ body {
 
 /* Состояние выбранного чекбокса */
 .checkbox-container input:checked ~ .checkmark {
-  /* background-color: #37474f; */
   border-color: #37474f;
 }
 
