@@ -1,4 +1,4 @@
-import UtilityCard from '@/components/common/utility-card';
+import UtilityCard from '@/components/common/utility-card/utility-card';
 import Logo from '@/components/ui/logo';
 import Socials from '@/components/ui/socials/socials';
 import cardData from '@/data/target-audience/utility-card-data.json';
@@ -11,7 +11,9 @@ const Home = () => {
       <br />
 
       <UtilityCard
-        url={cardData[0].url}
+        urlMobile={cardData[1].urlMobile}
+        urlTablet={cardData[1].urlTablet}
+        urlDesktop={cardData[1].urlDesktop}
         text={cardData[1].text}
         alt={cardData[1].alt}
       />

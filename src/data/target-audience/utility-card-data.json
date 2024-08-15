@@ -1,22 +1,30 @@
 [
   {
-    "url": "/assets/images/webp/target-audience/property-1.webp",
+    "urlMobile": "/assets/images/webp/target-audience/mobile/property-1.webp",
+    "urlTablet": "/assets/images/webp/target-audience/tablet/property-1.webp",
+    "urlDesktop": "/assets/images/webp/target-audience/desktop/property-1.webp",
     "text": "Пари, які хочуть покращити відносини, шукають поради та стратегії.",
-    "alt": "A couple standing close together, the woman hugging herself"
+    "alt": "Пара стоїть поряд, жінка обіймає себе."
   },
   {
-    "url": "/assets/images/webp/target-audience/property-2.webp",
+    "urlMobile": "/assets/images/webp/target-audience/mobile/property-2.webp",
+    "urlTablet": "/assets/images/webp/target-audience/tablet/property-2.webp",
+    "urlDesktop": "/assets/images/webp/target-audience/desktop/property-2.webp",
     "text": "Ті, хто має кризові ситуації, як депресія, тривожність, розлади їжі та інші.",
-    "alt": " Man with thoughts represented as tangled threads"
+    "alt": " Чоловік з думками у вигляди заплутаних ниток"
   },
   {
-    "url": "/assets/images/webp/target-audience/property-3.webp",
+    "urlMobile": "/assets/images/webp/target-audience/mobile/property-3.webp",
+    "urlTablet": "/assets/images/webp/target-audience/tablet/property-3.webp",
+    "urlDesktop": "/assets/images/webp/target-audience/desktop/property-3.webp",
     "text": "Підлітки та дорослі з особливостями (аутизм, розумова відсталість).",
-    "alt": "Girl sitting on a bench with a cup next to her "
+    "alt": "Жінка сидить на лавці, розкривши руки, поряд стоїть чашка "
   },
   {
-    "url": "/assets/images/webp/target-audience/property-4.webp",
+    "urlMobile": "/assets/images/webp/target-audience/mobile/property-4.webp",
+    "urlTablet": "/assets/images/webp/target-audience/tablet/property-4.webp",
+    "urlDesktop": "/assets/images/webp/target-audience/desktop/property-4.webp",
     "text": "Ті, хто бажають розвинути вміння спілкування з іншими. ",
-    "alt": " Girl sitting on the floor, hugging her knees, looking sad and deep in thought"
+    "alt": " Жінка сидить на підлозі, обійнявши коліна, сумує та міркує"
   }
 ]
