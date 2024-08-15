@@ -46,7 +46,13 @@ const Home = () => {
         <div className="py-4">
           <Socials section="menu" />
         </div>
+        <div className="py-4">
+          <Socials section="menu" />
+        </div>
 
+        <div className="bg-blue py-4">
+          <Socials section="footer" />
+        </div>
         <div className="bg-blue py-4">
           <Socials section="footer" />
         </div>
