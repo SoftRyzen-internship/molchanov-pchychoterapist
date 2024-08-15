@@ -7,12 +7,15 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      xl: '1280px',
+      smOnly: { min: '480px', max: '767px' },
+      mdOnly: { min: '768px', max: '1279px' },
+      notXL: { max: '1279px' },
+    },
     extend: {
-      screens: {
-        sm: '480px',
-        md: '768px',
-        xl: '1280px',
-      },
       colors: {
         greenDarkText: '#294945',
         greenBodyText: '#41555',
@@ -35,8 +38,17 @@ const config: Config = {
         montserrat: 'var(--font-montserrat), sans-serif',
         geologica: 'var(--font-geologica), sans-serif',
       },
-      backgroundImage: {},
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '20px',
+          sm: '20px',
+          md: '32px',
+          xl: '20px',
+        },
+      },
     },
+    backgroundImage: {},
   },
   plugins: [],
 };
