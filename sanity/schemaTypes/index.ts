@@ -3,6 +3,8 @@ import services from './services';
 import faq from './faq';
 import politics from './politics';
 
-export const schema: { types: SchemaTypeDefinition[] } = {
+const schema: { types: SchemaTypeDefinition[] } = {
   types: [services, faq, politics],
 };
+
+export default schema;

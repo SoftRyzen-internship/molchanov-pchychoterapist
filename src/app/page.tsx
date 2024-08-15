@@ -1,7 +1,24 @@
+'use client';
+
 import Logo from '@/components/ui/logo';
 import Socials from '@/components/ui/socials';
+import { useEffect, useState } from 'react';
+import getServices from '../../sanity/api/services';
 
 const Home = () => {
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await getServices();
+      setServices(data);
+    }
+
+    fetchData();
+  }, []);
+
+  console.log(services);
+
   return (
     <main>
       <Logo />
