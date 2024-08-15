@@ -1,4 +1,3 @@
-
 import { NavMenu } from '@/components/common/nav-menu/navMenu';
 import Logo from '@/components/ui/logo';
 import Socials from '@/components/ui/socials/socials';
