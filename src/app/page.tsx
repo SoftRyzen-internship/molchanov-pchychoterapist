@@ -1,33 +1,56 @@
+'use client';
+
 import Logo from '@/components/ui/logo';
 import ServiceCard from '@/components/ui/service-card';
-import Socials from '@/components/ui/socials';
+import Socials from '@/components/ui/socials/socials';
+import { useEffect, useState } from 'react';
+import getServices from '../../sanity/api/services';
 import services from '@/data/services/services.json';
 
 const Home = () => {
+  //   const [services, setServices] = useState([]);
+
+  //   useEffect(() => {
+  //     async function fetchData() {
+  //       const data = await getServices();
+  //       setServices(data);
+  //     }
+
+  //     fetchData();
+  //   }, []);
+
+  //   console.log('services:', services);
+  // const servicesObject = services[0];
+  // const servicesList = servicesObject.servicesList;
+
   return (
     <main>
-      <Logo />
+      <div className="container">
+        <Logo />
 
-      <br />
+        <br />
 
-      <button className="custom-button custom-button-no-border">
-        Записатися
-      </button>
+        <button className="custom-button custom-button-no-border">
+          Записатися
+        </button>
 
-      <button className="custom-button custom-button-border">Записатися</button>
+        <button className="custom-button custom-button-border">
+          Записатися
+        </button>
 
-      <div className="py-4">
-        <Socials color="text-greenDarkText" hoverColor="hover:text-blue" />
-      </div>
+        <div className="py-4">
+          <Socials section="menu" />
+        </div>
 
-      <div className="bg-blue py-4">
-        <Socials />
-      </div>
+        <div className="bg-blue py-4">
+          <Socials section="footer" />
+        </div>
 
-      <div className="bg-blue py-4">
-        {services.map((service) => (
-          <ServiceCard key={service.id} title={service.title} />
-        ))}
+        <div className="bg-blue py-4">
+          {services.map((service) => (
+            <ServiceCard key={service.id} title={service.title} />
+          ))}
+        </div>
       </div>
     </main>
   );
