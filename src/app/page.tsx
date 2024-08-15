@@ -29,9 +29,9 @@ const Home = () => {
         <br />
 
         <UtilityCard
-          urlMobile={cardData[1].urlMobile}
-          urlTablet={cardData[1].urlTablet}
-          urlDesktop={cardData[1].urlDesktop}
+          urlMobile={cardData[2].urlMobile}
+          urlTablet={cardData[2].urlTablet}
+          urlDesktop={cardData[2].urlDesktop}
           text={cardData[1].text}
           alt={cardData[1].alt}
         />
