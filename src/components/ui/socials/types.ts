@@ -1,6 +1,5 @@
 type SocialsProps = {
-  color?: string;
-  hoverColor?: string;
+  section: string;
   gap?: string;
 };
 
