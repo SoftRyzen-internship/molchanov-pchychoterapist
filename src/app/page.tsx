@@ -1,4 +1,5 @@
-import NavMenu from '@/components/common/navMenu/navMenu';
+
+import { NavMenu } from '@/components/common/nav-menu/navMenu';
 import Logo from '@/components/ui/logo';
 import Socials from '@/components/ui/socials/socials';
 
@@ -26,16 +27,11 @@ const Home = () => {
           <Socials section="footer" />
         </div>
 
-        <NavMenu
-          ulClassName="flex space-x-[30px]"
-          linkClassName="text-[16px] text-greenDarkText"
-        />
+        <NavMenu section="header" />
         <div className="bg-blue ">
-          <NavMenu
-            ulClassName="flex space-x-[30px]"
-            linkClassName="text-[14px] text-white"
-          />
+          <NavMenu section="footer" />
         </div>
+        <NavMenu section="burger" />
       </div>
     </main>
   );

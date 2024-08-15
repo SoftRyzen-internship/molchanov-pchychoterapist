@@ -40,7 +40,7 @@ body {
 
 .link-underline-animation::after {
   content: '';
-  @apply absolute z-10 left-0 bottom-0 w-full h-[1px] bg-pinkLight transform -translate-x-full transition-transform duration-300;
+  @apply absolute z-10 left-0 bottom-[1px] w-full h-[1px] bg-pinkLight transform -translate-x-full transition-transform duration-300;
 }
 
 .link-underline-animation:hover::after,
