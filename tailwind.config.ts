@@ -15,7 +15,7 @@ const config: Config = {
       },
       colors: {
         greenDarkText: '#294945',
-        greenBodyText: '#41555',
+        greenBodyText: '#415552',
         greenLight: '#cae8d5',
         blueDark: '#4c6880',
         blue: '#6a8ea8',
