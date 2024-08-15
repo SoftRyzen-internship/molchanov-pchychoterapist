@@ -4,6 +4,7 @@ import Logo from '@/components/ui/logo';
 import Socials from '@/components/ui/socials/socials';
 import { useEffect, useState } from 'react';
 import getServices from '../../sanity/api/services';
+import { NavMenu } from '@/components/common/nav-menu/navMenu';
 
 const Home = () => {
   const [services, setServices] = useState([]);
@@ -41,6 +42,12 @@ const Home = () => {
         <div className="bg-blue py-4">
           <Socials section="footer" />
         </div>
+
+        <NavMenu section="header" />
+        <div className="bg-blue ">
+          <NavMenu section="footer" />
+        </div>
+        <NavMenu section="burger" />
       </div>
     </main>
   );
