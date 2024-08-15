@@ -46,11 +46,11 @@ const Home = () => {
           <Socials section="footer" />
         </div>
 
-        <div className="bg-blue py-4">
+        <ul className="flex flex-col md:flex-row flex-wrap gap-8 md:gap-x-[94px] md:gap-y-[60px] xl:gap-x-[125px]">
           {services.map((service) => (
             <ServiceCard key={service.id} title={service.title} />
           ))}
-        </div>
+        </ul>
       </div>
     </main>
   );
