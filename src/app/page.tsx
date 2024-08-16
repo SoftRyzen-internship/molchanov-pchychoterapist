@@ -7,6 +7,7 @@ import { Socials } from '@/components/ui/socials/socials';
 import { useEffect, useState } from 'react';
 import { getServices } from '@/../sanity/api';
 import { ServiceCard } from '@/components/common/service-card/service-card';
+import { Modal } from '@/components/common/modal';
 
 type Service = {
   _key: string;
@@ -63,6 +64,8 @@ const Home = () => {
           ))}
         </ul>
       </div>
+
+      <Modal />
     </main>
   );
 };
