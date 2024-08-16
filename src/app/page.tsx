@@ -57,12 +57,13 @@ const Home = () => {
         <div className="bg-blue py-4">
           <Socials section="footer" />
         </div>
-
+        
+        <NavMenu section="burger" />
         <NavMenu section="header" />
         <div className="bg-blue ">
           <NavMenu section="footer" />
         </div>
-        <NavMenu section="burger" />
+
         <ul className="flex flex-col md:flex-row flex-wrap gap-8 md:gap-x-[94px] md:gap-y-[60px] xl:gap-x-[125px]">
           {services.map((service) => (
             <ServiceCard key={service._key} title={service.title} />

@@ -13,19 +13,19 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
   switch (section) {
     case 'footer':
       ulClassName =
-        'space-y-[16px] md:space-y-[0px] md:flex md:items-center md:justify-center  md:space-x-[30px]';
+        'flex flex-col gap-y-[16px] md:flex-row md:gap-y-[0px] md:flex md:items-center  md:gap-x-[30px]';
       linkClassName = 'text-[14px] text-white';
       break;
     case 'burger':
-      ulClassName = 'flex flex-col space-y-[32px] xl:hidden';
+      ulClassName = 'flex flex-col gap-y-[32px] xl:hidden';
       linkClassName = 'text-[16px] text-greenDarkText';
       break;
     case 'header':
-      ulClassName = 'hidden xl:flex xl:space-x-[30px]';
+      ulClassName = 'hidden xl:flex xl:gap-x-[30px]';
       linkClassName = 'text-[16px] text-greenDarkText';
       break;
     default:
-      ulClassName = 'flex space-x-[30px]';
+      ulClassName = 'flex flex-col gap-y-[32px] xl:hidden';
       linkClassName = 'text-[16px] text-greenDarkText';
       break;
   }
@@ -38,7 +38,7 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
             className={clsx(
               linkClassName,
               'link-underline-animation',
-              'cursor-pointer font-medium leading-[1.4] transition duration-300 '
+              'cursor-pointer font-medium leading-[1.4] '
             )}
             activeClass="active"
             to={i.href}
