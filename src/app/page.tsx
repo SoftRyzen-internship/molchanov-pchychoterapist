@@ -1,12 +1,16 @@
 'use client';
 
-import CheckboxField from '@/components/ui/checkbox-field';
-import InputField from '@/components/ui/input-field';
+import { CheckboxField } from '@/components/ui/checkbox-field';
+import { InputField } from '@/components/ui/input-field';
 import Logo from '@/components/ui/logo';
 import Socials from '@/components/ui/socials';
-import TextareaField from '@/components/ui/textarea-field';
-import { FormData } from '@/types/form-field';
+import { TextareaField } from '@/components/ui/textarea-field';
+import { schema } from '@/utils';
+import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
+
+type FormData = yup.InferType<typeof schema>;
 
 const Home = () => {
   const {
@@ -18,7 +22,7 @@ const Home = () => {
     reset,
   } = useForm<FormData>({
     mode: 'onTouched',
-    // resolver: yupResolver(schema),
+    resolver: yupResolver(schema),
   });
 
   const onSubmit = (data: FormData) => {

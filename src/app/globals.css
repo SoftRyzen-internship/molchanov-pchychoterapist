@@ -42,68 +42,33 @@ body {
   @apply pb-2 border-b-[1.5px] border-grey text-base font-medium leading-[1.4] placeholder:text-base placeholder:font-medium placeholder:leading-[1.4] placeholder:text-grey focus:outline-none;
 }
 
-.checkbox-container {
-  display: inline-block;
-  position: relative;
-  padding-left: 30px;
-  user-select: none;
+.checkbox-input {
+  @apply appearance-none absolute cursor-pointer top-[2px] left-0 h-4 w-4 border border-greenBodyText bg-transparent transition-all ease-in-out;
 }
 
-/* Скрываем стандартный чекбокс */
-.checkbox-container input {
-  position: absolute;
-  opacity: 0;
-}
-
-/* Стили для кастомного чекбокса */
 .checkmark {
-  position: absolute;
-  top: 2px;
-  left: 0;
-  height: 16px;
-  width: 16px;
-  border: 1px solid #37474f;
-  background-color: transparent;
-  transition: all 0.2s ease;
+  @apply absolute;
 }
 
-/* Состояние при наведении и фокусе */
-.checkmark:hover,
-.checkmark:focus {
-  border-color: #ffcdd2;
+.checkbox-input:checked + .checkmark::after {
+  @apply block;
 }
 
-/* Отображение галочки при checked */
-.checkbox-container input:checked + .checkmark::after {
-  display: block;
-}
-
-/* Стили для галочки */
-.checkbox-container .checkmark::after {
+.checkmark::after {
   content: '';
-  position: absolute;
   display: none;
-  left: 4px;
-  top: 1px;
-  width: 5px;
-  height: 10px;
-  border: solid #37474f;
-  border-width: 0 1px 1px 0;
-  transform: rotate(45deg);
+  @apply absolute left-[5px] top-[3px] w-[5px] h-[10px] border border-t-0 border-l-0 border-blue rotate-45;
 }
 
-/* Состояние ошибки */
-.checkbox-container.error .checkmark {
-  border-color: #e53935;
+.checkbox-input:hover,
+.checkbox-input:focus {
+  @apply border-pinkLight;
 }
 
-/* Состояние выбранного чекбокса */
-.checkbox-container input:checked ~ .checkmark {
-  border-color: #37474f;
+.error {
+  @apply border-redError;
 }
 
-/* Состояние ошибки и выбранного чекбокса */
-.checkbox-container.error input:checked ~ .checkmark {
-  background-color: transparent;
-  border-color: #e53935;
+.error.error:checked {
+  @apply border-redError bg-transparent;
 }

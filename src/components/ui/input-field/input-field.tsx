@@ -1,7 +1,8 @@
 import { IFormFieldProps } from '@/types/form-field';
+import clsx from 'clsx';
 import InputMask from 'react-input-mask-next';
 
-const InputField = ({
+export const InputField = ({
   id,
   label,
   type,
@@ -12,7 +13,7 @@ const InputField = ({
   autoComplete,
 }: IFormFieldProps) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col relative">
       <label htmlFor={id} className="label">
         {label}
       </label>
@@ -25,7 +26,7 @@ const InputField = ({
           {...register(name)}
           placeholder={placeholder}
           autoComplete={autoComplete}
-          className="input"
+          className={clsx('input', errors[name] && 'text-redError')}
         />
       ) : (
         <input
@@ -34,13 +35,13 @@ const InputField = ({
           {...register(name)}
           placeholder={placeholder}
           autoComplete={autoComplete}
-          className="input"
+          className={clsx('input', errors[name] && 'text-redError')}
         />
       )}
 
-      <p>{errors[name]?.message}</p>
+      <p className="absolute -bottom-1/4 left-0 text-sm font-medium text-redError">
+        {errors[name]?.message}
+      </p>
     </div>
   );
 };
-
-export default InputField;
