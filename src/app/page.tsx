@@ -57,7 +57,7 @@ const Home = () => {
         <div className="bg-blue py-4">
           <Socials section="footer" />
         </div>
-        
+
         <NavMenu section="burger" />
         <NavMenu section="header" />
         <div className="bg-blue ">
