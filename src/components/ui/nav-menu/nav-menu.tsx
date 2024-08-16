@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-scroll';
-import navList from '@/data/ui/nav-list.json';
+import {navList} from '../../../data/common.json';
 import clsx from 'clsx';
 import { NavItem, NavMenuProps } from './types';
 

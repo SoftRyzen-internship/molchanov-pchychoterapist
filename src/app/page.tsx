@@ -7,7 +7,7 @@ import { Socials } from '@/components/ui/socials/socials';
 import { useEffect, useState } from 'react';
 import { getServices } from '@/../sanity/api';
 import { ServiceCard } from '@/components/common/service-card/service-card';
-import { NavMenu } from '@/components/common/nav-menu/navMenu';
+import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
 
 type Service = {
   _key: string;
