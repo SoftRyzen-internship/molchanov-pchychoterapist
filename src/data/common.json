@@ -1,5 +1,5 @@
 {
-  "navList" :[
+  "navList": [
     {
       "id": 1,
       "href": "about",
@@ -26,5 +26,4 @@
       "name": "Контакти"
     }
   ]
-  
 }
