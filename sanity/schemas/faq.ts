@@ -1,6 +1,6 @@
 import { Rule } from '@sanity/types';
 
-const faq = {
+export const faq = {
   name: 'faq',
   title: 'Часті запитання',
   type: 'document',
@@ -12,7 +12,7 @@ const faq = {
     },
     {
       name: 'faqList',
-      title: 'Список питань',
+      title: 'Список питань/відповідей',
       type: 'array',
       of: [
         {
@@ -56,5 +56,3 @@ const faq = {
     },
   ],
 };
-
-export default faq;

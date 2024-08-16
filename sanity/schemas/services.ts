@@ -1,6 +1,6 @@
 import { Rule } from '@sanity/types';
 
-const services = {
+export const services = {
   name: 'services',
   title: 'Мої послуги',
   type: 'document',
@@ -12,17 +12,24 @@ const services = {
     },
     {
       name: 'servicesList',
-      title: 'Список послуг',
+      title: 'Перелік послуг',
       type: 'array',
       of: [
         {
-          type: 'string',
-          validation: (rule: Rule) =>
-            rule
-              .min(3)
-              .error('Мінімальна кількість символів 3')
-              .max(70)
-              .error('Максимальна кількість символів 70'),
+          type: 'object',
+          fields: [
+            {
+              name: 'title',
+              title: 'Список',
+              type: 'string',
+              validation: (rule: Rule) =>
+                rule
+                  .min(3)
+                  .error('Мінімальна кількість символів 3')
+                  .max(70)
+                  .error('Максимальна кількість символів 70'),
+            },
+          ],
         },
       ],
       validation: (rule: Rule) =>
@@ -34,5 +41,3 @@ const services = {
     },
   ],
 };
-
-export default services;

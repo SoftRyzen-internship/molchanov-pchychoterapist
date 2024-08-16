@@ -1,4 +1,4 @@
-const politics = {
+export const politics = {
   name: 'politics',
   title: 'Політика конфіденційності та захисту персональних даних',
   type: 'document',
@@ -16,5 +16,3 @@ const politics = {
     },
   ],
 };
-
-export default politics;

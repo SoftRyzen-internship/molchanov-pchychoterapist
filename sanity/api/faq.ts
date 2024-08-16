@@ -1,10 +1,8 @@
 import { client } from '../lib/client';
 
-async function getFaq() {
-  const query = '*[_type == "faq"]{_id, faqList}';
+export async function getFaq() {
+  const query = '*[_type == "faq"]{faqList[]{_key, question, answer}}';
 
   const faq = await client.fetch(query);
-  return faq;
+  return faq[0].faqList;
 }
-
-export default getFaq;

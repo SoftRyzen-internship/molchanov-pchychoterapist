@@ -1,10 +1,8 @@
 import { client } from '../lib/client';
 
-async function getServices() {
-  const query = '*[_type == "services"]{_id, servicesList}';
+export async function getServices() {
+  const query = '*[_type == "services"]{servicesList[]{_key, title}}';
 
   const services = await client.fetch(query);
-  return services;
+  return services[0].servicesList;
 }
-
-export default getServices;
