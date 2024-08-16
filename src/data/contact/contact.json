@@ -1,0 +1,66 @@
+{
+  "inputs": [
+    {
+      "id": "username",
+      "label": "Ваше iм’я *",
+      "type": "text",
+      "name": "username",
+      "placeholder": "Вікторія",
+      "autoComplete": "name"
+    },
+    {
+      "id": "phone",
+      "label": "Номер телефону *",
+      "type": "tel",
+      "name": "phone",
+      "placeholder": "+38 067 158 79 04",
+      "autoComplete": "tel"
+    }
+  ],
+  "textarea": {
+    "id": "comment",
+    "label": "Коментар",
+    "type": "textarea",
+    "name": "comment",
+    "placeholder": "Поділіться, з якою конкретно проблемою ви зіткнулись?\n(Макс. 300 символів)"
+  },
+  "checkbox": {
+    "id": "checked",
+    "label": "Я даю згоду на обробку моїх персональних даних відповідно до ",
+    "type": "checkbox",
+    "name": "checked",
+    "politics": "Політики конфіденційності."
+  },
+  "button": "Записатися",
+  "validation": {
+    "username": {
+      "required": { "message": "*Введіть своє ім’я" },
+      "minLength": { "value": 2, "message": "Мінімальна довжина 2 символи" },
+      "maxLength": {
+        "value": 30,
+        "message": "Максимальна довжина 30 символів"
+      },
+      "regExp": {
+        "value": "/^[a-zA-Zа-яА-ЯґҐєЄіІїЇ'ʼ`-]{1,29}[a-zA-Zа-яА-ЯґҐєЄіІїЇ'ʼ`-]?$|^[a-zA-Zа-яА-ЯґҐєЄіІїЇ'ʼ`-]{1,30}$/",
+        "message": "*Може містити кирилицю, латиницю, дефіс, апостроф, пробіл"
+      }
+    },
+    "phone": {
+      "required": { "message": "*Введіть свій номер телефону" },
+      "regExp": {
+        "value": "/+38sd{3}sd{3}sd{2}sd{2}/",
+        "message": "*Введіть вірний формат телефону"
+      }
+    },
+    "comment": {
+      "maxLength": {
+        "value": 300,
+        "message": "*Максимальна довжина 300 символів"
+      }
+    },
+    "checked": {
+      "value": true,
+      "message": "*Підтвердіть згоду на обробку даних"
+    }
+  }
+}

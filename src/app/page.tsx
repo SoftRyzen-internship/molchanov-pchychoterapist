@@ -14,6 +14,8 @@ import { schema } from '@/utils';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
+import contactData from '@/data/contact/contact.json';
+import { Name } from '../components/ui/input-field/type';
 
 type FormData = yup.InferType<typeof schema>;
 
@@ -31,7 +33,7 @@ const Home = () => {
     setValue,
     reset,
   } = useForm<FormData>({
-    mode: 'onTouched',
+    mode: 'onSubmit',
     resolver: yupResolver(schema),
   });
 
@@ -89,57 +91,55 @@ const Home = () => {
             <ServiceCard key={service._key} title={service.title} />
           ))}
         </ul>
-      </div>
 
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        autoComplete="on"
-        style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}
-      >
-        <InputField
-          label="Ваше iм’я *"
-          type="text"
-          id="username"
-          name="username"
-          errors={errors}
-          register={register}
-          placeholder="Вікторія"
-          autoComplete="name"
-        />
-        <InputField
-          label="Номер телефону *"
-          type="tel"
-          id="phone"
-          name="phone"
-          errors={errors}
-          register={register}
-          placeholder="+38 067 158 79 04"
-          autoComplete="tel"
-        />
-        <TextareaField
-          label="Коментар"
-          type="textarea"
-          id="comment"
-          name="comment"
-          errors={errors}
-          placeholder={
-            'Поділіться, з якою конкретно проблемою ви зіткнулись?\n(Макс. 300 символів)'
-          }
-          register={register}
-        />
-        <CheckboxField
-          label="Я даю згоду на обробку моїх персональних даних відповідно до "
-          type="checkbox"
-          id="checked"
-          name="checked"
-          errors={errors}
-          register={register}
-          politics="Політики конфіденційності."
-        />
-        <button className="custom-button custom-button-no-border">
-          Записатися
-        </button>
-      </form>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          autoComplete="on"
+          style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}
+        >
+          <InputField
+            label={contactData.inputs[0].label}
+            type={contactData.inputs[0].type}
+            id={contactData.inputs[0].id}
+            name={contactData.inputs[0].name as Name}
+            errors={errors}
+            register={register}
+            placeholder={contactData.inputs[0].placeholder}
+            autoComplete={contactData.inputs[0].autoComplete}
+          />
+          <InputField
+            label={contactData.inputs[1].label}
+            type={contactData.inputs[1].type}
+            id={contactData.inputs[1].id}
+            name={contactData.inputs[1].name as Name}
+            errors={errors}
+            register={register}
+            placeholder={contactData.inputs[1].placeholder}
+            autoComplete={contactData.inputs[1].autoComplete}
+          />
+          <TextareaField
+            label={contactData.textarea.label}
+            type={contactData.textarea.type}
+            id={contactData.textarea.id}
+            name={contactData.textarea.name as Name}
+            errors={errors}
+            placeholder={contactData.textarea.placeholder}
+            register={register}
+          />
+          <CheckboxField
+            label={contactData.checkbox.label}
+            type={contactData.checkbox.type}
+            id={contactData.checkbox.id}
+            name={contactData.checkbox.name as Name}
+            errors={errors}
+            register={register}
+            politics={contactData.checkbox.politics}
+          />
+          <button className="custom-button custom-button-no-border md:max-w-[190px]">
+            {contactData.button}
+          </button>
+        </form>
+      </div>
     </main>
   );
 };

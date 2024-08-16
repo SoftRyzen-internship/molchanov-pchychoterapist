@@ -1,4 +1,4 @@
-import { IFormFieldProps } from '@/types/form-field';
+import { IFormFieldProps } from '../input-field/type';
 import clsx from 'clsx';
 import Link from 'next/link';
 

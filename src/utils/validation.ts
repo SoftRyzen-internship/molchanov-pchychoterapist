@@ -1,23 +1,19 @@
 import * as yup from 'yup';
+import { validation } from '../data/contact/contact.json';
 
-const usernameRegexp =
-  /^[a-zA-Zа-яА-ЯґҐєЄіІїЇ'ʼ`-]{1,29}[a-zA-Zа-яА-ЯґҐєЄіІїЇ'ʼ`-]?$|^[a-zA-Zа-яА-ЯґҐєЄіІїЇ'ʼ`-]{1,30}$/;
-const phoneRegexp = /\+38\s\d{3}\s\d{3}\s\d{2}\s\d{2}/;
+const { username, phone, comment, checked } = validation;
 
 export const schema = yup.object().shape({
   username: yup
     .string()
-    .required('*Ім’я обовʼязкове поле')
-    .min(2, 'Мінімум 2 символи')
-    .max(30, 'Максимум 30 символів')
-    .matches(usernameRegexp, '*Введіть вірне ім’я'),
+    .required(username.required.message)
+    .min(username.minLength.value, username.minLength.message)
+    .max(username.maxLength.value, username.maxLength.message)
+    .matches(new RegExp(username.regExp.value), username.regExp.message),
   phone: yup
     .string()
-    .required('*Номер телефону обовʼязкове поле')
-    .matches(phoneRegexp, '*Введіть вірний формат телефону'),
-  comment: yup.string().max(300, '*Максимально 300 символів'),
-  checked: yup
-    .boolean()
-    .required()
-    .oneOf([true], '*Підтвердіть згоду на обробку даних'),
+    .required(phone.required.message)
+    .matches(new RegExp(phone.regExp.value), phone.regExp.message),
+  comment: yup.string().max(comment.maxLength.value, comment.maxLength.message),
+  checked: yup.boolean().required().oneOf([checked.value], checked.message),
 });

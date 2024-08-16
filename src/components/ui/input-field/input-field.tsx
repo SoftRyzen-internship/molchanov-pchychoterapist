@@ -1,4 +1,4 @@
-import { IFormFieldProps } from '@/types/form-field';
+import { IFormFieldProps } from './type';
 import clsx from 'clsx';
 import InputMask from 'react-input-mask-next';
 
@@ -39,7 +39,7 @@ export const InputField = ({
         />
       )}
 
-      <p className="absolute -bottom-1/4 left-0 text-sm font-medium text-redError">
+      <p className="absolute top-full left-0 text-sm font-medium text-redError">
         {errors[name]?.message}
       </p>
     </div>

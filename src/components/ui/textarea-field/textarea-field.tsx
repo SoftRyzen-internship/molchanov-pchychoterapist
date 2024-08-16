@@ -1,4 +1,4 @@
-import { IFormFieldProps } from '@/types/form-field';
+import { IFormFieldProps } from '../input-field/type';
 import clsx from 'clsx';
 
 export const TextareaField = ({
@@ -19,7 +19,7 @@ export const TextareaField = ({
         {...register(name)}
         placeholder={placeholder}
         className={clsx(
-          'input resize-none h-[74px] md:h-[52px]',
+          'input resize-none h-[78px] md:h-[55px]',
           errors[name] && 'text-redError'
         )}
       />
