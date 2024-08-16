@@ -1,13 +1,21 @@
 'use client';
 
+import UtilityCard from '@/components/common/utility-card/utility-card';
+import cardData from '@/data/target-audience/utility-card-data.json';
 import Logo from '@/components/ui/logo';
-import Socials from '@/components/ui/socials/socials';
+import { Socials } from '@/components/ui/socials/socials';
 import { useEffect, useState } from 'react';
-import getServices from '../../sanity/api/services';
+import { getServices } from '@/../sanity/api';
+import { ServiceCard } from '@/components/common/service-card/service-card';
 import { NavMenu } from '@/components/common/nav-menu/navMenu';
 
+type Service = {
+  _key: string;
+  title: string;
+};
+
 const Home = () => {
-  const [services, setServices] = useState([]);
+  const [services, setServices] = useState<Service[]>([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -18,7 +26,7 @@ const Home = () => {
     fetchData();
   }, []);
 
-  console.log(services);
+  console.log('services:', services);
 
   return (
     <main>
@@ -27,6 +35,13 @@ const Home = () => {
 
         <br />
 
+        <UtilityCard
+          urlMobile={cardData[2].urlMobile}
+          urlTablet={cardData[2].urlTablet}
+          urlDesktop={cardData[2].urlDesktop}
+          text={cardData[1].text}
+          alt={cardData[1].alt}
+        />
         <button className="custom-button custom-button-no-border">
           Записатися
         </button>
@@ -48,6 +63,11 @@ const Home = () => {
           <NavMenu section="footer" />
         </div>
         <NavMenu section="burger" />
+        <ul className="flex flex-col md:flex-row flex-wrap gap-8 md:gap-x-[94px] md:gap-y-[60px] xl:gap-x-[125px]">
+          {services.map((service) => (
+            <ServiceCard key={service._key} title={service.title} />
+          ))}
+        </ul>
       </div>
     </main>
   );
