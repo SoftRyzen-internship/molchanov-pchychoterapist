@@ -1,6 +1,6 @@
 'use client';
 
-import Logo from '@/components/ui/logo';
+import Logo from '@/components/ui/logo/logo';
 import Socials from '@/components/ui/socials/socials';
 import { useEffect, useState } from 'react';
 import getServices from '../../sanity/api/services';
