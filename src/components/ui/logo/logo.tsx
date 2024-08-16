@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import LogoSvg from '@/assets/images/icons/logo.svg';
+import LogoSvg from '/public/assets/images/icons/logo.svg';
 import content from '@/data/ui/logo.json';
 
 const Logo = () => {

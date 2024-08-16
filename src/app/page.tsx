@@ -27,14 +27,16 @@ const Home = () => {
         <Logo />
 
         <br />
+        <ul>
+          <UtilityCard
+            urlMobile={cardData[2].urlMobile}
+            urlTablet={cardData[2].urlTablet}
+            urlDesktop={cardData[2].urlDesktop}
+            text={cardData[1].text}
+            alt={cardData[1].alt}
+          />
+        </ul>
 
-        <UtilityCard
-          urlMobile={cardData[2].urlMobile}
-          urlTablet={cardData[2].urlTablet}
-          urlDesktop={cardData[2].urlDesktop}
-          text={cardData[1].text}
-          alt={cardData[1].alt}
-        />
         <button className="custom-button custom-button-no-border">
           Записатися
         </button>

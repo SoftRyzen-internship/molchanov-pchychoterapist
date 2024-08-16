@@ -1,4 +1,5 @@
 type UtilityCardProps = {
+  index?: number;
   urlMobile: string;
   urlTablet: string;
   urlDesktop: string;
