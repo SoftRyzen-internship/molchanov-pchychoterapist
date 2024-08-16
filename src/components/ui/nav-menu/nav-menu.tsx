@@ -1,10 +1,11 @@
 'use client';
 
+import navListData from '../../../data/common.json';
 import React from 'react';
 import { Link } from 'react-scroll';
-import { navList } from '../../../data/common.json';
 import clsx from 'clsx';
 import { NavItem, NavMenuProps } from './types';
+const { navList } = navListData;
 
 export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
   let ulClassName = '';
