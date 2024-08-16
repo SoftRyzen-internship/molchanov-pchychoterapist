@@ -1,11 +1,10 @@
 'use client';
 
-import navListData from '../../../data/common.json';
+import   navList from '@/data/common.json';
 import React from 'react';
 import { Link } from 'react-scroll';
 import clsx from 'clsx';
 import { NavItem, NavMenuProps } from './types';
-const { navList } = navListData;
 
 export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
   let ulClassName = '';
@@ -13,7 +12,7 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
 
   switch (section) {
     case 'footer':
-      ulClassName = 'flex space-x-[30px]';
+      ulClassName = 'space-y-[16px] md:space-y-[0px] md:flex md:items-center md:justify-center  md:space-x-[30px]';
       linkClassName = 'text-[14px] text-white';
       break;
     case 'burger':
@@ -21,7 +20,7 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
       linkClassName = 'text-[16px] text-greenDarkText';
       break;
     case 'header':
-      ulClassName = 'flex space-x-[30px]';
+      ulClassName = 'hidden xl:flex xl:space-x-[30px]';
       linkClassName = 'text-[16px] text-greenDarkText';
       break;
     default:
@@ -32,7 +31,7 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
 
   return (
     <ul className={ulClassName}>
-      {navList.map((i: NavItem) => (
+      { navList.navList.map((i: NavItem) => (
         <li key={i.id}>
           <Link
             className={clsx(
