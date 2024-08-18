@@ -1,9 +1,9 @@
-import ValuesCardProps from './types';
 import HeartIcon from '@/../public/assets/images/icons/heart.svg';
 import MedalIcon from '@/../public/assets/images/icons/medal-star.svg';
 import CupIcon from '@/../public/assets/images/icons/cup-star.svg';
+import { ValuesCardProps } from './types';
 
-const ValuesCard = ({ id, name, title, text }: ValuesCardProps) => {
+export const ValuesCard = ({ id, name, title, text }: ValuesCardProps) => {
   return (
     <li
       key={id}
@@ -37,4 +37,3 @@ const ValuesCard = ({ id, name, title, text }: ValuesCardProps) => {
     </li>
   );
 };
-export default ValuesCard;

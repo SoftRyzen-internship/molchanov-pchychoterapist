@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import UtilityCardProps from './types';
+import { UtilityCardProps } from './types';
 
-const UtilityCard = ({
+export const UtilityCard = ({
   id,
   urlMobile,
   urlTablet,
@@ -41,4 +41,3 @@ const UtilityCard = ({
     </li>
   );
 };
-export default UtilityCard;

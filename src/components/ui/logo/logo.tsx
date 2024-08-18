@@ -2,7 +2,7 @@ import Link from 'next/link';
 import LogoSvg from '/public/assets/images/icons/logo.svg';
 import content from '@/data/ui/logo.json';
 
-const Logo = () => {
+export const Logo = () => {
   return (
     <Link
       href={'/'}
@@ -19,4 +19,3 @@ const Logo = () => {
     </Link>
   );
 };
-export default Logo;

@@ -1,4 +1,4 @@
-type UtilityCardProps = {
+export type UtilityCardProps = {
   id: string;
   urlMobile: string;
   urlTablet: string;
@@ -6,4 +6,3 @@ type UtilityCardProps = {
   text: string;
   alt: string;
 };
-export default UtilityCardProps;
