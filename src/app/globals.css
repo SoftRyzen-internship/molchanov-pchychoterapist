@@ -5,7 +5,7 @@
 body {
   font-family: var(--font-montserrat), sans-serif, var(--font-geologica);
   @apply text-[16px] font-medium leading-[1.4] text-greenBodyText h-screen m-0
-    md:text-[20px] md:font-semibold ;
+    md:text-[20px] md:font-semibold;
 }
 
 h1,
@@ -32,11 +32,11 @@ img {
 
 h2 {
   @apply font-geologica text-[32px] font-medium leading-[1] text-greenDarkText
-    md:text-[56px] ;
+    md:text-[56px];
 }
 h3 {
   @apply text-[16px] font-semibold leading-[1.4] text-greenDarkText
-    md:text-[20px] ;
+    md:text-[20px];
 }
 
 /* @layer utilities {
