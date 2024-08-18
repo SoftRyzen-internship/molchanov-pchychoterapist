@@ -2,7 +2,7 @@ import Image from 'next/image';
 import UtilityCardProps from './types';
 
 const UtilityCard = ({
-  index,
+  id,
   urlMobile,
   urlTablet,
   urlDesktop,
@@ -11,14 +11,14 @@ const UtilityCard = ({
 }: UtilityCardProps) => {
   return (
     <li
-      key={index}
-      className="bg-pinkSupperLight p-4 overflow-hidden rounded-lg flex gap-2 sm:w-[448px] md:p-0 md:gap-5 items-center h-48 md:h-[330px] md:w-[704px] xl:h-[362px] xl:w-[610px]"
+      key={id}
+      className="bg-pinkSupperLight p-4 overflow-hidden rounded-lg flex gap-2  md:p-0 md:gap-5 items-center h-48 md:h-[330px]  xl:h-[362px] xl:w-[610px]"
     >
       <Image
         src={urlMobile}
         alt={alt}
         width={114}
-        height={158}
+        height={160}
         className="relative -bottom-4 -left-4 md:hidden "
       />
       <Image
