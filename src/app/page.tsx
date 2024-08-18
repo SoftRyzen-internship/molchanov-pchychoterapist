@@ -62,6 +62,11 @@ const Home = () => {
             <ServiceCard key={service._key} title={service.title} />
           ))}
         </ul>
+        <div>
+          <h2>Title h2</h2>
+          <h3>Title h3</h3>
+          <p>MainText</p>
+        </div>
       </div>
     </main>
   );
