@@ -48,14 +48,7 @@ const Home = () => {
             alt={cardData.cards[2].alt}
           />
         </ul>
-        <ul>
-          <ValuesCard
-            id={cardsValuesData.cards[0].id}
-            name={cardsValuesData.cards[0].name}
-            title={cardsValuesData.cards[0].title}
-            text={cardsValuesData.cards[0].text}
-          />
-        </ul>
+
         <button className="custom-button custom-button-no-border">
           Записатися
         </button>
@@ -71,7 +64,14 @@ const Home = () => {
         <div className="bg-blue py-4">
           <Socials section="footer" />
         </div>
-
+        <ul>
+          <ValuesCard
+            id={cardsValuesData.cards[0].id}
+            name={cardsValuesData.cards[2].name}
+            title={cardsValuesData.cards[0].title}
+            text={cardsValuesData.cards[0].text}
+          />
+        </ul>
         <NavMenu section="burger" />
         <NavMenu section="header" />
         <div className="bg-blue ">
