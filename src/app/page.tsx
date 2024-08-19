@@ -61,7 +61,7 @@ const Home = () => {
   return (
     <main>
       <div className="container">
-      <Accordion />
+        <Accordion />
         <Logo />
 
         <br />
@@ -153,8 +153,6 @@ const Home = () => {
           <h3>Title h3</h3>
           <p>MainText</p>
         </div>
-
-      
       </div>
     </main>
   );
