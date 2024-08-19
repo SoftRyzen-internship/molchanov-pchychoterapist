@@ -1,10 +1,16 @@
 'use client';
 
+import { UtilityCard } from '@/components/common/utility-card/utility-card';
+
+import { ValuesCard } from '@/components/common/values-card/values-card';
+import cardsValuesData from '@/data/values.json';
+
+import cardData from '@/data/target-audience.json';
+import { Logo } from '@/components/ui/logo/logo';
+
 import { CheckboxField } from '@/components/ui/checkbox-field';
 import { InputField } from '@/components/ui/input-field';
-import UtilityCard from '@/components/common/utility-card/utility-card';
-import cardData from '@/data/target-audience/utility-card-data.json';
-import Logo from '@/components/ui/logo';
+
 import { Socials } from '@/components/ui/socials/socials';
 import { useEffect, useState } from 'react';
 import { getServices } from '@/../sanity/api';
@@ -65,14 +71,17 @@ const Home = () => {
         <Logo />
 
         <br />
+        <ul>
+          <UtilityCard
+            id={cardData.cards[2].id}
+            urlMobile={cardData.cards[2].urlMobile}
+            urlTablet={cardData.cards[2].urlTablet}
+            urlDesktop={cardData.cards[2].urlDesktop}
+            text={cardData.cards[2].text}
+            alt={cardData.cards[2].alt}
+          />
+        </ul>
 
-        <UtilityCard
-          urlMobile={cardData[2].urlMobile}
-          urlTablet={cardData[2].urlTablet}
-          urlDesktop={cardData[2].urlDesktop}
-          text={cardData[1].text}
-          alt={cardData[1].alt}
-        />
         <button className="custom-button custom-button-no-border">
           Записатися
         </button>
@@ -88,7 +97,14 @@ const Home = () => {
         <div className="bg-blue py-4">
           <Socials section="footer" />
         </div>
-
+        <ul>
+          <ValuesCard
+            id={cardsValuesData.cards[0].id}
+            name={cardsValuesData.cards[2].name}
+            title={cardsValuesData.cards[0].title}
+            text={cardsValuesData.cards[0].text}
+          />
+        </ul>
         <NavMenu section="burger" />
         <NavMenu section="header" />
         <div className="bg-blue ">
