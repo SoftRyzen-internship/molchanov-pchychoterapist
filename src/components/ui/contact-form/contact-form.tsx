@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -9,6 +11,7 @@ import { Name } from '../input-field/type';
 import { FormData } from './type';
 
 import { schema } from '@/utils';
+
 import contactData from '@/data/contact/contact.json';
 
 export const ContactForm = () => {
@@ -24,60 +27,77 @@ export const ContactForm = () => {
     resolver: yupResolver(schema),
   });
 
+  const { inputs, textarea, checkbox, button } = contactData;
+
+  watch((data) => {
+    localStorage.setItem('contactForm', JSON.stringify(data));
+  });
+
+  useEffect(() => {
+    const storageData = localStorage.getItem('contactForm');
+    if (storageData !== null) {
+      const result = JSON.parse(storageData);
+      setValue('username', result.username);
+      setValue('phone', result.phone);
+      setValue('comment', result.message);
+    }
+  }, [setValue]);
+
   const onSubmit = (data: FormData) => {
-    console.log(data);
-    reset();
-    setValue('phone', '');
+    try {
+      console.log(data);
+      localStorage.removeItem('contactForm');
+      reset();
+      setValue('phone', '');
+    } catch (error) {
+      console.log(error);
+    }
   };
+
   return (
-    <div>
+    <>
       <form
         onSubmit={handleSubmit(onSubmit)}
         autoComplete="on"
-        style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}
+        className="flex flex-col gap-10"
       >
-        <InputField
-          label={contactData.inputs[0].label}
-          type={contactData.inputs[0].type}
-          id={contactData.inputs[0].id}
-          name={contactData.inputs[0].name as Name}
-          errors={errors}
-          register={register}
-          placeholder={contactData.inputs[0].placeholder}
-          autoComplete={contactData.inputs[0].autoComplete}
-        />
-        <InputField
-          label={contactData.inputs[1].label}
-          type={contactData.inputs[1].type}
-          id={contactData.inputs[1].id}
-          name={contactData.inputs[1].name as Name}
-          errors={errors}
-          register={register}
-          placeholder={contactData.inputs[1].placeholder}
-          autoComplete={contactData.inputs[1].autoComplete}
-        />
+        <div className="flex flex-col gap-9">
+          {inputs.map((input) => (
+            <InputField
+              key={input.id}
+              label={input.label}
+              type={input.type}
+              id={input.id}
+              name={input.name as Name}
+              errors={errors}
+              register={register}
+              placeholder={input.placeholder}
+              autoComplete={input.autoComplete}
+            />
+          ))}
+        </div>
         <TextareaField
-          label={contactData.textarea.label}
-          type={contactData.textarea.type}
-          id={contactData.textarea.id}
-          name={contactData.textarea.name as Name}
+          label={textarea.label}
+          type={textarea.type}
+          id={textarea.id}
+          name={textarea.name as Name}
           errors={errors}
-          placeholder={contactData.textarea.placeholder}
+          placeholder={textarea.placeholder}
           register={register}
         />
         <CheckboxField
-          label={contactData.checkbox.label}
-          type={contactData.checkbox.type}
-          id={contactData.checkbox.id}
-          name={contactData.checkbox.name as Name}
+          label={checkbox.label}
+          type={checkbox.type}
+          id={checkbox.id}
+          name={checkbox.name as Name}
           errors={errors}
           register={register}
-          politics={contactData.checkbox.politics}
+          politics={checkbox.politics}
         />
         <button className="custom-button custom-button-no-border md:max-w-[190px]">
-          {contactData.button}
+          {button}
         </button>
       </form>
-    </div>
+    </>
   );
 };
