@@ -11,6 +11,7 @@ import { Socials } from '@/components/ui/socials/socials';
 import { useEffect, useState } from 'react';
 import { getServices } from '@/../sanity/api';
 import { ServiceCard } from '@/components/common/service-card/service-card';
+import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
 
 type Service = {
   _key: string;
@@ -71,11 +72,22 @@ const Home = () => {
           <Socials section="footer" />
         </div>
 
+        <NavMenu section="burger" />
+        <NavMenu section="header" />
+        <div className="bg-blue ">
+          <NavMenu section="footer" />
+        </div>
+
         <ul className="flex flex-col md:flex-row flex-wrap gap-8 md:gap-x-[94px] md:gap-y-[60px] xl:gap-x-[125px]">
           {services.map((service) => (
             <ServiceCard key={service._key} title={service.title} />
           ))}
         </ul>
+        <div>
+          <h2>Title h2</h2>
+          <h3>Title h3</h3>
+          <p>MainText</p>
+        </div>
       </div>
     </main>
   );
