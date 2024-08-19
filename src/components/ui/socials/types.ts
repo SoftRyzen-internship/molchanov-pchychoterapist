@@ -1,6 +1,4 @@
-type SocialsProps = {
+export type SocialsProps = {
   section: string;
   gap?: string;
 };
-
-export default SocialsProps;

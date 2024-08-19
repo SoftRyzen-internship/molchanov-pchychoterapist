@@ -1,12 +1,12 @@
 import React from 'react';
 
-import TelegramIcon from '@/assets/images/icons/telegram.svg';
-import InstagramIcon from '@/assets/images/icons/instagram.svg';
-import FacebookIcon from '@/assets/images/icons/facebook.svg';
-import SocialItemProps from './types';
+import TelegramIcon from '@/../public/assets/images/icons/telegram.svg';
+import InstagramIcon from '@/../public/assets/images/icons/instagram.svg';
+import FacebookIcon from '@/../public/assets/images/icons/facebook.svg';
+import { SocialItemProps } from './types';
 import clsx from 'clsx';
 
-const SocialItem = ({
+export const SocialItem = ({
   name,
   link,
   areaLabel,
@@ -34,5 +34,3 @@ const SocialItem = ({
     </li>
   );
 };
-
-export default SocialItem;
