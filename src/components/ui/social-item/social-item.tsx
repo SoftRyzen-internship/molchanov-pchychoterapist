@@ -7,9 +7,7 @@ import { SocialItemProps } from './types';
 import clsx from 'clsx';
 
 export const SocialItem = ({
-  name,
-  link,
-  areaLabel,
+  item: { name, link, areaLabel },
   iconsColors,
 }: SocialItemProps) => {
   return (
