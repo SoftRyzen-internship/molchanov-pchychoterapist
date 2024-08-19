@@ -17,6 +17,7 @@ import { useForm } from 'react-hook-form';
 import contactData from '@/data/contact/contact.json';
 import { Name } from '../components/ui/input-field/type';
 import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
+import { Accordion } from '@/components/ui/accordion/accordion';
 
 type FormData = yup.InferType<typeof schema>;
 
@@ -60,6 +61,7 @@ const Home = () => {
   return (
     <main>
       <div className="container">
+      <Accordion />
         <Logo />
 
         <br />
@@ -151,6 +153,8 @@ const Home = () => {
           <h3>Title h3</h3>
           <p>MainText</p>
         </div>
+
+      
       </div>
     </main>
   );
