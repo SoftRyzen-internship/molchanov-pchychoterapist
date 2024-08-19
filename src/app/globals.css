@@ -2,20 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-}
-
 body {
   font-family: var(--font-montserrat), sans-serif, var(--font-geologica);
-  color: #294945;
+  @apply text-[16px] font-medium leading-[1.4] text-greenBodyText h-screen m-0
+    md:text-[20px] md:font-semibold;
 }
 
-@layer utilities {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  @apply m-0;
+}
+a {
+  @apply no-underline text-current;
+}
+ul {
+  @apply list-none p-0 m-0;
+}
+li {
+  @apply list-none;
+}
+img {
+  @apply block max-w-full h-auto;
+}
+
+h2 {
+  @apply font-geologica text-[32px] font-medium leading-[1] text-greenDarkText
+    md:text-[56px];
+}
+h3 {
+  @apply text-[16px] font-semibold leading-[1.4] text-greenDarkText
+    md:text-[20px];
+}
+
+/* @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
-
+} */
 .custom-button {
   @apply text-greenDarkText text-xl font-semibold tracking-[0.02em]  h-[56px] min-w-[190px]
     rounded-lg inline-block cursor-pointer transition-colors duration-300;
@@ -32,4 +60,22 @@ body {
 .custom-button:hover,
 .custom-button:focus {
   @apply bg-beige border-beige;
+}
+
+.link-underline-animation {
+  @apply relative inline-block overflow-hidden transition-colors duration-300;
+}
+
+.link-underline-animation::after {
+  content: '';
+  @apply absolute z-10 left-0 bottom-[1px] w-full h-[1px] bg-pinkLight transform -translate-x-full transition-transform duration-300;
+}
+
+.link-underline-animation:hover::after,
+.link-underline-animation:focus::after {
+  @apply translate-x-0;
+}
+.link-underline-animation:hover,
+.link-underline-animation:focus {
+  @apply text-pinkLight;
 }
