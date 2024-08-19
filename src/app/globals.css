@@ -62,6 +62,45 @@ h3 {
   @apply bg-beige border-beige;
 }
 
+.label {
+  @apply text-base font-medium leading-[1.4] text-greenBodyText mb-5 md:text-xl md:font-semibold;
+}
+
+.input {
+  @apply pb-2 border-b-[1.5px] border-grey text-base font-medium leading-[1.4] placeholder:text-base placeholder:font-medium placeholder:leading-[1.4] placeholder:text-grey focus:outline-none;
+}
+
+.checkbox-input {
+  @apply appearance-none absolute cursor-pointer top-[2px] left-0 h-4 w-4 border border-greenBodyText bg-transparent transition-all ease-in-out;
+}
+
+.checkmark {
+  @apply absolute;
+}
+
+.checkbox-input:checked + .checkmark::after {
+  @apply block;
+}
+
+.checkmark::after {
+  content: '';
+  display: none;
+  @apply absolute left-[6px] top-[4px] w-[4px] h-[8px] border border-t-0 border-l-0 border-blue rotate-45;
+}
+
+.checkbox-input:hover,
+.checkbox-input:focus {
+  @apply border-pinkLight;
+}
+
+.error {
+  @apply border-redError;
+}
+
+.error.error:checked {
+  @apply border-redError bg-transparent;
+}
+
 .link-underline-animation {
   @apply relative inline-block overflow-hidden transition-colors duration-300;
 }
