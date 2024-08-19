@@ -170,7 +170,7 @@ const Home = () => {
           <p>MainText</p>
         </div>
 
-        <ul className="pr-[76px] md:pr-0">
+        <ul className="flex flex-col gap-6 md:flex-row md:flex-wrap md:justify-between md:gap-x-0 md:gap-y-7 xl:gap-y-8 xl:w-[610px]">
           {aboutData.awards.map((award) => (
             <AwardItem key={award.id} item={award} />
           ))}
