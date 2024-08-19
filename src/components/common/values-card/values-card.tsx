@@ -11,14 +11,14 @@ export const ValuesCard = ({ id, name, title, text }: ValuesCardProps) => {
     >
       {name === 'heart' && (
         <HeartIcon
-          className="fill-greenDarkText h-7 w-7 md:h-16 md:w-16"
+          className="fill-greenDarkText h-7 w-7 md:h-20 md:w-20 md:p-2"
           width={28}
           height={28}
         />
       )}
       {name === 'medal' && (
         <MedalIcon
-          className="stroke-greenDarkText h-7 w-7 md:h-16 md:w-16 stroke-[3px] md:stroke-[1.5px]"
+          className="stroke-greenDarkText h-7 w-7 md:h-20 md:w-20 md:p-2 stroke-[3px] md:stroke-[1.5px]"
           width={28}
           height={28}
         />
@@ -32,8 +32,13 @@ export const ValuesCard = ({ id, name, title, text }: ValuesCardProps) => {
           height={28}
         />
       )}
-      <h4 className="mt-6 mb-4 xl:mt-9">{title}</h4>
-      <p className="">{text}</p>
+      <h3 className="mt-6 mb-4 xl:mt-9">{title}</h3>
+      <p
+        className="text-base
+font-medium leading-[1.4]"
+      >
+        {text}
+      </p>
     </li>
   );
 };

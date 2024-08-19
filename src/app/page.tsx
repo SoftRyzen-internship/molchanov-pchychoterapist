@@ -50,8 +50,8 @@ const Home = () => {
         <ul>
           <ValuesCard
             id={cardsValuesData.cards[0].id}
-            name={cardsValuesData.cards[2].name}
-            title={cardsValuesData.cards[2].title}
+            name={cardsValuesData.cards[0].name}
+            title={cardsValuesData.cards[0].title}
             text={cardsValuesData.cards[0].text}
           />
         </ul>
