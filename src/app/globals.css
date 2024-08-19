@@ -33,3 +33,21 @@ body {
 .custom-button:focus {
   @apply bg-beige border-beige;
 }
+
+.link-underline-animation {
+  @apply relative inline-block overflow-hidden transition-colors duration-300;
+}
+
+.link-underline-animation::after {
+  content: '';
+  @apply absolute z-10 left-0 bottom-[1px] w-full h-[1px] bg-pinkLight transform -translate-x-full transition-transform duration-300;
+}
+
+.link-underline-animation:hover::after,
+.link-underline-animation:focus::after {
+  @apply translate-x-0;
+}
+.link-underline-animation:hover,
+.link-underline-animation:focus {
+  @apply text-pinkLight;
+}
