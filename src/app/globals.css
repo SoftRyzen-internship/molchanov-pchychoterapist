@@ -57,7 +57,7 @@ body {
 .checkmark::after {
   content: '';
   display: none;
-  @apply absolute left-[5px] top-[3px] w-[5px] h-[10px] border border-t-0 border-l-0 border-blue rotate-45;
+  @apply absolute left-[6px] top-[4px] w-[4px] h-[8px] border border-t-0 border-l-0 border-blue rotate-45;
 }
 
 .checkbox-input:hover,
