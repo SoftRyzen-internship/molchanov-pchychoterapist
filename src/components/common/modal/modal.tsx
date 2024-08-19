@@ -33,11 +33,12 @@ export const Modal = ({
           <button
             onClick={() => setIsOpen(false)}
             className="flex ml-auto mb-6 rounded-lg focus:outline-blue focus:text-blue transition-all duration-300"
+            aria-label="button close modal"
           >
             <CloseIcon
               width={24}
               height={24}
-              className="stroke-current hover:stroke-blue transition-colors duration-300"
+              className="text-greenDarkText hover:text-blue transition-colors duration-300"
             />
           </button>
           {children}
