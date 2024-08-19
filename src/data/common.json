@@ -25,5 +25,25 @@
       "href": "contacts",
       "name": "Контакти"
     }
+  ],
+  "socials": [
+    {
+      "id": 1,
+      "name": "instagram",
+      "link": "https://www.instagram.com/sergey_molchanov_psychologist",
+      "areaLabel": "Посилання на Instagram"
+    },
+    {
+      "id": 2,
+      "name": "telegram",
+      "link": "https://t.me/MolchanovSM",
+      "areaLabel": "Посилання на Telegram"
+    },
+    {
+      "id": 3,
+      "name": "facebook",
+      "link": "https://www.facebook.com/Molchanov.Sergey92",
+      "areaLabel": "Посилання на Facebook"
+    }
   ]
 }
