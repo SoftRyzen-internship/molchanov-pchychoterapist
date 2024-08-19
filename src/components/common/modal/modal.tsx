@@ -1,42 +1,48 @@
-import {
-  Description,
-  Dialog,
-  DialogBackdrop,
-  DialogPanel,
-  DialogTitle,
-} from '@headlessui/react';
-import { useState } from 'react';
+import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react';
+import clsx from 'clsx';
 
-export const Modal = () => {
-  const [isOpen, setIsOpen] = useState(false);
+import { IModalProps } from './type';
 
+import CloseIcon from '@/../public/assets/images/icons/icon-close.svg';
+
+export const Modal = ({
+  children,
+  isOpen,
+  setIsOpen,
+  mobileMenu,
+}: IModalProps) => {
   return (
-    <>
-      <button onClick={() => setIsOpen(true)}>Open dialog</button>
-      <Dialog
-        open={isOpen}
-        onClose={() => setIsOpen(false)}
-        className="relative z-50"
+    <Dialog
+      open={isOpen}
+      onClose={() => setIsOpen(false)}
+      className="relative z-50"
+    >
+      <DialogBackdrop className="fixed inset-0 bg-black/50 backdrop-blur-md" />
+      <div
+        className={clsx(
+          'fixed inset-0 flex w-screen items-center justify-center',
+          mobileMenu && 'md:justify-end items-stretch'
+        )}
       >
-        <DialogBackdrop className="fixed inset-0 bg-black/50 backdrop-blur-md" />
-        <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
-          <DialogPanel className="max-w-lg bg-white p-5">
-            <button onClick={() => setIsOpen(false)}>Cancel</button>
-            <DialogTitle className="font-bold">Deactivate account</DialogTitle>
-            <Description>
-              This will permanently deactivate your account
-            </Description>
-            <p>
-              Are you sure you want to deactivate your account? All of your data
-              will be permanently removed.
-            </p>
-            <div className="flex gap-4">
-              <button onClick={() => setIsOpen(false)}>Cancel</button>
-              <button onClick={() => setIsOpen(false)}>Deactivate</button>
-            </div>
-          </DialogPanel>
-        </div>
-      </Dialog>
-    </>
+        <DialogPanel
+          className={clsx(
+            'bg-white p-6 rounded-lg',
+            mobileMenu && 'w-screen rounded-none px-8 pb-12 md:w-96'
+          )}
+        >
+          <button
+            onClick={() => setIsOpen(false)}
+            className="flex ml-auto mb-6 rounded-lg focus:outline-blue focus:text-blue transition-all duration-300"
+          >
+            <CloseIcon
+              width={24}
+              height={24}
+              className="stroke-current hover:stroke-blue transition-colors duration-300"
+            />
+          </button>
+          {children}
+        </DialogPanel>
+      </div>
+    </Dialog>
   );
 };

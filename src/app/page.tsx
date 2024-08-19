@@ -16,6 +16,7 @@ type Service = {
 
 const Home = () => {
   const [services, setServices] = useState<Service[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -63,9 +64,19 @@ const Home = () => {
             <ServiceCard key={service._key} title={service.title} />
           ))}
         </ul>
-      </div>
 
-      <Modal />
+        <div>
+          <button
+            onClick={() => setIsOpen(true)}
+            className="custom-button custom-button-border"
+          >
+            Відкрити модальне вікно
+          </button>
+          <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+            <div>Контент модального вікна</div>
+          </Modal>
+        </div>
+      </div>
     </main>
   );
 };
