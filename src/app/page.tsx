@@ -16,6 +16,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import contactData from '@/data/contact/contact.json';
 import { Name } from '../components/ui/input-field/type';
+import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
 
 type FormData = yup.InferType<typeof schema>;
 
@@ -86,6 +87,12 @@ const Home = () => {
           <Socials section="footer" />
         </div>
 
+        <NavMenu section="burger" />
+        <NavMenu section="header" />
+        <div className="bg-blue ">
+          <NavMenu section="footer" />
+        </div>
+
         <ul className="flex flex-col md:flex-row flex-wrap gap-8 md:gap-x-[94px] md:gap-y-[60px] xl:gap-x-[125px]">
           {services.map((service) => (
             <ServiceCard key={service._key} title={service.title} />
@@ -139,6 +146,11 @@ const Home = () => {
             {contactData.button}
           </button>
         </form>
+        <div>
+          <h2>Title h2</h2>
+          <h3>Title h3</h3>
+          <p>MainText</p>
+        </div>
       </div>
     </main>
   );
