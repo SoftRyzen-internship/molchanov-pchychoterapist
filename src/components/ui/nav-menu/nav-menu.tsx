@@ -6,7 +6,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { NavItem, NavMenuProps } from './types';
-const {navList} = nav;
+const { navList } = nav;
 
 export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
   const [isHomePage, setIsHomePage] = useState(false);
