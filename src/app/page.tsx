@@ -23,6 +23,10 @@ import { useForm } from 'react-hook-form';
 import contactData from '@/data/contact/contact.json';
 import { Name } from '../components/ui/input-field/type';
 import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
+import { AwardItem } from '@/components/common/award-item/award-item';
+import aboutData from '@/data/about.json';
+import therapyData from '@/data/therapy.json';
+import { TherapyItem } from '@/components/common/therapy-item/therapy-item';
 import { Modal } from '@/components/common/modal';
 
 type FormData = yup.InferType<typeof schema>;
@@ -169,6 +173,18 @@ const Home = () => {
           <h3>Title h3</h3>
           <p>MainText</p>
         </div>
+
+        <ul className="flex flex-col gap-6 md:flex-row md:flex-wrap md:justify-between md:gap-x-0 md:gap-y-7 xl:gap-y-8 xl:w-[610px]">
+          {aboutData.awards.map((award) => (
+            <AwardItem key={award.id} item={award} />
+          ))}
+        </ul>
+
+        <ul className="pr-[25px] md:pr-0 xl:flex xl:flex-row justify-between">
+          {therapyData.therapySteps.map((item) => (
+            <TherapyItem key={item.id} item={item} />
+          ))}
+        </ul>
 
         <div>
           <button
