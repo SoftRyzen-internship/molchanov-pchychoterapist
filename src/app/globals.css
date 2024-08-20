@@ -127,5 +127,3 @@ h3 {
 .group:focus .link-underline-animation {
   @apply text-pinkLight;
 }
-
-

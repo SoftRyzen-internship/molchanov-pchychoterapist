@@ -28,7 +28,7 @@ import aboutData from '@/data/about.json';
 import therapyData from '@/data/therapy.json';
 import { TherapyItem } from '@/components/common/therapy-item/therapy-item';
 import { Modal } from '@/components/common/modal';
-import {Slider} from '@/components/common/slider/slider';
+import { Slider } from '@/components/common/slider/slider';
 
 type FormData = yup.InferType<typeof schema>;
 
@@ -73,12 +73,11 @@ const Home = () => {
   return (
     <main>
       <div className="container">
-
-       <Slider>
+        <Slider>
           {therapyData.therapySteps.map((item) => (
             <TherapyItem key={item.id} item={item} />
           ))}
-        </Slider> 
+        </Slider>
 
         <Logo />
 
