@@ -18,7 +18,7 @@ const FormFeedbackMessage = ({ status }: FormFeedbackMessageProps) => {
   const titleColor = status === 'success' ? 'text-blueDark' : 'text-redError';
 
   return (
-    <div className="flex flex-col gap-4 md:gap-6 items-center">
+    <div className="flex flex-col gap-4 md:gap-6 items-center pb-10">
       {status === 'success' ? (
         <SuccessImage
           className="w-[175px] h-[238px] md:w-[208px] md:h-[283px] xl:w-[202px] xl:h-[273px]"
