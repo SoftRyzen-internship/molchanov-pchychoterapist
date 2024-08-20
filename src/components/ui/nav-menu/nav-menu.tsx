@@ -1,16 +1,28 @@
 'use client';
 
 import nav from '@/data/common.json';
-import React from 'react';
-import { Link } from 'react-scroll';
+import React, { useEffect, useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import Link from 'next/link';
 import clsx from 'clsx';
 import { NavItem, NavMenuProps } from './types';
-// import { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 // const {navList} = nav;
 
 export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
-  // const router = useRouter();
-  // const isHomePage = router.pathname === '/';
+  // const [isClient, setIsClient] = useState(false);
+  // // const router = useRouter();
+  // useEffect(() => {
+  //   setIsClient(true);
+  // }, []);
+
+  // if (!isClient) {
+  //   return null;
+  // }
+
+  // const { pathname } = require('next/router').useRouter();
+  
+  // const isHomePage = pathname === '/';
 
   let ulClassName = '';
   let linkClassName = '';
@@ -39,7 +51,8 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
     <ul className={ulClassName}>
       {nav.navList.map((i: NavItem) => (
         <li key={i.id}>
-          <Link
+          {"isHomePage" ? (
+          <ScrollLink
             className={clsx(
               linkClassName,
               'link-underline-animation',
@@ -55,7 +68,21 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
             tabIndex={0}
           >
             {i.name}
+          </ScrollLink>
+          ) : (
+            <Link
+            href={`/#${i.href}`}
+            className={clsx(
+              linkClassName,
+              'link-underline-animation',
+              'cursor-pointer '
+            )}
+            onClick={toggleModal}
+            tabIndex={0}
+          >
+            {i.name}
           </Link>
+        )}
         </li>
       ))}
     </ul>
