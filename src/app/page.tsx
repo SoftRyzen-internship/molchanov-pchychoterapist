@@ -13,7 +13,7 @@ import { InputField } from '@/components/ui/input-field';
 
 import { Socials } from '@/components/ui/socials/socials';
 import { useEffect, useState } from 'react';
-import { getServices } from '@/../sanity/api';
+import { getPolitics, getServices } from '@/../sanity/api';
 import { ServiceCard } from '@/components/common/service-card/service-card';
 import { TextareaField } from '@/components/ui/textarea-field';
 import { schema } from '@/utils';
@@ -53,6 +53,7 @@ const Home = () => {
   };
 
   const [services, setServices] = useState<Service[]>([]);
+  const [politics, setPolitics] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -61,9 +62,17 @@ const Home = () => {
     }
 
     fetchData();
+
+    async function fetchDataPolitics() {
+      const data = await getPolitics();
+      setPolitics(data);
+    }
+
+    fetchDataPolitics();
   }, []);
 
   console.log('services:', services);
+  console.log('politics:', politics);
 
   return (
     <main>

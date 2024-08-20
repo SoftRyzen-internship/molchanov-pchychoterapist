@@ -4,16 +4,13 @@ export const faq = {
   name: 'faq',
   title: 'Часті запитання',
   type: 'document',
-  validation: (rule: Rule) =>
-    rule.custom((fields: { title: string }) => {
-      if (fields.title.length <= 1) return 'Максимальна кількість списків 1';
-      return true;
-    }),
   fields: [
     {
       name: 'title',
-      title: 'Список',
+      title: 'Заголовок',
       type: 'string',
+      validation: (rule: Rule) =>
+        rule.required().error('Це поле обов`язкове для заповнення'),
     },
     {
       name: 'faqList',
@@ -28,7 +25,7 @@ export const faq = {
               type: 'string',
               title: 'Питання',
               validation: (rule: Rule) => [
-                rule.required().error('Це поле обовязкове для заповнення'),
+                rule.required().error('Це поле обов`язкове для заповнення'),
                 rule.min(3).error('Мінімальна кількість символів 3'),
                 rule.max(130).error('Максимальна кількість символів 130'),
               ],
@@ -38,7 +35,7 @@ export const faq = {
               type: 'string',
               title: 'Відповідь',
               validation: (rule: Rule) => [
-                rule.required().error('Це поле обовязкове для заповнення'),
+                rule.required().error('Це поле обов`язкове для заповнення'),
                 rule.min(3).error('Мінімальна кількість символів 3'),
                 rule.max(250).error('Максимальна кількість символів 250'),
               ],
