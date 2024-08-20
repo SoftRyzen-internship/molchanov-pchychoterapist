@@ -7,9 +7,7 @@ import { SocialItemProps } from './types';
 import clsx from 'clsx';
 
 export const SocialItem = ({
-  name,
-  link,
-  areaLabel,
+  item: { name, link, ariaLabel },
   iconsColors,
 }: SocialItemProps) => {
   return (
@@ -18,7 +16,7 @@ export const SocialItem = ({
         href={link}
         target="_blank"
         rel="noopener noreferrer nofollow"
-        aria-label={areaLabel}
+        aria-label={ariaLabel}
         className={clsx(iconsColors, 'transition-colors duration-300')}
       >
         {name === 'telegram' && (

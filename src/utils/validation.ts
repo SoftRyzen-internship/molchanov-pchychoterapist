@@ -1,7 +1,7 @@
 import * as yup from 'yup';
-import { validation } from '../data/contact/contact.json';
+import contactData from '../data/contact/contact.json';
 
-const { username, phone, comment, checked } = validation;
+const { username, phone, comment, checked } = contactData.validation;
 
 export const schema = yup.object().shape({
   username: yup

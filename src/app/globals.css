@@ -45,7 +45,7 @@ h3 {
   }
 } */
 .custom-button {
-  @apply text-greenDarkText text-xl font-semibold tracking-[0.02em]  h-[56px] min-w-[190px]
+  @apply text-greenDarkText text-xl font-semibold tracking-[0.02em] h-[56px] min-w-[190px] px-[31px]
     rounded-lg inline-block cursor-pointer transition-colors duration-300;
 }
 
@@ -116,5 +116,14 @@ h3 {
 }
 .link-underline-animation:hover,
 .link-underline-animation:focus {
+  @apply text-pinkLight;
+}
+.group:hover .link-underline-animation::after,
+.group:focus .link-underline-animation::after {
+  @apply translate-x-0;
+}
+
+.group:hover .link-underline-animation,
+.group:focus .link-underline-animation {
   @apply text-pinkLight;
 }
