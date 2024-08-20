@@ -48,15 +48,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - #### component Button
 
-| Prop       | Type     | Default   | Description                                                                    |
-| ---------- | -------- | --------- | ------------------------------------------------------------------------------ |
-| `type`     | string   | 'button'  | optional, sets the button type.                                                |
-| `onClick`  | function | --        | required,function that will be called on click; scrolls to a specific section. |
-| `children` | ReactNode| --        | required, button content, can be text or element.                              |
+| Prop       | Type      | Default  | Description                                                                    |
+| ---------- | --------- | -------- | ------------------------------------------------------------------------------ |
+| `type`     | string    | 'button' | optional, sets the button type.                                                |
+| `onClick`  | function  | --       | required,function that will be called on click; scrolls to a specific section. |
+| `children` | ReactNode | --       | required, button content, can be text or element.                              |
 
 - #### component NavMenu
 
-| Prop         | Type      | Default | Description                                                                                           |
-| ------------ | --------- | ------- | ----------------------------------------------------------------------------------------------------- |
-| `section`    | string    | --      | optional, defines a color scheme depending on the section (for example,'footer', 'burger', 'header'). |
-| `toggleModal`| function  | --      | optional, function to control the opening/closing of a modal window.                                  |
+| Prop          | Type     | Default | Description                                                                                           |
+| ------------- | -------- | ------- | ----------------------------------------------------------------------------------------------------- |
+| `section`     | string   | --      | optional, defines a color scheme depending on the section (for example,'footer', 'burger', 'header'). |
+| `toggleModal` | function | --      | optional, function to control the opening/closing of a modal window.                                  |
