@@ -6,23 +6,16 @@ import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { NavItem, NavMenuProps } from './types';
-import { useRouter } from 'next/router';
-// const {navList} = nav;
+const {navList} = nav;
 
 export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
-  // const [isClient, setIsClient] = useState(false);
-  // // const router = useRouter();
-  // useEffect(() => {
-  //   setIsClient(true);
-  // }, []);
+  const [isHomePage, setIsHomePage] = useState(false);
 
-  // if (!isClient) {
-  //   return null;
-  // }
-
-  // const { pathname } = require('next/router').useRouter();
-
-  // const isHomePage = pathname === '/';
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsHomePage(window.location.pathname === '/');
+    }
+  }, []);
 
   let ulClassName = '';
   let linkClassName = '';
@@ -49,9 +42,9 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
 
   return (
     <ul className={ulClassName}>
-      {nav.navList.map((i: NavItem) => (
+      {navList.map((i: NavItem) => (
         <li key={i.id}>
-          {'isHomePage' ? (
+          {isHomePage ? (
             <ScrollLink
               className={clsx(
                 linkClassName,
