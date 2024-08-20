@@ -21,7 +21,7 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
   // }
 
   // const { pathname } = require('next/router').useRouter();
-  
+
   // const isHomePage = pathname === '/';
 
   let ulClassName = '';
@@ -51,38 +51,38 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
     <ul className={ulClassName}>
       {nav.navList.map((i: NavItem) => (
         <li key={i.id}>
-          {"isHomePage" ? (
-          <ScrollLink
-            className={clsx(
-              linkClassName,
-              'link-underline-animation',
-              'cursor-pointer '
-            )}
-            activeClass="active"
-            to={i.href}
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-            onClick={toggleModal}
-            tabIndex={0}
-          >
-            {i.name}
-          </ScrollLink>
+          {'isHomePage' ? (
+            <ScrollLink
+              className={clsx(
+                linkClassName,
+                'link-underline-animation',
+                'cursor-pointer '
+              )}
+              activeClass="active"
+              to={i.href}
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              onClick={toggleModal}
+              tabIndex={0}
+            >
+              {i.name}
+            </ScrollLink>
           ) : (
             <Link
-            href={`/#${i.href}`}
-            className={clsx(
-              linkClassName,
-              'link-underline-animation',
-              'cursor-pointer '
-            )}
-            onClick={toggleModal}
-            tabIndex={0}
-          >
-            {i.name}
-          </Link>
-        )}
+              href={`/#${i.href}`}
+              className={clsx(
+                linkClassName,
+                'link-underline-animation',
+                'cursor-pointer '
+              )}
+              onClick={toggleModal}
+              tabIndex={0}
+            >
+              {i.name}
+            </Link>
+          )}
         </li>
       ))}
     </ul>
