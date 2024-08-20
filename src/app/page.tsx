@@ -25,8 +25,14 @@ import { Name } from '../components/ui/input-field/type';
 import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
 import { AwardItem } from '@/components/common/award-item/award-item';
 import aboutData from '@/data/about.json';
+
 import reviews from '@/data/reviews.json';
 import { ReviewCard } from '@/components/common/review-card/review-card';
+
+import therapyData from '@/data/therapy.json';
+import { TherapyItem } from '@/components/common/therapy-item/therapy-item';
+import { Modal } from '@/components/common/modal';
+
 type FormData = yup.InferType<typeof schema>;
 
 type Service = {
@@ -54,6 +60,7 @@ const Home = () => {
   };
 
   const [services, setServices] = useState<Service[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -184,6 +191,24 @@ const Home = () => {
             <AwardItem key={award.id} item={award} />
           ))}
         </ul>
+
+        <ul className="pr-[25px] md:pr-0 xl:flex xl:flex-row justify-between">
+          {therapyData.therapySteps.map((item) => (
+            <TherapyItem key={item.id} item={item} />
+          ))}
+        </ul>
+
+        <div>
+          <button
+            onClick={() => setIsOpen(true)}
+            className="custom-button custom-button-border"
+          >
+            Відкрити модальне вікно
+          </button>
+          <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+            <div>Контент модального вікна</div>
+          </Modal>
+        </div>
       </div>
     </main>
   );
