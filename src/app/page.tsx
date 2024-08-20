@@ -107,11 +107,11 @@ const Home = () => {
             text={cardsValuesData.cards[0].text}
           />
         </ul>
-        <NavMenu section="burger" />
+        {/* <NavMenu section="burger" />
         <NavMenu section="header" />
         <div className="bg-blue ">
           <NavMenu section="footer" />
-        </div>
+        </div> */}
 
         <ul className="flex flex-col md:flex-row flex-wrap gap-8 md:gap-x-[94px] md:gap-y-[60px] xl:gap-x-[125px]">
           {services.map((service) => (
