@@ -27,6 +27,7 @@ import { AwardItem } from '@/components/common/award-item/award-item';
 import aboutData from '@/data/about.json';
 import therapyData from '@/data/therapy.json';
 import { TherapyItem } from '@/components/common/therapy-item/therapy-item';
+import { Modal } from '@/components/common/modal';
 
 type FormData = yup.InferType<typeof schema>;
 
@@ -55,6 +56,7 @@ const Home = () => {
   };
 
   const [services, setServices] = useState<Service[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -183,6 +185,18 @@ const Home = () => {
             <TherapyItem key={item.id} item={item} />
           ))}
         </ul>
+
+        <div>
+          <button
+            onClick={() => setIsOpen(true)}
+            className="custom-button custom-button-border"
+          >
+            Відкрити модальне вікно
+          </button>
+          <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+            <div>Контент модального вікна</div>
+          </Modal>
+        </div>
       </div>
     </main>
   );
