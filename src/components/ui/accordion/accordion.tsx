@@ -35,8 +35,12 @@ export const Accordion: React.FC = () => {
           key={faq.id}
           as="li"
           className={clsx('border-b border-greenDarkText ', {
-            'py-4': !activeDisclosurePanel?.open || activeDisclosurePanel.key !== index,
-            'pt-4': activeDisclosurePanel?.open && activeDisclosurePanel.key === index,
+            'py-4':
+              !activeDisclosurePanel?.open ||
+              activeDisclosurePanel.key !== index,
+            'pt-4':
+              activeDisclosurePanel?.open &&
+              activeDisclosurePanel.key === index,
             'md:border-b-0': faqs.accordion.length - 1 === index,
           })}
         >
