@@ -25,7 +25,8 @@ import { Name } from '../components/ui/input-field/type';
 import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
 import { AwardItem } from '@/components/common/award-item/award-item';
 import aboutData from '@/data/about.json';
-
+import reviews from '@/data/reviews.json';
+import { ReviewCard } from '@/components/common/review-card/review-card';
 type FormData = yup.InferType<typeof schema>;
 
 type Service = {
@@ -116,7 +117,15 @@ const Home = () => {
             <ServiceCard key={service._key} title={service.title} />
           ))}
         </ul>
-
+        <ul>
+          {reviews.reviews.map((review) => (
+            <ReviewCard
+              key={review.id}
+              author={review.author}
+              text={review.text}
+            />
+          ))}
+        </ul>
         <form
           onSubmit={handleSubmit(onSubmit)}
           autoComplete="on"
