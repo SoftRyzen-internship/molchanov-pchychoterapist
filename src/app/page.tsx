@@ -32,6 +32,7 @@ import { ReviewCard } from '@/components/common/review-card/review-card';
 import therapyData from '@/data/therapy.json';
 import { TherapyItem } from '@/components/common/therapy-item/therapy-item';
 import { Modal } from '@/components/common/modal';
+import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
 
 type FormData = yup.InferType<typeof schema>;
 
@@ -61,6 +62,7 @@ const Home = () => {
 
   const [services, setServices] = useState<Service[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [status, setStatus] = useState<'success' | 'failed'>('success');
 
   useEffect(() => {
     async function fetchData() {
@@ -208,6 +210,47 @@ const Home = () => {
           <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
             <div>Контент модального вікна</div>
           </Modal>
+        </div>
+
+        <div className="py-10">
+          <h2 className="h2 mb-10">Оберіть, як відправилась форма</h2>
+
+          <div className="mb-10">
+            <label className="mr-2">
+              <input
+                type="radio"
+                name="status"
+                value="success"
+                checked={status === 'success'}
+                onChange={() => setStatus('success')}
+                className="mr-1"
+              />
+              Success
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="status"
+                value="failed"
+                checked={status === 'failed'}
+                onChange={() => setStatus('failed')}
+                className="mr-1"
+              />
+              Failed
+            </label>
+          </div>
+
+          <div>
+            <button
+              onClick={() => setIsOpen(true)}
+              className="custom-button custom-button-no-border"
+            >
+              Показати повідомлення
+            </button>
+            <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+              <FormFeedbackMessage status={status} />
+            </Modal>
+          </div>
         </div>
       </div>
     </main>
