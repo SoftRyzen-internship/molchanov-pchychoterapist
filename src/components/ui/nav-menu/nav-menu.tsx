@@ -1,23 +1,33 @@
 'use client';
 
-import navList from '@/data/common.json';
-import React from 'react';
-import { Link } from 'react-scroll';
+import nav from '@/data/common.json';
+import React, { useEffect, useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import Link from 'next/link';
 import clsx from 'clsx';
 import { NavItem, NavMenuProps } from './types';
+const { navList } = nav;
 
 export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
+  const [isHomePage, setIsHomePage] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsHomePage(window.location.pathname === '/');
+    }
+  }, []);
+
   let ulClassName = '';
   let linkClassName = '';
 
   switch (section) {
     case 'footer':
       ulClassName =
-        'flex flex-col gap-y-[16px] md:flex-row md:gap-y-[0px] md:flex md:items-center  md:gap-x-[30px]';
+        'flex flex-col smOnly:gap-y-4 md:flex-row md:flex md:items-center md:gap-x-[30px]';
       linkClassName = 'text-[14px] text-white';
       break;
     case 'burger':
-      ulClassName = 'flex flex-col gap-y-[32px] xl:hidden';
+      ulClassName = 'flex flex-col gap-y-8 xl:hidden';
       linkClassName = 'text-[16px] text-greenDarkText';
       break;
     case 'header':
@@ -25,32 +35,47 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
       linkClassName = 'text-[16px] text-greenDarkText';
       break;
     default:
-      ulClassName = 'flex flex-col gap-y-[32px] xl:hidden';
+      ulClassName = 'flex flex-col gap-y-8 xl:hidden';
       linkClassName = 'text-[16px] text-greenDarkText';
       break;
   }
 
   return (
     <ul className={ulClassName}>
-      {navList.navList.map((i: NavItem) => (
+      {navList.map((i: NavItem) => (
         <li key={i.id}>
-          <Link
-            className={clsx(
-              linkClassName,
-              'link-underline-animation',
-              'cursor-pointer font-medium leading-[1.4] '
-            )}
-            activeClass="active"
-            to={i.href}
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-            onClick={toggleModal}
-            tabIndex={0}
-          >
-            {i.name}
-          </Link>
+          {isHomePage ? (
+            <ScrollLink
+              className={clsx(
+                linkClassName,
+                'link-underline-animation',
+                'cursor-pointer '
+              )}
+              activeClass="active"
+              to={i.href}
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              onClick={toggleModal}
+              tabIndex={0}
+            >
+              {i.name}
+            </ScrollLink>
+          ) : (
+            <Link
+              href={`/#${i.href}`}
+              className={clsx(
+                linkClassName,
+                'link-underline-animation',
+                'cursor-pointer '
+              )}
+              onClick={toggleModal}
+              tabIndex={0}
+            >
+              {i.name}
+            </Link>
+          )}
         </li>
       ))}
     </ul>

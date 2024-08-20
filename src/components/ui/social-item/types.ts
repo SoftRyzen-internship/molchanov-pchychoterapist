@@ -1,6 +1,8 @@
 export type SocialItemProps = {
-  name: string;
-  link: string;
-  areaLabel: string;
+  item: {
+    name: string;
+    link: string;
+    ariaLabel: string;
+  };
   iconsColors: string;
 };

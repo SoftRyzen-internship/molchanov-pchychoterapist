@@ -1,4 +1,7 @@
 {
+  "logo": {
+    "name": "Molchanov"
+  },
   "navList": [
     {
       "id": 1,
@@ -25,5 +28,37 @@
       "href": "contacts",
       "name": "Контакти"
     }
-  ]
+  ],
+  "socials": [
+    {
+      "id": 1,
+      "name": "instagram",
+      "link": "https://www.instagram.com/sergey_molchanov_psychologist",
+      "ariaLabel": "Посилання на Instagram"
+    },
+    {
+      "id": 2,
+      "name": "telegram",
+      "link": "https://t.me/MolchanovSM",
+      "ariaLabel": "Посилання на Telegram"
+    },
+    {
+      "id": 3,
+      "name": "facebook",
+      "link": "https://www.facebook.com/Molchanov.Sergey92",
+      "ariaLabel": "Посилання на Facebook"
+    }
+  ],
+  "feedbackMessages": {
+    "success": {
+      "id": 1,
+      "title": "Дякую за вашу заявку!",
+      "message": "Ваші дані були успішно відправлені. Ми зв'яжемось з вами найближчим часом."
+    },
+    "failed": {
+      "id": 2,
+      "title": "Щось пішло не так...",
+      "message": "Bаші данні не були відправлені. Спробуйте пізніше."
+    }
+  }
 }
