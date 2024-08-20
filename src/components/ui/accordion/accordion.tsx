@@ -42,7 +42,7 @@ export const Accordion: React.FC = () => {
                   )}
                 />
               </DisclosureButton>
-              {openIndex === index  && (
+              {openIndex === index && (
                 <DisclosurePanel className="text-[14px] font-light my-3 md:text-[16px] md:font-medium">
                   {faq.answers}
                 </DisclosurePanel>
