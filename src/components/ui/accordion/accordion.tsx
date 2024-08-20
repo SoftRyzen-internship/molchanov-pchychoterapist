@@ -5,7 +5,7 @@ import {
 } from '@headlessui/react';
 import Arrow from '@/../public/assets/images/icons/down-arrow.svg';
 import { useState } from 'react';
-import faqs from '@/data/FAQ/FAQ.json';
+import faqs from '@/data/faq.json';
 import clsx from 'clsx';
 
 export const Accordion: React.FC = () => {
