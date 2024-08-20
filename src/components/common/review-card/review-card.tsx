@@ -29,16 +29,14 @@ export const ReviewCard = ({ author, text }: ReviewCardProps) => {
       >
         {reviews.button}
       </button>
-      {modalIsOpen && (
-        <Modal isOpen={modalIsOpen} setIsOpen={setModalIsOpen}>
-          <div className="flex flex-col gap-8 md:gap-[60px] mb-5 md:mb-8 xl:w-[941px] xl:mx-auto">
-            <p className="text-base font-semibold md:text-xl xl:w-[836px]">
-              {text}
-            </p>
-            <p className="text-blueDark md:text-base">{author}</p>
-          </div>
-        </Modal>
-      )}
+      <Modal isOpen={modalIsOpen} setIsOpen={setModalIsOpen}>
+        <div className="flex flex-col gap-8 md:gap-[60px] mb-5 md:mb-8 xl:w-[941px] xl:mx-auto">
+          <p className="text-base font-semibold md:text-xl xl:w-[836px]">
+            {text}
+          </p>
+          <p className="text-blueDark md:text-base">{author}</p>
+        </div>
+      </Modal>
     </li>
   );
 };
