@@ -38,10 +38,11 @@ export const InputField = ({
           className={clsx('input', errors[name] && 'text-redError')}
         />
       )}
-
-      <p className="absolute top-full left-0 text-sm font-medium text-redError">
-        {errors[name]?.message}
-      </p>
+      {errors[name] && (
+        <p className="absolute top-full left-0 text-sm font-medium text-redError">
+          {errors[name]?.message}
+        </p>
+      )}
     </div>
   );
 };
