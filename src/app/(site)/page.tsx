@@ -28,6 +28,7 @@ import { PortableText } from '@portabletext/react';
 
 import { ContactForm } from '@/components/common/contact-form';
 import { Services } from '@/sections/services/services';
+import { About } from '@/sections/about/about';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,6 +50,7 @@ const Home = () => {
     <main>
       <Services />
       <TargetAudience />
+      <About />
       <div className="container">
         <Accordion />
         <Logo />
@@ -101,12 +103,6 @@ const Home = () => {
           <h3>Title h3</h3>
           <p>MainText</p>
         </div>
-
-        <ul className="flex flex-col gap-6 md:flex-row md:flex-wrap md:justify-between md:gap-x-0 md:gap-y-7 xl:gap-y-8 xl:w-[610px]">
-          {aboutData.awards.map((award) => (
-            <AwardItem key={award.id} item={award} />
-          ))}
-        </ul>
 
         <ul className="pr-[25px] md:pr-0 xl:flex xl:flex-row justify-between">
           {therapyData.therapySteps.map((item) => (
