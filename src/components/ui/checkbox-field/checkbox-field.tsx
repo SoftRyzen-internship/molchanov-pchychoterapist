@@ -24,9 +24,9 @@ export const CheckboxField = ({
       </div>
       <label
         htmlFor={id}
-        className="flex flex-col pl-7 text-sm font-medium leading-[1.4] text-greenBodyText"
+        className="block pl-7 text-sm font-medium leading-[1.4] text-greenBodyText"
       >
-        {label}{' '}
+        {label}
         <Link
           href="/politics"
           className="text-blue hover:underline focus:underline focus:outline-none"

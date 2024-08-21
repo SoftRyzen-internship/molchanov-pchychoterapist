@@ -13,7 +13,7 @@ export const InputField = ({
   autoComplete,
 }: IFormFieldProps) => {
   return (
-    <div className="flex flex-col relative">
+    <div className="flex flex-col relative flex-1">
       <label htmlFor={id} className="label">
         {label}
       </label>

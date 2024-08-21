@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import contactData from '@/data/contact/contact.json';
+import contactData from '@/data/contact.json';
 
 export const Contact = () => {
   const { title, image } = contactData;
