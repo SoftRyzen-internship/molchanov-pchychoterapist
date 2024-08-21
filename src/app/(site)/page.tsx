@@ -1,11 +1,8 @@
 'use client';
 
-import { UtilityCard } from '@/components/common/utility-card/utility-card';
-
 import { ValuesCard } from '@/components/common/values-card/values-card';
 import cardsValuesData from '@/data/values.json';
 
-import cardData from '@/data/target-audience.json';
 import { Logo } from '@/components/ui/logo/logo';
 
 import { Socials } from '@/components/ui/socials/socials';

@@ -3,33 +3,25 @@
   "cards": [
     {
       "id": "1",
-      "urlMobile": "/assets/images/webp/target-audience/mobile/property-1.webp",
-      "urlTablet": "/assets/images/webp/target-audience/tablet/property-1.webp",
-      "urlDesktop": "/assets/images/webp/target-audience/desktop/property-1.webp",
+      "name": "property-1",
       "text": "Пари, які хочуть покращити відносини, шукають поради та стратегії.",
       "alt": "Пара стоїть поряд, жінка обіймає себе."
     },
     {
       "id": "2",
-      "urlMobile": "/assets/images/webp/target-audience/mobile/property-2.webp",
-      "urlTablet": "/assets/images/webp/target-audience/tablet/property-2.webp",
-      "urlDesktop": "/assets/images/webp/target-audience/desktop/property-2.webp",
+      "name": "property-2",
       "text": "Ті, хто має кризові ситуації, як депресія, тривожність, розлади їжі та інші.",
       "alt": " Чоловік з думками у вигляди заплутаних ниток"
     },
     {
       "id": "3",
-      "urlMobile": "/assets/images/webp/target-audience/mobile/property-3.webp",
-      "urlTablet": "/assets/images/webp/target-audience/tablet/property-3.webp",
-      "urlDesktop": "/assets/images/webp/target-audience/desktop/property-3.webp",
+      "name": "property-3",
       "text": "Підлітки та дорослі з особливостями (аутизм, розумова відсталість).",
       "alt": "Жінка сидить на лавці, розкривши руки, поряд стоїть чашка "
     },
     {
       "id": "4",
-      "urlMobile": "/assets/images/webp/target-audience/mobile/property-4.webp",
-      "urlTablet": "/assets/images/webp/target-audience/tablet/property-4.webp",
-      "urlDesktop": "/assets/images/webp/target-audience/desktop/property-4.webp",
+      "name": "property-4",
       "text": "Ті, хто бажають розвинути вміння спілкування з іншими. ",
       "alt": " Жінка сидить на підлозі, обійнявши коліна, сумує та міркує"
     }

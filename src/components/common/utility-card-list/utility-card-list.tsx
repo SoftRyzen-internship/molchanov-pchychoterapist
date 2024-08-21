@@ -8,9 +8,7 @@ export const UtilityCardList = () => {
       {content.cards.map((card) => (
         <UtilityCard
           key={card.id}
-          urlMobile={card.urlMobile}
-          urlTablet={card.urlTablet}
-          urlDesktop={card.urlDesktop}
+          name={card.name}
           text={card.text}
           alt={card.alt}
         />
