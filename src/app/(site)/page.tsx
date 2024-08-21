@@ -67,7 +67,6 @@ const Home = () => {
       <TargetAudience />
       <FAQ />
       <div className="container">
-        
         <Logo />
 
         <br />
