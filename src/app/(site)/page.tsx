@@ -14,7 +14,6 @@ import { getPolitics, getServices } from '@/../sanity/api';
 import { ServiceCard } from '@/components/common/service-card/service-card';
 
 import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
-import { Accordion } from '@/components/common/accordion/accordion';
 import { AwardItem } from '@/components/common/award-item/award-item';
 import aboutData from '@/data/about.json';
 
@@ -31,6 +30,7 @@ import { TargetAudience } from '@/sections/target-audience/target-audience';
 import { PortableText } from '@portabletext/react';
 
 import { ContactForm } from '@/components/common/contact-form';
+import { FAQ } from '@/sections/faq/faq';
 
 type Service = {
   _key: string;
@@ -65,8 +65,9 @@ const Home = () => {
   return (
     <main>
       <TargetAudience />
+      <FAQ />
       <div className="container">
-        <Accordion />
+        
         <Logo />
 
         <br />
