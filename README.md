@@ -70,3 +70,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 | `children`  | ReactNode | --      | required, the content to be displayed inside the modal.  |
 | `isOpen`    | boolean   | --      | required, controls whether the modal is open or closed.  |
 | `setIsOpen` | function  | --      | required, function to set the modal's open/closed state. |
+
+- #### component Slider
+
+| Prop            | Type      | Default               | Description                                                                     |
+| --------------- | --------- | --------------------- | ------------------------------------------------------------------------------- |
+| `children`      | ReactNode | --                    | required, elements that will be displayed in the slider as slides.              |
+| `slidesPerView` | number    | '1'                   | optional, the number of slides visible at the same time.                        |
+| `autoplay`      | object    | '{ delay: 3000 }'     | optional, configuration of autoplay of slides.                                  |
+| `grabCursor`    | boolean   | 'true'                | optional, allows the user to drag and drop slides with the mouse.               |
+| `pagination`    | object    | '{ clickable: true }' | optional, configuration for pagination points, points are clickable by default. |
+| `initialSlide`  | number    | '0'                   | optional, starting slide index.                                                 |
+| `onSlideChange` | function  | --                    | optional, a function that is called when the active slide changes.              |
