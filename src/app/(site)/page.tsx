@@ -31,6 +31,7 @@ import { TargetAudience } from '@/sections/target-audience/target-audience';
 import { PortableText } from '@portabletext/react';
 
 import { ContactForm } from '@/components/common/contact-form';
+import { Values } from '@/sections/values/values';
 
 type Service = {
   _key: string;
@@ -65,7 +66,9 @@ const Home = () => {
   return (
     <main>
       <TargetAudience />
+      <Values />
       <div className="container">
+        
         <Accordion />
         <Logo />
 
