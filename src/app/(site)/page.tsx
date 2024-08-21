@@ -1,10 +1,7 @@
 'use client';
 
-
-
 import { ValuesCard } from '@/components/common/values-card/values-card';
 import cardsValuesData from '@/data/values.json';
-
 
 import { Logo } from '@/components/ui/logo/logo';
 
