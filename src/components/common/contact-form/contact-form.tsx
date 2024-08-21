@@ -13,7 +13,7 @@ import { FormData, Status } from './type';
 
 import { schema } from '@/utils';
 
-import contactData from '@/data/contact/contact.json';
+import contactData from '@/data/contact.json';
 import { Modal } from '../../ui/modal';
 import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
 
