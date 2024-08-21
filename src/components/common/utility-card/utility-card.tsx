@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { UtilityCardProps } from './types';
 
 export const UtilityCard = ({
-  id,
   urlMobile,
   urlTablet,
   urlDesktop,
@@ -10,10 +9,7 @@ export const UtilityCard = ({
   alt,
 }: UtilityCardProps) => {
   return (
-    <li
-      key={id}
-      className="bg-pinkSupperLight p-4 overflow-hidden rounded-lg flex gap-2  md:p-0 md:gap-5 items-center h-48 md:h-[330px]  xl:h-[362px] xl:w-[610px]"
-    >
+    <li className="bg-pinkSupperLight p-4 overflow-hidden rounded-lg flex gap-2  md:p-0 md:gap-5 items-center h-48 md:h-[330px]  xl:h-[362px] xl:w-[610px]">
       <Image
         src={urlMobile}
         alt={alt}

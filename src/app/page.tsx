@@ -33,6 +33,7 @@ import therapyData from '@/data/therapy.json';
 import { TherapyItem } from '@/components/common/therapy-item/therapy-item';
 import { Modal } from '@/components/common/modal';
 import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
+import { TargetAudience } from '@/sections/target-audience/target-audience';
 
 type FormData = yup.InferType<typeof schema>;
 
@@ -77,20 +78,11 @@ const Home = () => {
 
   return (
     <main>
+      <TargetAudience />
       <div className="container">
         <Logo />
 
         <br />
-        <ul>
-          <UtilityCard
-            id={cardData.cards[2].id}
-            urlMobile={cardData.cards[2].urlMobile}
-            urlTablet={cardData.cards[2].urlTablet}
-            urlDesktop={cardData.cards[2].urlDesktop}
-            text={cardData.cards[2].text}
-            alt={cardData.cards[2].alt}
-          />
-        </ul>
 
         <button className="custom-button custom-button-no-border">
           Записатися
