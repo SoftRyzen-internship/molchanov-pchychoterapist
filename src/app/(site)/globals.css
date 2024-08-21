@@ -127,3 +127,13 @@ h3 {
 .group:focus .link-underline-animation {
   @apply text-pinkLight;
 }
+
+.swiper-pagination {
+  @apply xl:ml-0 xl:text-left !important;
+}
+.swiper-pagination-bullet {
+  @apply bg-blueLight md:w-4 md:h-4 opacity-100 !important;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-blue md:w-4 md:h-4 !important;
+}
