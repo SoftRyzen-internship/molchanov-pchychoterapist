@@ -89,8 +89,7 @@ const Home = () => {
   return (
     <main>
       <div className="container">
-
-<Therapy />
+        <Therapy />
         <Logo />
 
         <br />
