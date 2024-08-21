@@ -79,15 +79,13 @@ const Home = () => {
   return (
     <main>
       <div className="container">
-        
-      <ul className=" xl:hidden">
-        <Slider>
-          {therapyData.therapySteps.map((item) => (
-            <TherapyItem key={item.id} item={item} />
-          ))}
-        </Slider>
-      </ul>
-
+        <ul className=" xl:hidden">
+          <Slider>
+            {therapyData.therapySteps.map((item) => (
+              <TherapyItem key={item.id} item={item} />
+            ))}
+          </Slider>
+        </ul>
 
         <Logo />
 
@@ -263,8 +261,8 @@ const Home = () => {
             </Modal>
           </div>
         </div>
-        
-      {/* <Slider>
+
+        {/* <Slider>
       {reviews.reviews.map((review) => (
             <ReviewCard
               key={review.id}
