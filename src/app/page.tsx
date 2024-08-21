@@ -23,7 +23,7 @@ import { useForm } from 'react-hook-form';
 import contactData from '@/data/contact/contact.json';
 import { Name } from '../components/ui/input-field/type';
 import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
-import { Accordion } from '@/components/ui/accordion/accordion';
+import { Accordion } from '@/components/common/accordion/accordion';
 import { AwardItem } from '@/components/common/award-item/award-item';
 import aboutData from '@/data/about.json';
 import therapyData from '@/data/therapy.json';
