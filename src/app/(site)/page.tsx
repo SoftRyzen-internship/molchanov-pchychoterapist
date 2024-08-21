@@ -13,7 +13,7 @@ import { InputField } from '@/components/ui/input-field';
 
 import { Socials } from '@/components/ui/socials/socials';
 import { useEffect, useState } from 'react';
-import { getServices } from '@/../sanity/api';
+import { getPolitics, getServices } from '@/../sanity/api';
 import { ServiceCard } from '@/components/common/service-card/service-card';
 import { TextareaField } from '@/components/ui/textarea-field';
 import { schema } from '@/utils';
@@ -21,7 +21,7 @@ import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import contactData from '@/data/contact/contact.json';
-import { Name } from '../components/ui/input-field/type';
+import { Name } from '../../components/ui/input-field/type';
 import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
 import { AwardItem } from '@/components/common/award-item/award-item';
 import aboutData from '@/data/about.json';
@@ -33,7 +33,10 @@ import therapyData from '@/data/therapy.json';
 import { TherapyItem } from '@/components/common/therapy-item/therapy-item';
 import { Modal } from '@/components/common/modal';
 import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
+
 import { TargetAudience } from '@/sections/target-audience/target-audience';
+
+import { PortableText } from '@portabletext/react';
 
 type FormData = yup.InferType<typeof schema>;
 
@@ -64,6 +67,7 @@ const Home = () => {
   const [services, setServices] = useState<Service[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [status, setStatus] = useState<'success' | 'failed'>('success');
+  const [politics, setPolitics] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -72,9 +76,17 @@ const Home = () => {
     }
 
     fetchData();
+
+    async function fetchDataPolitics() {
+      const data = await getPolitics();
+      setPolitics(data);
+    }
+
+    fetchDataPolitics();
   }, []);
 
   console.log('services:', services);
+  console.log('politics:', politics);
 
   return (
     <main>
@@ -244,6 +256,14 @@ const Home = () => {
             </Modal>
           </div>
         </div>
+
+        <ul>
+          {politics.map((section, index) => (
+            <li key={index}>
+              <PortableText value={section} />
+            </li>
+          ))}
+        </ul>
       </div>
     </main>
   );
