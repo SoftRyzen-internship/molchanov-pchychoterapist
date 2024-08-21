@@ -1,8 +1,8 @@
-type SocialItemProps = {
-  name: string;
-  link: string;
-  areaLabel: string;
+export type SocialItemProps = {
+  item: {
+    name: string;
+    link: string;
+    ariaLabel: string;
+  };
   iconsColors: string;
 };
-
-export default SocialItemProps;

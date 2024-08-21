@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-montserrat), sans-serif, var(--font-geologica);
+  @apply text-[16px] font-medium leading-[1.4] text-greenBodyText h-screen m-0
+    md:text-[20px] md:font-semibold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  @apply m-0;
+}
+a {
+  @apply no-underline text-current;
+}
+ul {
+  @apply list-none p-0 m-0;
+}
+li {
+  @apply list-none;
+}
+img {
+  @apply block max-w-full h-auto;
+}
+
+h2 {
+  @apply font-geologica text-[32px] font-medium leading-[1] text-greenDarkText
+    md:text-[56px];
+}
+h3 {
+  @apply text-[16px] font-semibold leading-[1.4] text-greenDarkText
+    md:text-[20px];
+}
+
+/* @layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+.custom-button {
+  @apply text-greenDarkText text-xl font-semibold tracking-[0.02em] h-[56px] min-w-[190px] px-[31px]
+    rounded-lg inline-block cursor-pointer transition-colors duration-300;
+}
+
+.custom-button-no-border {
+  @apply bg-pinkLight;
+}
+
+.custom-button-border {
+  @apply bg-transparent border-2 border-pinkLight;
+}
+
+.custom-button:hover,
+.custom-button:focus {
+  @apply bg-beige border-beige;
+}
+
+.label {
+  @apply text-base font-medium leading-[1.4] text-greenBodyText mb-5 md:text-xl md:font-semibold;
+}
+
+.input {
+  @apply pb-2 border-b-[1.5px] border-grey text-base font-medium leading-[1.4] placeholder:text-base placeholder:font-medium placeholder:leading-[1.4] placeholder:text-grey focus:outline-none;
+}
+
+.checkbox-input {
+  @apply appearance-none absolute cursor-pointer top-[2px] left-0 h-4 w-4 border border-greenBodyText bg-transparent transition-all ease-in-out;
+}
+
+.checkmark {
+  @apply absolute;
+}
+
+.checkbox-input:checked + .checkmark::after {
+  @apply block;
+}
+
+.checkmark::after {
+  content: '';
+  display: none;
+  @apply absolute left-[6px] top-[4px] w-[4px] h-[8px] border border-t-0 border-l-0 border-blue rotate-45;
+}
+
+.checkbox-input:hover,
+.checkbox-input:focus {
+  @apply border-pinkLight;
+}
+
+.error {
+  @apply border-redError;
+}
+
+.error.error:checked {
+  @apply border-redError bg-transparent;
+}
+
+.link-underline-animation {
+  @apply relative inline-block overflow-hidden transition-colors duration-300;
+}
+
+.link-underline-animation::after {
+  content: '';
+  @apply absolute z-10 left-0 bottom-[1px] w-full h-[1px] bg-pinkLight transform -translate-x-full transition-transform duration-300;
+}
+
+.link-underline-animation:hover::after,
+.link-underline-animation:focus::after {
+  @apply translate-x-0;
+}
+.link-underline-animation:hover,
+.link-underline-animation:focus {
+  @apply text-pinkLight;
+}
+.group:hover .link-underline-animation::after,
+.group:focus .link-underline-animation::after {
+  @apply translate-x-0;
+}
+
+.group:hover .link-underline-animation,
+.group:focus .link-underline-animation {
+  @apply text-pinkLight;
+}

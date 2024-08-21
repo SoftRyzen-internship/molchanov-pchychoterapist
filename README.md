@@ -34,3 +34,39 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+- #### component Socials
+
+| Prop      | Default | Description                                                                            |
+| --------- | ------- | -------------------------------------------------------------------------------------- |
+| `section` | --      | optional, `string`, determines the color scheme based on the section (e.g., 'footer'). |
+| `gap`     | 'gap-8' | optional, `string`, adds custom gap between the social icons.                          |
+
+- #### component Logo
+
+| Prop     | Default | Description |
+| -------- | ------- | ----------- |
+| no props | --      |             |
+
+- #### component Button
+
+| Prop       | Type      | Default  | Description                                                                    |
+| ---------- | --------- | -------- | ------------------------------------------------------------------------------ |
+| `type`     | string    | 'button' | optional, sets the button type.                                                |
+| `onClick`  | function  | --       | required,function that will be called on click; scrolls to a specific section. |
+| `children` | ReactNode | --       | required, button content, can be text or element.                              |
+
+- #### component NavMenu
+
+| Prop          | Type     | Default | Description                                                                                           |
+| ------------- | -------- | ------- | ----------------------------------------------------------------------------------------------------- |
+| `section`     | string   | --      | optional, defines a color scheme depending on the section (for example,'footer', 'burger', 'header'). |
+| `toggleModal` | function | --      | optional, function to control the opening/closing of a modal window.                                  |
+
+- #### component Modal
+
+| Prop        | Type      | Default | Description                                              |
+| ----------- | --------- | ------- | -------------------------------------------------------- |
+| `children`  | ReactNode | --      | required, the content to be displayed inside the modal.  |
+| `isOpen`    | boolean   | --      | required, controls whether the modal is open or closed.  |
+| `setIsOpen` | function  | --      | required, function to set the modal's open/closed state. |
