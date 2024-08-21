@@ -14,6 +14,7 @@ import { getPolitics, getServices } from '@/../sanity/api';
 import { ServiceCard } from '@/components/common/service-card/service-card';
 
 import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
+import { Accordion } from '@/components/common/accordion/accordion';
 import { AwardItem } from '@/components/common/award-item/award-item';
 import aboutData from '@/data/about.json';
 
@@ -61,6 +62,7 @@ const Home = () => {
   return (
     <main>
       <div className="container">
+        <Accordion />
         <Logo />
 
         <br />
