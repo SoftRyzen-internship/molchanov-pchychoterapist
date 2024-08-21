@@ -13,7 +13,7 @@ type FormFeedbackMessageProps = {
 const { feedbackMessages } = commonData;
 
 const FormFeedbackMessage = ({ status }: FormFeedbackMessageProps) => {
-  const { title, message } = feedbackMessages[status];
+  const { title, message, ariaLabel } = feedbackMessages[status];
 
   const titleColor = status === 'success' ? 'text-blueDark' : 'text-redError';
 
@@ -24,12 +24,14 @@ const FormFeedbackMessage = ({ status }: FormFeedbackMessageProps) => {
           className="w-[175px] h-[238px] md:w-[208px] md:h-[283px] xl:w-[202px] xl:h-[273px]"
           width={175}
           height={238}
+          aria-label={ariaLabel}
         />
       ) : (
         <ErrorImage
           className="w-[265.2px] h-[195px] md:w-[299.6px] md:h-[220.29px] xl:w-[297.85px] xl:h-[219px]"
           width={265.2}
           height={195}
+          aria-label={ariaLabel}
         />
       )}
 
