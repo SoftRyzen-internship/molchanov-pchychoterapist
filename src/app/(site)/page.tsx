@@ -94,10 +94,8 @@ const Home = () => {
         <ul>
           <UtilityCard
             id={cardData.cards[2].id}
-            urlMobile={cardData.cards[2].urlMobile}
-            urlTablet={cardData.cards[2].urlTablet}
-            urlDesktop={cardData.cards[2].urlDesktop}
-            text={cardData.cards[2].text}
+            name={cardData.cards[0].name}
+            text={cardData.cards[0].text}
             alt={cardData.cards[2].alt}
           />
         </ul>

@@ -1,8 +1,6 @@
 export type UtilityCardProps = {
   id: string;
-  urlMobile: string;
-  urlTablet: string;
-  urlDesktop: string;
+  name: string;
   text: string;
   alt: string;
 };
