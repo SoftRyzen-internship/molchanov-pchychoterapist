@@ -32,7 +32,7 @@ import { ReviewCard } from '@/components/common/review-card/review-card';
 import therapyData from '@/data/therapy.json';
 import { TherapyItem } from '@/components/common/therapy-item/therapy-item';
 import { Modal } from '@/components/common/modal';
-import { Slider } from '@/components/common/slider/slider';
+import { Slider } from '@/components/ui/slider/slider';
 import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
 
 type FormData = yup.InferType<typeof schema>;
@@ -83,6 +83,17 @@ const Home = () => {
           <Slider>
             {therapyData.therapySteps.map((item) => (
               <TherapyItem key={item.id} item={item} />
+            ))}
+          </Slider>
+        </ul>
+        <ul>
+          <Slider>
+            {reviews.reviews.map((review) => (
+              <ReviewCard
+                key={review.id}
+                author={review.author}
+                text={review.text}
+              />
             ))}
           </Slider>
         </ul>
@@ -262,15 +273,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* <Slider>
-      {reviews.reviews.map((review) => (
-            <ReviewCard
-              key={review.id}
-              author={review.author}
-              text={review.text}
-            />
-          ))}
-        </Slider> */}
+
       </div>
     </main>
   );

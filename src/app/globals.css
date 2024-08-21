@@ -118,6 +118,11 @@ h3 {
   @apply text-pinkLight;
 }
 
+
+.swiper-pagination {
+  @apply xl:ml-0 xl:text-left !important; 
+
+}
 .swiper-pagination-bullet {
   @apply bg-blueLight md:w-4 md:h-4 opacity-100 !important;
 }

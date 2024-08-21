@@ -7,10 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { EffectFade, Pagination } from 'swiper/modules';
 import React from 'react';
-
-interface SliderProps {
-  children: ReactNode | ReactNode[];
-}
+import { SliderProps } from './types';
 
 export const Slider: FC<SliderProps> = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -38,7 +35,6 @@ export const Slider: FC<SliderProps> = ({ children }) => {
       {slides.map((slide, index) => (
         <SwiperSlide
           key={index}
-          className="h-auto bg-cover bg-center bg-no-repeat"
         >
           {slide}
         </SwiperSlide>
