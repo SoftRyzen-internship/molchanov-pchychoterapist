@@ -23,9 +23,11 @@ export const TextareaField = ({
           errors[name] && 'text-redError'
         )}
       />
-      <p className="absolute -bottom-[16%] left-0 text-sm font-medium text-redError">
-        {errors[name]?.message}
-      </p>
+      {errors[name] && (
+        <p className="absolute -bottom-[16%] left-0 text-sm font-medium text-redError">
+          {errors[name]?.message}
+        </p>
+      )}
     </div>
   );
 };
