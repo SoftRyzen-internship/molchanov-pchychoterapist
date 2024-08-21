@@ -12,6 +12,7 @@ import { Socials } from '@/components/ui/socials/socials';
 import { useEffect, useState } from 'react';
 import { getPolitics, getServices } from '@/../sanity/api';
 import { ServiceCard } from '@/components/common/service-card/service-card';
+
 import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
 import { AwardItem } from '@/components/common/award-item/award-item';
 import aboutData from '@/data/about.json';
