@@ -35,13 +35,30 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-# utility-card
-
-Компонент utility-card приймає 3 пропси url, text, alt. Пропси на усі картки лежать у файлі data/target-audience/utility-card-data.json
-
 - #### component Socials
 
 | Prop      | Default | Description                                                                            |
 | --------- | ------- | -------------------------------------------------------------------------------------- |
 | `section` | --      | optional, `string`, determines the color scheme based on the section (e.g., 'footer'). |
 | `gap`     | 'gap-8' | optional, `string`, adds custom gap between the social icons.                          |
+
+- #### component Logo
+
+| Prop     | Default | Description |
+| -------- | ------- | ----------- |
+| no props | --      |             |
+
+- #### component Button
+
+| Prop       | Type      | Default  | Description                                                                    |
+| ---------- | --------- | -------- | ------------------------------------------------------------------------------ |
+| `type`     | string    | 'button' | optional, sets the button type.                                                |
+| `onClick`  | function  | --       | required,function that will be called on click; scrolls to a specific section. |
+| `children` | ReactNode | --       | required, button content, can be text or element.                              |
+
+- #### component NavMenu
+
+| Prop          | Type     | Default | Description                                                                                           |
+| ------------- | -------- | ------- | ----------------------------------------------------------------------------------------------------- |
+| `section`     | string   | --      | optional, defines a color scheme depending on the section (for example,'footer', 'burger', 'header'). |
+| `toggleModal` | function | --      | optional, function to control the opening/closing of a modal window.                                  |
