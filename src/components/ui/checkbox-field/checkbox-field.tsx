@@ -34,9 +34,11 @@ export const CheckboxField = ({
           {politics}
         </Link>
       </label>
-      <p className="absolute -bottom-1/3 left-0 text-sm font-medium text-redError">
-        {errors[name]?.message}
-      </p>
+      {errors[name] && (
+        <p className="absolute -bottom-1/3 left-0 text-sm font-medium text-redError">
+          {errors[name]?.message}
+        </p>
+      )}
     </div>
   );
 };

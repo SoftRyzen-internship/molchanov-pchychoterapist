@@ -10,7 +10,7 @@ import { Logo } from '@/components/ui/logo/logo';
 
 import { Socials } from '@/components/ui/socials/socials';
 import { useEffect, useState } from 'react';
-import { getServices } from '@/../sanity/api';
+import { getPolitics, getServices } from '@/../sanity/api';
 import { ServiceCard } from '@/components/common/service-card/service-card';
 import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
 import { AwardItem } from '@/components/common/award-item/award-item';
@@ -23,6 +23,7 @@ import therapyData from '@/data/therapy.json';
 import { TherapyItem } from '@/components/common/therapy-item/therapy-item';
 import { Modal } from '@/components/ui/modal';
 import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
+import { PortableText } from '@portabletext/react';
 
 import { ContactForm } from '@/components/common/contact-form';
 
@@ -35,6 +36,7 @@ const Home = () => {
   const [services, setServices] = useState<Service[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [status, setStatus] = useState<'success' | 'failed'>('success');
+  const [politics, setPolitics] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -43,9 +45,17 @@ const Home = () => {
     }
 
     fetchData();
+
+    async function fetchDataPolitics() {
+      const data = await getPolitics();
+      setPolitics(data);
+    }
+
+    fetchDataPolitics();
   }, []);
 
   console.log('services:', services);
+  console.log('politics:', politics);
 
   return (
     <main>
@@ -168,6 +178,14 @@ const Home = () => {
             </Modal>
           </div>
         </div>
+
+        <ul>
+          {politics.map((section, index) => (
+            <li key={index}>
+              <PortableText value={section} />
+            </li>
+          ))}
+        </ul>
       </div>
     </main>
   );
