@@ -21,7 +21,7 @@ import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import contactData from '@/data/contact/contact.json';
-import { Name } from '../components/ui/input-field/type';
+import { Name } from '../../components/ui/input-field/type';
 import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
 import { AwardItem } from '@/components/common/award-item/award-item';
 import aboutData from '@/data/about.json';
