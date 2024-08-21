@@ -10,8 +10,6 @@ import React from 'react';
 
 interface SliderProps {
   children: ReactNode | ReactNode[];
-  initialSlide?: number;
-  effect?: 'fade' | 'slide';
 }
 
 export const Slider: FC<SliderProps> = ({ children }) => {

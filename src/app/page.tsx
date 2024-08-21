@@ -25,10 +25,15 @@ import { Name } from '../components/ui/input-field/type';
 import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
 import { AwardItem } from '@/components/common/award-item/award-item';
 import aboutData from '@/data/about.json';
+
+import reviews from '@/data/reviews.json';
+import { ReviewCard } from '@/components/common/review-card/review-card';
+
 import therapyData from '@/data/therapy.json';
 import { TherapyItem } from '@/components/common/therapy-item/therapy-item';
 import { Modal } from '@/components/common/modal';
 import { Slider } from '@/components/common/slider/slider';
+import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
 
 type FormData = yup.InferType<typeof schema>;
 
@@ -58,6 +63,7 @@ const Home = () => {
 
   const [services, setServices] = useState<Service[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [status, setStatus] = useState<'success' | 'failed'>('success');
 
   useEffect(() => {
     async function fetchData() {
@@ -73,11 +79,15 @@ const Home = () => {
   return (
     <main>
       <div className="container">
+        
+      <ul className=" xl:hidden">
         <Slider>
           {therapyData.therapySteps.map((item) => (
             <TherapyItem key={item.id} item={item} />
           ))}
         </Slider>
+      </ul>
+
 
         <Logo />
 
@@ -127,7 +137,15 @@ const Home = () => {
             <ServiceCard key={service._key} title={service.title} />
           ))}
         </ul>
-
+        <ul>
+          {reviews.reviews.map((review) => (
+            <ReviewCard
+              key={review.id}
+              author={review.author}
+              text={review.text}
+            />
+          ))}
+        </ul>
         <form
           onSubmit={handleSubmit(onSubmit)}
           autoComplete="on"
@@ -204,6 +222,57 @@ const Home = () => {
             <div>Контент модального вікна</div>
           </Modal>
         </div>
+
+        <div className="py-10">
+          <h2 className="h2 mb-10">Оберіть, як відправилась форма</h2>
+
+          <div className="mb-10">
+            <label className="mr-2">
+              <input
+                type="radio"
+                name="status"
+                value="success"
+                checked={status === 'success'}
+                onChange={() => setStatus('success')}
+                className="mr-1"
+              />
+              Success
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="status"
+                value="failed"
+                checked={status === 'failed'}
+                onChange={() => setStatus('failed')}
+                className="mr-1"
+              />
+              Failed
+            </label>
+          </div>
+
+          <div>
+            <button
+              onClick={() => setIsOpen(true)}
+              className="custom-button custom-button-no-border"
+            >
+              Показати повідомлення
+            </button>
+            <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+              <FormFeedbackMessage status={status} />
+            </Modal>
+          </div>
+        </div>
+        
+      {/* <Slider>
+      {reviews.reviews.map((review) => (
+            <ReviewCard
+              key={review.id}
+              author={review.author}
+              text={review.text}
+            />
+          ))}
+        </Slider> */}
       </div>
     </main>
   );
