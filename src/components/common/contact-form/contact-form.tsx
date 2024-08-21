@@ -8,13 +8,13 @@ import { InputField } from '@/components/ui/input-field';
 import { TextareaField } from '@/components/ui/textarea-field';
 import { CheckboxField } from '@/components/ui/checkbox-field';
 
-import { Name } from '../input-field/type';
+import { Name } from '../../ui/input-field/type';
 import { FormData, Status } from './type';
 
 import { schema } from '@/utils';
 
 import contactData from '@/data/contact/contact.json';
-import { Modal } from '../modal';
+import { Modal } from '../../ui/modal';
 import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
 
 export const ContactForm = () => {
@@ -44,11 +44,13 @@ export const ContactForm = () => {
     try {
       console.log(data);
       setStatus('success');
+      setIsOpen(true);
       reset();
     } catch (error) {
       setStatus('failed');
+      setIsOpen(true);
     } finally {
-      setIsOpen(false);
+      setIsOpen(true);
     }
   };
 

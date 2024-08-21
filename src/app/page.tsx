@@ -24,7 +24,7 @@ import { TherapyItem } from '@/components/common/therapy-item/therapy-item';
 import { Modal } from '@/components/ui/modal';
 import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
 
-import { ContactForm } from '@/components/ui/contact-form';
+import { ContactForm } from '@/components/common/contact-form';
 
 type Service = {
   _key: string;
@@ -127,18 +127,6 @@ const Home = () => {
             <TherapyItem key={item.id} item={item} />
           ))}
         </ul>
-
-        <div>
-          <button
-            onClick={() => setIsOpen(true)}
-            className="custom-button custom-button-border"
-          >
-            Відкрити модальне вікно
-          </button>
-          <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
-            <div>Контент модального вікна</div>
-          </Modal>
-        </div>
 
         <div className="py-10">
           <h2 className="h2 mb-10">Оберіть, як відправилась форма</h2>
