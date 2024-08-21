@@ -16,7 +16,7 @@ export const Therapy = () => {
             <TherapyItem key={item.id} item={item} />
           ))}
         </Slider>
-      </ul>        
+      </ul>
 
       <ul className="hidden xl:flex xl:flex-row justify-between">
         {therapyData.therapySteps.map((item) => (
