@@ -33,11 +33,7 @@ export const Slider: FC<SliderProps> = ({ children }) => {
       onSwiper={(swiper) => (swiperRef.current = swiper)}
     >
       {slides.map((slide, index) => (
-        <SwiperSlide
-          key={index}
-        >
-          {slide}
-        </SwiperSlide>
+        <SwiperSlide key={index}>{slide}</SwiperSlide>
       ))}
     </Swiper>
   );

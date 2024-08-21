@@ -272,8 +272,6 @@ const Home = () => {
             </Modal>
           </div>
         </div>
-
-
       </div>
     </main>
   );
