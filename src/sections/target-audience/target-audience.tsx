@@ -6,7 +6,7 @@ export const TargetAudience = () => {
   return (
     <section className="p-10 bg-red">
       <div className="container">
-        <h2 className="mb-10 text-center">{content.title}</h2>
+        <h2 className="mb-10  text-left xl:text-center">{content.title}</h2>
         <UtilityCardList />
       </div>
     </section>
