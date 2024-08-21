@@ -34,6 +34,7 @@ import { TherapyItem } from '@/components/common/therapy-item/therapy-item';
 import { Modal } from '@/components/common/modal';
 import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
 import { PortableText } from '@portabletext/react';
+import { Therapy } from '@/sections/therapy/therapy';
 
 type FormData = yup.InferType<typeof schema>;
 
@@ -88,6 +89,8 @@ const Home = () => {
   return (
     <main>
       <div className="container">
+
+<Therapy />
         <Logo />
 
         <br />
