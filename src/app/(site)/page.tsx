@@ -68,7 +68,6 @@ const Home = () => {
       <TargetAudience />
       <Values />
       <div className="container">
-        
         <Accordion />
         <Logo />
 
