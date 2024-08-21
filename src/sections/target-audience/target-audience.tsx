@@ -4,9 +4,11 @@ import { UtilityCardList } from '@/components/common/utility-card-list/utility-c
 
 export const TargetAudience = () => {
   return (
-    <section className="p-10 bg-red">
+    <section className="py-[45px] md:py-[50px] xl:pt-[75px] xl:pb-[77px]">
       <div className="container">
-        <h2 className="mb-10  text-left xl:text-center">{content.title}</h2>
+        <h2 className="mb-10 md:mb-[60px] text-left xl:text-center">
+          {content.title}
+        </h2>
         <UtilityCardList />
       </div>
     </section>
