@@ -62,3 +62,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 | ------------- | -------- | ------- | ----------------------------------------------------------------------------------------------------- |
 | `section`     | string   | --      | optional, defines a color scheme depending on the section (for example,'footer', 'burger', 'header'). |
 | `toggleModal` | function | --      | optional, function to control the opening/closing of a modal window.                                  |
+
+- #### component Modal
+
+| Prop        | Type      | Default | Description                                              |
+| ----------- | --------- | ------- | -------------------------------------------------------- |
+| `children`  | ReactNode | --      | required, the content to be displayed inside the modal.  |
+| `isOpen`    | boolean   | --      | required, controls whether the modal is open or closed.  |
+| `setIsOpen` | function  | --      | required, function to set the modal's open/closed state. |
