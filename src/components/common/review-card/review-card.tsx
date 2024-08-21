@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
 import reviews from '@/data/reviews.json';
-import { Modal } from '../modal';
+import { Modal } from '../../ui/modal';
 import { ReviewCardProps } from './types';
 
 export const ReviewCard = ({ author, text }: ReviewCardProps) => {

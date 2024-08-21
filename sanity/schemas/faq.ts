@@ -7,8 +7,10 @@ export const faq = {
   fields: [
     {
       name: 'title',
-      title: 'Список',
+      title: 'Заголовок',
       type: 'string',
+      validation: (rule: Rule) =>
+        rule.required().error('Це поле обов`язкове для заповнення'),
     },
     {
       name: 'faqList',
@@ -22,37 +24,29 @@ export const faq = {
               name: 'question',
               type: 'string',
               title: 'Питання',
-              validation: (rule: Rule) =>
-                rule
-                  .required()
-                  .error('Це поле обовязкове для заповнення')
-                  .min(3)
-                  .error('Мінімальна кількість символів 3')
-                  .max(130)
-                  .error('Максимальна кількість символів 130'),
+              validation: (rule: Rule) => [
+                rule.required().error('Це поле обов`язкове для заповнення'),
+                rule.min(3).error('Мінімальна кількість символів 3'),
+                rule.max(130).error('Максимальна кількість символів 130'),
+              ],
             },
             {
               name: 'answer',
               type: 'string',
               title: 'Відповідь',
-              validation: (rule: Rule) =>
-                rule
-                  .required()
-                  .error('Це поле обовязкове для заповнення')
-                  .min(3)
-                  .error('Мінімальна кількість символів 3')
-                  .max(250)
-                  .error('Максимальна кількість символів 250'),
+              validation: (rule: Rule) => [
+                rule.required().error('Це поле обов`язкове для заповнення'),
+                rule.min(3).error('Мінімальна кількість символів 3'),
+                rule.max(250).error('Максимальна кількість символів 250'),
+              ],
             },
           ],
         },
       ],
-      validation: (rule: Rule) =>
-        rule
-          .min(3)
-          .error('Мінімальна кількість питань 3')
-          .max(12)
-          .error('Максимальна кількість питань 12'),
+      validation: (rule: Rule) => [
+        rule.min(3).error('Мінімальна кількість питань 3'),
+        rule.max(12).error('Максимальна кількість питань 12'),
+      ],
     },
   ],
 };
