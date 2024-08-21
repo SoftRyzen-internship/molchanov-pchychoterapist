@@ -120,8 +120,6 @@ const Home = () => {
           ))}
         </ul>
 
-        <ContactForm />
-
         <div>
           <h2>Title h2</h2>
           <h3>Title h3</h3>
