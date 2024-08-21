@@ -3,7 +3,6 @@ import FirstIcon from '@/../public/assets/images/icons/target-audience/property-
 import SecondIcon from '@/../public/assets/images/icons/target-audience/property-2.svg';
 import ThirdIcon from '@/../public/assets/images/icons/target-audience/property-3.svg';
 import FourthIcon from '@/../public/assets/images/icons/target-audience/property-4.svg';
-import clsx from 'clsx';
 
 export const UtilityCard = ({ id, name, text, alt }: UtilityCardProps) => {
   const style =
