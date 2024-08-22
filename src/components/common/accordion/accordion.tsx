@@ -43,10 +43,10 @@ export const Accordion: React.FC = () => {
       open: !newPanel.open,
     });
   }
-  
+
   return (
     <ul>
-      {faqs.map(({question, answer, _key }, index) => (
+      {faqs.map(({ question, answer, _key }, index) => (
         <Disclosure
           key={_key}
           as="li"
