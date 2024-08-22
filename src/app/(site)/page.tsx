@@ -23,7 +23,7 @@ import { Slider } from '@/components/ui/slider/slider';
 
 import { Modal } from '@/components/ui/modal';
 
-import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
+// import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
 import { getPolitics } from '@/../sanity/api';
 
 import { TargetAudience } from '@/sections/target-audience/target-audience';
@@ -39,6 +39,7 @@ type Service = {
   title: string;
 };
 import { Services } from '@/sections/services/services';
+import { FormFeedbackMessage } from '@/components/common/form-feedback-message/form-feedback-message';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
