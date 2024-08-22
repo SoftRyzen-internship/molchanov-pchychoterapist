@@ -29,7 +29,7 @@ export const Accordion: React.FC = () => {
     });
   }
   return (
-    <ul className="min-w-[320px]">
+    <ul>
       {faqs.accordion.map((faq, index) => (
         <Disclosure
           key={faq.id}
