@@ -1,4 +1,4 @@
-import { IFormFieldProps } from '../input-field/type';
+import { IFormFieldProps } from '../input-field/types';
 import clsx from 'clsx';
 
 export const TextareaField = ({

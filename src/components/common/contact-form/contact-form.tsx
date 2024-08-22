@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 
 import { useForm } from 'react-hook-form';
@@ -10,8 +12,8 @@ import { CheckboxField } from '@/components/ui/checkbox-field';
 import { FormFeedbackMessage } from '@/components/common/form-feedback-message/form-feedback-message';
 import { Modal } from '../../ui/modal';
 
-import { Name } from '../../ui/input-field/type';
-import { FormData, Status } from './type';
+import { Name } from '../../ui/input-field/types';
+import { FormData, Status } from './types';
 
 import { schema } from '@/utils';
 import { sendMessage } from '@/api/telegram';
