@@ -1,4 +1,6 @@
-import { FC, useState, useEffect, useRef, ReactNode } from 'react';
+'use client';
+
+import { FC, useState, useEffect, useRef, Children } from 'react';
 import { Swiper as SwiperClass } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -6,7 +8,6 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { EffectFade, Pagination } from 'swiper/modules';
-import React from 'react';
 import { SliderProps } from './types';
 
 export const Slider: FC<SliderProps> = ({ children }) => {
@@ -19,7 +20,7 @@ export const Slider: FC<SliderProps> = ({ children }) => {
     }
   }, [activeIndex]);
 
-  const slides = React.Children.toArray(children);
+  const slides = Children.toArray(children);
 
   return (
     <Swiper

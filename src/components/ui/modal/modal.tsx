@@ -1,6 +1,6 @@
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react';
 
-import { IModalProps } from './type';
+import { IModalProps } from './types';
 
 import CloseIcon from '@/../public/assets/images/icons/icon-close.svg';
 

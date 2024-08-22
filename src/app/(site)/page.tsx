@@ -1,5 +1,3 @@
-'use client';
-
 import { Services } from '@/sections/services/services';
 
 import { Hero } from '@/sections/hero/hero';
