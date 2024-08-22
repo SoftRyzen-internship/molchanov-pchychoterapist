@@ -29,6 +29,7 @@ import { getPolitics } from '@/../sanity/api';
 import { TargetAudience } from '@/sections/target-audience/target-audience';
 
 import { PortableText } from '@portabletext/react';
+import { Contact } from '@/sections/contact/contact';
 
 import { ContactForm } from '@/components/common/contact-form';
 import { Values } from '@/sections/values/values';
@@ -124,8 +125,6 @@ const Home = () => {
           ))}
         </ul>
 
-        <ContactForm />
-
         <div>
           <h2>Title h2</h2>
           <h3>Title h3</h3>
@@ -193,6 +192,8 @@ const Home = () => {
           ))}
         </ul>
       </div>
+
+      <Contact />
     </main>
   );
 };

@@ -61,7 +61,7 @@ export const ContactForm = () => {
         autoComplete="on"
         className="flex flex-col gap-10 xl:max-w-[609px]"
       >
-        <div className="flex flex-col gap-9 md:flex-row xl:gap-5 xl:mb-5">
+        <div className="flex flex-col gap-9 md:gap-8 md:flex-row xl:gap-5 xl:mb-5">
           {inputs.map((input) => (
             <InputField
               key={input.id}
@@ -94,7 +94,10 @@ export const ContactForm = () => {
           register={register}
           politics={checkbox.politics}
         />
-        <button className="custom-button custom-button-no-border md:max-w-[190px] md:mt-5">
+        <button
+          type="submit"
+          className="custom-button custom-button-no-border mt-5 md:max-w-[190px]"
+        >
           {button}
         </button>
       </form>
