@@ -1,5 +1,9 @@
 {
   "button": "Читати далі",
+  "quotes": {
+    "path": "/assets/images/icons/quotes-left.svg",
+    "alt": "Лапки."
+  },
   "image": {
     "path": "/assets/images/webp/reviews/reviews-img.webp",
     "alt": "Дівчина збирає пазли як відгуки."
