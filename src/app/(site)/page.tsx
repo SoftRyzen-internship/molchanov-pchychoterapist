@@ -63,7 +63,6 @@ const Home = () => {
       <Values />
       <Therapy />
       <div className="container">
-        
         {/* <ul className=" xl:hidden">
           <Slider>
             {therapyData.therapySteps.map((item) => (

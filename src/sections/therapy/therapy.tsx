@@ -11,12 +11,8 @@ export const Therapy = () => {
         <h2 className="mb-10 mdOnly:w-[505px] md:mb-[60px] xl:text-center">
           {therapy.title}
         </h2>
-    
-        {!isDesktop ? (
-          <MobileTherapyList />
-        ) :(
-          <DesktopTherapyList />
-        )}
+
+        {!isDesktop ? <MobileTherapyList /> : <DesktopTherapyList />}
       </div>
     </section>
   );
