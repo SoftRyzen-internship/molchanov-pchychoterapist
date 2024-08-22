@@ -7,15 +7,16 @@ import useFormPersist from 'react-hook-form-persist';
 import { InputField } from '@/components/ui/input-field';
 import { TextareaField } from '@/components/ui/textarea-field';
 import { CheckboxField } from '@/components/ui/checkbox-field';
+import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
+import { Modal } from '../../ui/modal';
 
 import { Name } from '../../ui/input-field/type';
 import { FormData, Status } from './type';
 
 import { schema } from '@/utils';
+import { sendMessage } from '@/api/telegram';
 
 import contactData from '@/data/contact.json';
-import { Modal } from '../../ui/modal';
-import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
 
 export const ContactForm = () => {
   const [status, setStatus] = useState<Status>('success');
@@ -40,15 +41,14 @@ export const ContactForm = () => {
     exclude: ['checked'],
   });
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = async ({ username, phone, comment }: FormData) => {
     try {
-      console.log(data);
+      const message = `Ім'я: ${username}\nТелефон: ${phone}\nПовідомлення: ${comment}`;
+      await sendMessage(message);
       setStatus('success');
-      setIsOpen(true);
       reset();
     } catch (error) {
       setStatus('failed');
-      setIsOpen(true);
     } finally {
       setIsOpen(true);
     }
