@@ -1,17 +1,12 @@
 'use client';
 
-import { UtilityCard } from '@/components/common/utility-card/utility-card';
-
 import { ValuesCard } from '@/components/common/values-card/values-card';
 import cardsValuesData from '@/data/values.json';
 
-import cardData from '@/data/target-audience.json';
 import { Logo } from '@/components/ui/logo/logo';
 
 import { Socials } from '@/components/ui/socials/socials';
 import { useEffect, useState } from 'react';
-import { getPolitics, getServices } from '@/../sanity/api';
-import { ServiceCard } from '@/components/common/service-card/service-card';
 
 import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
 import { Accordion } from '@/components/common/accordion/accordion';
@@ -23,8 +18,13 @@ import { ReviewCard } from '@/components/common/review-card/review-card';
 
 import therapyData from '@/data/therapy.json';
 import { TherapyItem } from '@/components/common/therapy-item/therapy-item';
+
+import { Slider } from '@/components/ui/slider/slider';
+
 import { Modal } from '@/components/ui/modal';
+
 import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
+import { getPolitics } from '@/../sanity/api';
 
 import { TargetAudience } from '@/sections/target-audience/target-audience';
 
@@ -32,26 +32,16 @@ import { PortableText } from '@portabletext/react';
 import { Therapy } from '@/sections/therapy/therapy';
 
 import { ContactForm } from '@/components/common/contact-form';
-
-type Service = {
-  _key: string;
-  title: string;
-};
+import { Services } from '@/sections/services/services';
 
 const Home = () => {
-  const [services, setServices] = useState<Service[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [status, setStatus] = useState<'success' | 'failed'>('success');
   const [politics, setPolitics] = useState([]);
 
+  console.log('politics:', politics);
+
   useEffect(() => {
-    async function fetchData() {
-      const data = await getServices();
-      setServices(data);
-    }
-
-    fetchData();
-
     async function fetchDataPolitics() {
       const data = await getPolitics();
       setPolitics(data);
@@ -60,14 +50,31 @@ const Home = () => {
     fetchDataPolitics();
   }, []);
 
-  console.log('services:', services);
-  console.log('politics:', politics);
-
   return (
     <main>
+      <Services />
       <TargetAudience />
       <div className="container">
         <Therapy />
+        {/* <ul className=" xl:hidden">
+          <Slider>
+            {therapyData.therapySteps.map((item) => (
+              <TherapyItem key={item.id} item={item} />
+            ))}
+          </Slider>
+        </ul> */}
+        <ul>
+          <Slider>
+            {reviews.reviews.map((review) => (
+              <ReviewCard
+                key={review.id}
+                author={review.author}
+                text={review.text}
+              />
+            ))}
+          </Slider>
+        </ul>
+
         <Accordion />
         <Logo />
 
@@ -102,11 +109,6 @@ const Home = () => {
           <NavMenu section="footer" />
         </div>
 
-        <ul className="flex flex-col md:flex-row flex-wrap gap-8 md:gap-x-[94px] md:gap-y-[60px] xl:gap-x-[125px]">
-          {services.map((service) => (
-            <ServiceCard key={service._key} title={service.title} />
-          ))}
-        </ul>
         <ul>
           {reviews.reviews.map((review) => (
             <ReviewCard

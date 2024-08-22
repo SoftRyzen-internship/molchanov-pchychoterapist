@@ -39,24 +39,16 @@ h3 {
     md:text-[20px];
 }
 
-/* @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
 .custom-button {
   @apply text-greenDarkText text-xl font-semibold tracking-[0.02em] h-[56px] min-w-[190px] px-[31px]
     rounded-lg inline-block cursor-pointer transition-colors duration-300;
 }
-
 .custom-button-no-border {
   @apply bg-pinkLight;
 }
-
 .custom-button-border {
   @apply bg-transparent border-2 border-pinkLight;
 }
-
 .custom-button:hover,
 .custom-button:focus {
   @apply bg-beige border-beige;
@@ -104,12 +96,10 @@ h3 {
 .link-underline-animation {
   @apply relative inline-block overflow-hidden transition-colors duration-300;
 }
-
 .link-underline-animation::after {
   content: '';
   @apply absolute z-10 left-0 bottom-[1px] w-full h-[1px] bg-pinkLight transform -translate-x-full transition-transform duration-300;
 }
-
 .link-underline-animation:hover::after,
 .link-underline-animation:focus::after {
   @apply translate-x-0;
@@ -118,11 +108,11 @@ h3 {
 .link-underline-animation:focus {
   @apply text-pinkLight;
 }
+
 .group:hover .link-underline-animation::after,
 .group:focus .link-underline-animation::after {
   @apply translate-x-0;
 }
-
 .group:hover .link-underline-animation,
 .group:focus .link-underline-animation {
   @apply text-pinkLight;
