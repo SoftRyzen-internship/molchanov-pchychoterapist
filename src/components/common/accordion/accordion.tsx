@@ -6,16 +6,28 @@ import {
   DisclosurePanel,
 } from '@headlessui/react';
 import Arrow from '@/../public/assets/images/icons/down-arrow.svg';
-import { useState } from 'react';
-import faqs from '@/data/faq.json';
+import { useEffect, useState } from 'react';
 import clsx from 'clsx';
+import { getFaq } from '../../../../sanity/api';
+import { FaqItem } from './types';
 
 export const Accordion: React.FC = () => {
+  const [faqs, setFaqs] = useState<FaqItem[]>([]);
+
   const [activeDisclosurePanel, setActiveDisclosurePanel] = useState<{
     key: number;
     open: boolean;
     close?: () => void;
   } | null>(null);
+
+  useEffect(() => {
+    async function fetchFaqs() {
+      const data = await getFaq();
+      setFaqs(data);
+    }
+
+    fetchFaqs();
+  }, []);
 
   function togglePanels(newPanel: { key: number; open: boolean }) {
     if (activeDisclosurePanel && activeDisclosurePanel.close) {
@@ -31,11 +43,12 @@ export const Accordion: React.FC = () => {
       open: !newPanel.open,
     });
   }
+
   return (
     <ul>
-      {faqs.accordion.map((faq, index) => (
+      {faqs.map(({ question, answer, _key }, index) => (
         <Disclosure
-          key={faq.id}
+          key={_key}
           as="li"
           className={clsx('border-b border-greenDarkText ', {
             'py-4':
@@ -44,7 +57,7 @@ export const Accordion: React.FC = () => {
             'pt-4':
               activeDisclosurePanel?.open &&
               activeDisclosurePanel.key === index,
-            'md:border-b-0': faqs.accordion.length - 1 === index,
+            'md:border-b-0': faqs.length - 1 === index,
           })}
         >
           {(panel) => {
@@ -55,7 +68,7 @@ export const Accordion: React.FC = () => {
                   className="flex justify-between gap-8 w-full"
                   onClick={() => togglePanels({ ...panel, key: index })}
                 >
-                  <p className="text-left xl:w-[750px]">{faq.question}</p>
+                  <p className="text-left xl:w-[750px]">{question}</p>
                   <Arrow
                     className={clsx(
                       'min-w-4 min-h-4 transform transition-transform duration-300',
@@ -69,7 +82,7 @@ export const Accordion: React.FC = () => {
                   />
                 </DisclosureButton>
                 <DisclosurePanel className="text-[14px] font-light my-3 md:text-[16px] md:font-medium">
-                  {faq.answers}
+                  {answer}
                 </DisclosurePanel>
               </>
             );
