@@ -25,7 +25,6 @@ export const Slider: FC<SliderProps> = ({ children }) => {
     <Swiper
       modules={[EffectFade, Pagination]}
       slidesPerView={1}
-      autoplay={{ delay: 3000 }}
       grabCursor={true}
       pagination={{ clickable: true }}
       onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
