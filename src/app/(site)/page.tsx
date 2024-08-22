@@ -70,8 +70,8 @@ const Home = () => {
       <FAQ />
       <Values />
       <div className="container">
-      {isMobile && <p>Вы используете мобильное устройство</p>}
-      {isTablet && <p>Вы используете планшет</p>}
+        {isMobile && <p>Вы используете мобильное устройство</p>}
+        {isTablet && <p>Вы используете планшет</p>}
         {/* <ul className=" xl:hidden">
           <Slider>
             {therapyData.therapySteps.map((item) => (

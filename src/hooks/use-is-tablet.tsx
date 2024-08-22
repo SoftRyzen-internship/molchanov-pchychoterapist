@@ -18,4 +18,3 @@ export const useIsTablet = () => {
 
   return isTablet;
 };
-
