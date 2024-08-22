@@ -25,7 +25,7 @@ export const Hero = () => {
             smooth={true}
             offset={0}
             duration={500}
-            className="custom-button custom-button-no-border smOnly:w-full inline-flex"
+            className="custom-button custom-button-no-border smOnly:w-full"
           >
             {content.button}
           </ScrollLink>
