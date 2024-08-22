@@ -1,5 +1,9 @@
 {
   "button": "Читати далі",
+  "image": {
+    "path": "/assets/images/webp/reviews/reviews-img.webp",
+    "alt": "Дівчина збирає пазли як відгуки."
+  },
   "reviews": [
     {
       "id": "1",

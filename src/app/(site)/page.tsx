@@ -39,6 +39,7 @@ type Service = {
   title: string;
 };
 import { Services } from '@/sections/services/services';
+import { Reviews } from '@/sections/reviews/reviews';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,6 +59,7 @@ const Home = () => {
 
   return (
     <main>
+      <Reviews />
       <Services />
       <TargetAudience />
       <Values />
