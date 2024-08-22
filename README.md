@@ -73,7 +73,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - #### component Slider
 
-| Prop            | Type      | Default               | Description                                                                     |
-| --------------- | --------- | --------------------- | ------------------------------------------------------------------------------- |
-| `children`      | ReactNode | --                    | required, elements that will be displayed in the slider as slides.              |
-
+| Prop       | Type      | Default | Description                                                        |
+| ---------- | --------- | ------- | ------------------------------------------------------------------ |
+| `children` | ReactNode | --      | required, elements that will be displayed in the slider as slides. |
