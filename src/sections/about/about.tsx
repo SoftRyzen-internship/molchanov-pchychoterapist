@@ -7,34 +7,29 @@ export const About = () => {
     <section>
       <div className="container">
         <h2 className="h2">{aboutData.title}</h2>
-        <div className="relative w-full h-[411px] md:w-[575px] md:h-[667px] overflow-hidden">
-          <Image
-            src="/assets/images/webp/about/my-photo.webp"
-            alt="Сергій Молчанов"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="left"
-            className="h-full w-full"
-          />
+
+        <div className="relative mb-[120px]">
+          <div className="relative w-full h-[411px] rounded-lg overflow-hidden">
+            <Image
+              src="/assets/images/webp/about/my-photo.webp"
+              alt="Сергій Молчанов"
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'left' }}
+              className="h-full w-full"
+            />
+          </div>
+
+          <div className="absolute -bottom-20 left-0 w-full max-w-[440px] pl-[72px] pr-[21px]">
+            <div className="relative w-full  h-[152px] rounded-lg overflow-hidden">
+              <Image
+                src="/assets/images/webp/about/therapy-meeting.webp"
+                alt="Сеанс терапії Сергія Молчанова з групою клієнтів"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+              />
+            </div>
+          </div>
         </div>
-        {/* <div>
-          <Image
-            src="/assets/images/webp/about-me/my-photo.webp"
-            alt="Сергій Молчанов"
-            width={575}
-            height={667}
-            layout="responsive"
-          />
-        </div>
-        <div>
-          <Image
-            src="/assets/images/webp/about-me/therapy-meeting.webp"
-            alt="Сеанс терапії Сергія Молчанова з групою клієнтів"
-            width={339}
-            height={252}
-            layout="responsive"
-          />
-        </div> */}
 
         {aboutData.text.map((text, index) => (
           <p key={index}>{text}</p>
