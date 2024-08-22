@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import {
   Disclosure,
@@ -16,7 +16,7 @@ export const Accordion: React.FC = () => {
     open: boolean;
     close?: () => void;
   } | null>(null);
-  
+
   function togglePanels(newPanel: { key: number; open: boolean }) {
     if (activeDisclosurePanel && activeDisclosurePanel.close) {
       if (
