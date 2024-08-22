@@ -39,6 +39,7 @@ import { useIsTablet } from '@/hooks/use-is-tablet';
 import { Services } from '@/sections/services/services';
 import { Accordion } from '@/components/common/accordion/accordion';
 import { FormFeedbackMessage } from '@/components/common/form-feedback-message/form-feedback-message';
+import { Therapy } from '@/sections/therapy/therapy';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,6 +66,7 @@ const Home = () => {
       <TargetAudience />
       <Values />
       <FAQ />
+      <Therapy />
       <div className="container">
         {isMobile && <p>Вы используете мобильное устройство</p>}
         {isTablet && <p>Вы используете планшет</p>}
