@@ -13,7 +13,7 @@ export const TherapyItem: React.FC<TherapyItemProps> = ({
     'xl:block xl:w-[235px] xl:h-[2px] xl:bg-[rgba(41,73,69,0.3)] xl:absolute xl:left-1/2 xl:translate-x-10 xl:top-1/2 xl:translate-y-[-50%]';
 
   return (
-    <li className="flex flex-col gap-5 min-h-[208px] md:min-h-[291px]  md:gap-9 items-center xl:w-[295px] px-[10px] mdOnly:px-[215px] pb-[22px] mdOnly:pb-[63px]">
+    <div className="flex flex-col gap-5 min-h-[208px] md:min-h-[291px]  md:gap-9 items-center xl:w-[295px] px-[10px] mdOnly:px-[215px] pb-[22px] mdOnly:pb-[63px]">
       <div
         className={`w-12 md:w-20 h-12 md:h-20 rounded-full flex justify-center items-center ${iconName === 'diploma' ? 'bg-greenLight' : 'bg-blueLight'} relative`}
       >
@@ -61,6 +61,6 @@ export const TherapyItem: React.FC<TherapyItemProps> = ({
           {text}
         </p>
       </div>
-    </li>
+    </div>
   );
 };

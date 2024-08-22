@@ -61,8 +61,9 @@ const Home = () => {
       <Services />
       <TargetAudience />
       <Values />
+      <Therapy />
       <div className="container">
-        <Therapy />
+        
         {/* <ul className=" xl:hidden">
           <Slider>
             {therapyData.therapySteps.map((item) => (
