@@ -32,6 +32,12 @@ import { PortableText } from '@portabletext/react';
 import { Therapy } from '@/sections/therapy/therapy';
 
 import { ContactForm } from '@/components/common/contact-form';
+import { Values } from '@/sections/values/values';
+
+type Service = {
+  _key: string;
+  title: string;
+};
 import { Services } from '@/sections/services/services';
 
 const Home = () => {
@@ -54,6 +60,7 @@ const Home = () => {
     <main>
       <Services />
       <TargetAudience />
+      <Values />
       <div className="container">
         <Therapy />
         {/* <ul className=" xl:hidden">
