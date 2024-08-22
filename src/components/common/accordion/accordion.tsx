@@ -68,7 +68,7 @@ export const Accordion: React.FC = () => {
                   className="flex justify-between gap-8 w-full"
                   onClick={() => togglePanels({ ...panel, key: index })}
                 >
-                  <p className="text-left">{question}</p>
+                  <p className="text-left xl:w-[750px]">{question}</p>
                   <Arrow
                     className={clsx(
                       'min-w-4 min-h-4 transform transition-transform duration-300',
