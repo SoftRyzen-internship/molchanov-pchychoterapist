@@ -23,7 +23,6 @@ import { Slider } from '@/components/ui/slider/slider';
 
 import { Modal } from '@/components/ui/modal';
 
-import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
 import { getPolitics } from '@/../sanity/api';
 
 import { TargetAudience } from '@/sections/target-audience/target-audience';
@@ -31,14 +30,10 @@ import { TargetAudience } from '@/sections/target-audience/target-audience';
 import { PortableText } from '@portabletext/react';
 import { Contact } from '@/sections/contact/contact';
 
-import { ContactForm } from '@/components/common/contact-form';
 import { Values } from '@/sections/values/values';
 
-type Service = {
-  _key: string;
-  title: string;
-};
 import { Services } from '@/sections/services/services';
+import { FormFeedbackMessage } from '@/components/common/form-feedback-message/form-feedback-message';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,7 +76,6 @@ const Home = () => {
           </Slider>
         </ul>
 
-        <Accordion />
         <Logo />
 
         <br />
@@ -101,14 +95,7 @@ const Home = () => {
         <div className="bg-blue py-4">
           <Socials section="footer" />
         </div>
-        <ul>
-          <ValuesCard
-            id={cardsValuesData.cards[0].id}
-            name={cardsValuesData.cards[2].name}
-            title={cardsValuesData.cards[0].title}
-            text={cardsValuesData.cards[0].text}
-          />
-        </ul>
+
         <NavMenu section="burger" />
         <NavMenu section="header" />
         <div className="bg-blue ">

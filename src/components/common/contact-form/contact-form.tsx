@@ -15,7 +15,7 @@ import { schema } from '@/utils';
 
 import contactData from '@/data/contact.json';
 import { Modal } from '../../ui/modal';
-import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
+import { FormFeedbackMessage } from '@/components/common/form-feedback-message/form-feedback-message';
 
 export const ContactForm = () => {
   const [status, setStatus] = useState<Status>('success');
