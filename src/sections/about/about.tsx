@@ -7,14 +7,14 @@ export const About = () => {
     <section>
       <div className="container">
         <h2 className="h2">{aboutData.title}</h2>
-        <div className="relative w-full h-[667px] md:w-[575px] md:h-[667px] overflow-hidden">
+        <div className="relative w-full h-[411px] md:w-[575px] md:h-[667px] overflow-hidden">
           <Image
-            src="/assets/images/webp/about-me/my-photo.webp"
+            src="/assets/images/webp/about/my-photo.webp"
             alt="Сергій Молчанов"
             layout="fill"
             objectFit="cover"
             objectPosition="left"
-            className="md:h-full w-[300px] md:w-full"
+            className="h-full w-full"
           />
         </div>
         {/* <div>
