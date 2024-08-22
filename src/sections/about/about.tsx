@@ -7,7 +7,17 @@ export const About = () => {
     <section>
       <div className="container">
         <h2 className="h2">{aboutData.title}</h2>
-        <div>
+        <div className="relative w-full h-[667px] md:w-[575px] md:h-[667px] overflow-hidden">
+          <Image
+            src="/assets/images/webp/about-me/my-photo.webp"
+            alt="Сергій Молчанов"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="left"
+            className="md:h-full w-[300px] md:w-full"
+          />
+        </div>
+        {/* <div>
           <Image
             src="/assets/images/webp/about-me/my-photo.webp"
             alt="Сергій Молчанов"
@@ -24,7 +34,7 @@ export const About = () => {
             height={252}
             layout="responsive"
           />
-        </div>
+        </div> */}
 
         {aboutData.text.map((text, index) => (
           <p key={index}>{text}</p>
