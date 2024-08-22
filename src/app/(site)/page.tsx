@@ -18,7 +18,11 @@ import { ReviewCard } from '@/components/common/review-card/review-card';
 
 import therapyData from '@/data/therapy.json';
 import { TherapyItem } from '@/components/common/therapy-item/therapy-item';
+
+import { Slider } from '@/components/ui/slider/slider';
+
 import { Modal } from '@/components/ui/modal';
+
 import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
 import { getPolitics } from '@/../sanity/api';
 
@@ -50,6 +54,25 @@ const Home = () => {
       <Services />
       <TargetAudience />
       <div className="container">
+        <ul className=" xl:hidden">
+          <Slider>
+            {therapyData.therapySteps.map((item) => (
+              <TherapyItem key={item.id} item={item} />
+            ))}
+          </Slider>
+        </ul>
+        <ul>
+          <Slider>
+            {reviews.reviews.map((review) => (
+              <ReviewCard
+                key={review.id}
+                author={review.author}
+                text={review.text}
+              />
+            ))}
+          </Slider>
+        </ul>
+
         <Accordion />
         <Logo />
 
