@@ -17,7 +17,7 @@ export const Reviews = () => {
             className="smOnly:mx-auto smOnly:mt-4
              md:w-[633px] mdOnly:mx-auto mdOnly:mt-[60px] 
              xl:w-1/2 xl:ml-auto xl:w-[561px] "
-          />          
+          />
         </div>
       </div>
     </section>
