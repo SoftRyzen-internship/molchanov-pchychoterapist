@@ -13,8 +13,8 @@ export const useDeviceType = () => {
 
       setDeviceType({
         isDesktop: width >= 1280,
-        isTablet: width >= 768 && width < 1279,
-        isMobile: width < 767,
+        isTablet: width >= 768 && width < 1280,
+        isMobile: width < 768,
       });
     };
 
