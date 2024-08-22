@@ -16,15 +16,26 @@ import { ReviewCard } from '@/components/common/review-card/review-card';
 
 import therapyData from '@/data/therapy.json';
 import { TherapyItem } from '@/components/common/therapy-item/therapy-item';
+
+import { Slider } from '@/components/ui/slider/slider';
+
 import { Modal } from '@/components/ui/modal';
+
 import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
 import { getPolitics } from '@/../sanity/api';
 
 import { TargetAudience } from '@/sections/target-audience/target-audience';
 
 import { PortableText } from '@portabletext/react';
+import { Contact } from '@/sections/contact/contact';
 
 import { ContactForm } from '@/components/common/contact-form';
+import { Values } from '@/sections/values/values';
+
+type Service = {
+  _key: string;
+  title: string;
+};
 import { Services } from '@/sections/services/services';
 import { About } from '@/sections/about/about';
 
@@ -49,7 +60,27 @@ const Home = () => {
       <Services />
       <TargetAudience />
       <About />
+      <Values />
       <div className="container">
+        <ul className=" xl:hidden">
+          <Slider>
+            {therapyData.therapySteps.map((item) => (
+              <TherapyItem key={item.id} item={item} />
+            ))}
+          </Slider>
+        </ul>
+        <ul>
+          <Slider>
+            {reviews.reviews.map((review) => (
+              <ReviewCard
+                key={review.id}
+                author={review.author}
+                text={review.text}
+              />
+            ))}
+          </Slider>
+        </ul>
+
         <Accordion />
         <Logo />
 
@@ -93,8 +124,6 @@ const Home = () => {
             />
           ))}
         </ul>
-
-        <ContactForm />
 
         <div>
           <h2>Title h2</h2>
@@ -157,6 +186,8 @@ const Home = () => {
           ))}
         </ul>
       </div>
+
+      <Contact />
     </main>
   );
 };

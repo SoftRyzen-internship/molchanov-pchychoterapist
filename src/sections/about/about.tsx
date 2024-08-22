@@ -7,12 +7,25 @@ export const About = () => {
     <section>
       <div className="container">
         <h2 className="h2">{aboutData.title}</h2>
-        <Image
-          src="/public/assets/images/webp/about-me/my-photo.webp"
-          alt="Сергій Молчанов"
-          width={440}
-          height={565}
-        />
+        <div>
+          <Image
+            src="/assets/images/webp/about-me/my-photo.webp"
+            alt="Сергій Молчанов"
+            width={575}
+            height={667}
+            layout="responsive"
+          />
+        </div>
+        <div>
+          <Image
+            src="/assets/images/webp/about-me/therapy-meeting.webp"
+            alt="Сеанс терапії Сергія Молчанова з групою клієнтів"
+            width={339}
+            height={252}
+            layout="responsive"
+          />
+        </div>
+
         {aboutData.text.map((text, index) => (
           <p key={index}>{text}</p>
         ))}
