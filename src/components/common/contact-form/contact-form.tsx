@@ -7,7 +7,7 @@ import useFormPersist from 'react-hook-form-persist';
 import { InputField } from '@/components/ui/input-field';
 import { TextareaField } from '@/components/ui/textarea-field';
 import { CheckboxField } from '@/components/ui/checkbox-field';
-import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
+import { FormFeedbackMessage } from '@/components/common/form-feedback-message/form-feedback-message';
 import { Modal } from '../../ui/modal';
 
 import { Name } from '../../ui/input-field/type';
