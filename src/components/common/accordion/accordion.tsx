@@ -9,7 +9,7 @@ import Arrow from '@/../public/assets/images/icons/down-arrow.svg';
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { getFaq } from '../../../../sanity/api';
-import { FaqItem } from './type';
+import { FaqItem } from './types';
 
 export const Accordion: React.FC = () => {
   const [faqs, setFaqs] = useState<FaqItem[]>([]);

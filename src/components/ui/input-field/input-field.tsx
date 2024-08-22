@@ -1,4 +1,4 @@
-import { IFormFieldProps } from './type';
+import { IFormFieldProps } from './types';
 import clsx from 'clsx';
 import InputMask from 'react-input-mask-next';
 

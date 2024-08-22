@@ -10,8 +10,8 @@ import { InputField } from '@/components/ui/input-field';
 import { TextareaField } from '@/components/ui/textarea-field';
 import { CheckboxField } from '@/components/ui/checkbox-field';
 
-import { Name } from '../../ui/input-field/type';
-import { FormData, Status } from './type';
+import { Name } from '../../ui/input-field/types';
+import { FormData, Status } from './types';
 
 import { schema } from '@/utils';
 
