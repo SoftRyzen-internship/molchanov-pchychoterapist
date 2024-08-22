@@ -32,6 +32,7 @@ import { PortableText } from '@portabletext/react';
 
 import { ContactForm } from '@/components/common/contact-form';
 import { Services } from '@/sections/services/services';
+import { Hero } from '@/sections/hero/hero';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,6 +52,7 @@ const Home = () => {
 
   return (
     <main>
+      <Hero />
       <Services />
       <TargetAudience />
       <div className="container">
