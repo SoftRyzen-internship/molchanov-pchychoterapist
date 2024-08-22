@@ -8,10 +8,10 @@ export const About = () => {
       <div className="container">
         <h2 className="h2">{aboutData.title}</h2>
         <Image
-          src="/path/to/your/image.jpg" // Шлях до зображення
-          alt="Опис зображення для скрін рідерів" // Опис зображення
-          width={500} // Ширина зображення
-          height={300}
+          src="/public/assets/images/webp/about-me/my-photo.webp"
+          alt="Сергій Молчанов"
+          width={440}
+          height={565}
         />
         {aboutData.text.map((text, index) => (
           <p key={index}>{text}</p>
