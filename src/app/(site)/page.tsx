@@ -34,6 +34,9 @@ import { ContactForm } from '@/components/common/contact-form';
 import { FAQ } from '@/sections/faq/faq';
 import { Values } from '@/sections/values/values';
 
+import { useIsMobile } from '@/hooks/use-is-mobile';
+import { useIsTablet } from '@/hooks/use-is-tablet';
+
 type Service = {
   _key: string;
   title: string;
@@ -45,6 +48,9 @@ const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [status, setStatus] = useState<'success' | 'failed'>('success');
   const [politics, setPolitics] = useState([]);
+
+  const isMobile = useIsMobile();
+  const isTablet = useIsTablet();
 
   console.log('politics:', politics);
 
@@ -64,13 +70,15 @@ const Home = () => {
       <FAQ />
       <Values />
       <div className="container">
-        <ul className=" xl:hidden">
+      {isMobile && <p>Вы используете мобильное устройство</p>}
+      {isTablet && <p>Вы используете планшет</p>}
+        {/* <ul className=" xl:hidden">
           <Slider>
             {therapyData.therapySteps.map((item) => (
               <TherapyItem key={item.id} item={item} />
             ))}
           </Slider>
-        </ul>
+        </ul> */}
         <ul>
           <Slider>
             {reviews.reviews.map((review) => (
