@@ -25,7 +25,6 @@ export const Therapy = () => {
         {therapy.title}
       </h2>
 
-
       {!isDesktop && (
         <Slider>
           {therapyData.therapySteps.map((item) => (
@@ -33,7 +32,6 @@ export const Therapy = () => {
           ))}
         </Slider>
       )}
-
 
       {/* <ul className="xl:hidden">
         <Slider>
