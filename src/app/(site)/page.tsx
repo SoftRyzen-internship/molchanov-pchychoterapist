@@ -36,6 +36,7 @@ import { Services } from '@/sections/services/services';
 
 import { FormFeedbackMessage } from '@/components/common/form-feedback-message/form-feedback-message';
 import { Therapy } from '@/sections/therapy/therapy';
+import { BurgerMenu } from '@/components/ui/burger-menu';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,6 +67,8 @@ const Home = () => {
       <Contact />
 
       <div className="container">
+        <BurgerMenu />
+
         {isMobile && <p>Вы используете мобильное устройство</p>}
         {isTablet && <p>Вы используете планшет</p>}
 

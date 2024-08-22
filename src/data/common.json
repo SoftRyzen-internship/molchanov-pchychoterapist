@@ -64,5 +64,8 @@
       "title": "Щось пішло не так...",
       "message": "Bаші данні не були відправлені. Спробуйте пізніше."
     }
+  },
+  "burger": {
+    "ariaLabel": "button open burger menu"
   }
 }
