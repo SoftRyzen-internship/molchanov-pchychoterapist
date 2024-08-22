@@ -1,10 +1,12 @@
+'use client';
+
 import { DesktopTherapyList } from '@/components/common/desctop-therapy-list/desctop-therapy-list';
 import { MobileTherapyList } from '@/components/common/mobile-therapy-list/mobile-therapy-list';
 import therapy from '@/data/therapy.json';
-import { useIsDesktop } from '@/hooks/use-is-desctop';
+import { useDeviceType } from '@/hooks/use-device-type';
 
 export const Therapy = () => {
-  const isDesktop = useIsDesktop();
+  const { isDesktop } = useDeviceType();
   return (
     <section className="py-[45px] md:py-[50px] xl:pt-[77px] xl:pb-[106px]">
       <div className="container">
