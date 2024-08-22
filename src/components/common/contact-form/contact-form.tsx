@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 
 import { useForm } from 'react-hook-form';
@@ -8,14 +10,14 @@ import { InputField } from '@/components/ui/input-field';
 import { TextareaField } from '@/components/ui/textarea-field';
 import { CheckboxField } from '@/components/ui/checkbox-field';
 
-import { Name } from '../../ui/input-field/type';
-import { FormData, Status } from './type';
+import { Name } from '../../ui/input-field/types';
+import { FormData, Status } from './types';
 
 import { schema } from '@/utils';
 
 import contactData from '@/data/contact.json';
 import { Modal } from '../../ui/modal';
-import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
+import { FormFeedbackMessage } from '@/components/common/form-feedback-message/form-feedback-message';
 
 export const ContactForm = () => {
   const [status, setStatus] = useState<Status>('success');
