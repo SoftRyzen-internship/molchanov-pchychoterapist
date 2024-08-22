@@ -22,7 +22,6 @@ import { Slider } from '@/components/ui/slider/slider';
 
 import { Modal } from '@/components/ui/modal';
 
-import FormFeedbackMessage from '@/components/common/form-feedback-message/form-feedback-message';
 import { getPolitics } from '@/../sanity/api';
 
 import { TargetAudience } from '@/sections/target-audience/target-audience';
@@ -37,12 +36,9 @@ import { Values } from '@/sections/values/values';
 import { useIsMobile } from '@/hooks/use-is-mobile';
 import { useIsTablet } from '@/hooks/use-is-tablet';
 
-type Service = {
-  _key: string;
-  title: string;
-};
 import { Services } from '@/sections/services/services';
 import { Accordion } from '@/components/common/accordion/accordion';
+import { FormFeedbackMessage } from '@/components/common/form-feedback-message/form-feedback-message';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,8 +63,8 @@ const Home = () => {
     <main>
       <Services />
       <TargetAudience />
-      <FAQ />
       <Values />
+      <FAQ />
       <div className="container">
         {isMobile && <p>Вы используете мобильное устройство</p>}
         {isTablet && <p>Вы используете планшет</p>}
@@ -91,7 +87,6 @@ const Home = () => {
           </Slider>
         </ul>
 
-        <Accordion />
         <Logo />
 
         <br />
@@ -111,14 +106,7 @@ const Home = () => {
         <div className="bg-blue py-4">
           <Socials section="footer" />
         </div>
-        <ul>
-          <ValuesCard
-            id={cardsValuesData.cards[0].id}
-            name={cardsValuesData.cards[2].name}
-            title={cardsValuesData.cards[0].title}
-            text={cardsValuesData.cards[0].text}
-          />
-        </ul>
+
         <NavMenu section="burger" />
         <NavMenu section="header" />
         <div className="bg-blue ">
