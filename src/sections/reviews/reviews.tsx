@@ -9,7 +9,7 @@ export const Reviews = () => {
       <div className="container">
         <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between">
           <div className="xl:w-1/2">
-          <Image
+            <Image
               src={reviews.quotes.path}
               width={32}
               height={30}
