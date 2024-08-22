@@ -5,7 +5,6 @@ import FourthIcon from '@/../public/assets/images/icons/target-audience/property
 import { UtilityCardProps } from './types';
 
 export const UtilityCard = ({ name, text, ariaLabel }: UtilityCardProps) => {
-  console.log(ariaLabel);
   const style =
     'w-[114px] h-40 relative -left-4 -bottom-4 md:left-0 md:w-[257.92px] md:h-[362px] md:left-0  xl:bottom-0 block flex-shrink-0';
   return (

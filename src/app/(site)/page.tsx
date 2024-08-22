@@ -9,7 +9,6 @@ import { Socials } from '@/components/ui/socials/socials';
 import { useEffect, useState } from 'react';
 
 import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
-import { Accordion } from '@/components/common/accordion/accordion';
 import { AwardItem } from '@/components/common/award-item/award-item';
 import aboutData from '@/data/about.json';
 
@@ -30,15 +29,24 @@ import { TargetAudience } from '@/sections/target-audience/target-audience';
 import { PortableText } from '@portabletext/react';
 import { Contact } from '@/sections/contact/contact';
 
+import { ContactForm } from '@/components/common/contact-form';
+import { FAQ } from '@/sections/faq/faq';
 import { Values } from '@/sections/values/values';
 
+import { useIsMobile } from '@/hooks/use-is-mobile';
+import { useIsTablet } from '@/hooks/use-is-tablet';
+
 import { Services } from '@/sections/services/services';
+import { Accordion } from '@/components/common/accordion/accordion';
 import { FormFeedbackMessage } from '@/components/common/form-feedback-message/form-feedback-message';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [status, setStatus] = useState<'success' | 'failed'>('success');
   const [politics, setPolitics] = useState([]);
+
+  const isMobile = useIsMobile();
+  const isTablet = useIsTablet();
 
   console.log('politics:', politics);
 
@@ -56,14 +64,17 @@ const Home = () => {
       <Services />
       <TargetAudience />
       <Values />
+      <FAQ />
       <div className="container">
-        <ul className=" xl:hidden">
+        {isMobile && <p>Вы используете мобильное устройство</p>}
+        {isTablet && <p>Вы используете планшет</p>}
+        {/* <ul className=" xl:hidden">
           <Slider>
             {therapyData.therapySteps.map((item) => (
               <TherapyItem key={item.id} item={item} />
             ))}
           </Slider>
-        </ul>
+        </ul> */}
         <ul>
           <Slider>
             {reviews.reviews.map((review) => (
