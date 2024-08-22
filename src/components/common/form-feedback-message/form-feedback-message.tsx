@@ -12,7 +12,7 @@ type FormFeedbackMessageProps = {
 
 const { feedbackMessages } = commonData;
 
-const FormFeedbackMessage = ({ status }: FormFeedbackMessageProps) => {
+export const FormFeedbackMessage = ({ status }: FormFeedbackMessageProps) => {
   const { title, message } = feedbackMessages[status];
 
   const titleColor = status === 'success' ? 'text-blueDark' : 'text-redError';
@@ -45,5 +45,3 @@ const FormFeedbackMessage = ({ status }: FormFeedbackMessageProps) => {
     </div>
   );
 };
-
-export default FormFeedbackMessage;

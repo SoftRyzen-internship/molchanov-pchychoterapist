@@ -10,7 +10,7 @@ export const UtilityCardList = () => {
           key={card.id}
           name={card.name}
           text={card.text}
-          alt={card.alt}
+          ariaLabel={card.ariaLabel}
         />
       ))}
     </ul>
