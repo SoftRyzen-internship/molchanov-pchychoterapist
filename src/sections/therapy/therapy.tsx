@@ -1,3 +1,5 @@
+'use client';
+
 import { DesktopTherapyList } from '@/components/common/desctop-therapy-list/desctop-therapy-list';
 import { MobileTherapyList } from '@/components/common/mobile-therapy-list/mobile-therapy-list';
 import therapy from '@/data/therapy.json';
