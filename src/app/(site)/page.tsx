@@ -1,8 +1,5 @@
 'use client';
 
-import { ValuesCard } from '@/components/common/values-card/values-card';
-import cardsValuesData from '@/data/values.json';
-
 import { Logo } from '@/components/ui/logo/logo';
 
 import { Socials } from '@/components/ui/socials/socials';
@@ -29,7 +26,6 @@ import { TargetAudience } from '@/sections/target-audience/target-audience';
 import { PortableText } from '@portabletext/react';
 import { Contact } from '@/sections/contact/contact';
 
-import { ContactForm } from '@/components/common/contact-form';
 import { FAQ } from '@/sections/faq/faq';
 import { Values } from '@/sections/values/values';
 
@@ -37,7 +33,7 @@ import { useIsMobile } from '@/hooks/use-is-mobile';
 import { useIsTablet } from '@/hooks/use-is-tablet';
 
 import { Services } from '@/sections/services/services';
-import { Accordion } from '@/components/common/accordion/accordion';
+
 import { FormFeedbackMessage } from '@/components/common/form-feedback-message/form-feedback-message';
 import { Therapy } from '@/sections/therapy/therapy';
 
@@ -64,30 +60,14 @@ const Home = () => {
     <main>
       <Services />
       <TargetAudience />
+      <Therapy />
       <Values />
       <FAQ />
-      <Therapy />
+      <Contact />
+
       <div className="container">
         {isMobile && <p>Вы используете мобильное устройство</p>}
         {isTablet && <p>Вы используете планшет</p>}
-        {/* <ul className=" xl:hidden">
-          <Slider>
-            {therapyData.therapySteps.map((item) => (
-              <TherapyItem key={item.id} item={item} />
-            ))}
-          </Slider>
-        </ul> */}
-        <ul>
-          <Slider>
-            {reviews.reviews.map((review) => (
-              <ReviewCard
-                key={review.id}
-                author={review.author}
-                text={review.text}
-              />
-            ))}
-          </Slider>
-        </ul>
 
         <Logo />
 
@@ -125,21 +105,9 @@ const Home = () => {
           ))}
         </ul>
 
-        <div>
-          <h2>Title h2</h2>
-          <h3>Title h3</h3>
-          <p>MainText</p>
-        </div>
-
         <ul className="flex flex-col gap-6 md:flex-row md:flex-wrap md:justify-between md:gap-x-0 md:gap-y-7 xl:gap-y-8 xl:w-[610px]">
           {aboutData.awards.map((award) => (
             <AwardItem key={award.id} item={award} />
-          ))}
-        </ul>
-
-        <ul className="pr-[25px] md:pr-0 xl:flex xl:flex-row justify-between">
-          {therapyData.therapySteps.map((item) => (
-            <TherapyItem key={item.id} item={item} />
           ))}
         </ul>
 
@@ -192,8 +160,6 @@ const Home = () => {
           ))}
         </ul>
       </div>
-
-      <Contact />
     </main>
   );
 };
