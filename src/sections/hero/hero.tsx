@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 import content from '@/data/hero.json';
 
 export const Hero = () => {
@@ -19,12 +20,15 @@ export const Hero = () => {
             {content.title}
           </h1>
           <p className="mb-10 md:mb-12 md:px-6">{content.text}</p>
-          <button
-            type="button"
-            className="custom-button custom-button-no-border smOnly:w-full"
+          <ScrollLink
+            to={content.href}
+            smooth={true}
+            offset={0}
+            duration={500}
+            className="custom-button custom-button-no-border smOnly:w-full inline-flex"
           >
             {content.button}
-          </button>
+          </ScrollLink>
         </div>
       </div>
     </section>

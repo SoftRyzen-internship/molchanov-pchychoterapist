@@ -41,7 +41,7 @@ h3 {
 
 .custom-button {
   @apply text-greenDarkText text-xl font-semibold tracking-[0.02em] h-[56px] min-w-[190px] px-[31px]
-    rounded-lg inline-block cursor-pointer transition-colors duration-300;
+    rounded-lg inline-flex items-center  justify-center  cursor-pointer transition-colors duration-300;
 }
 .custom-button-no-border {
   @apply bg-pinkLight;
