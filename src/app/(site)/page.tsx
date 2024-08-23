@@ -6,13 +6,24 @@ import { Values } from '@/sections/values/values';
 import { FAQ } from '@/sections/faq/faq';
 import { Contact } from '@/sections/contact/contact';
 import { BurgerMenu } from '@/components/ui/burger-menu';
+import { getServices } from '../../../sanity/api';
+import { ServiceData } from '@/sections/services/types';
 
-const Home = () => {
+const Home = async () => {
+  let services: ServiceData[] | null = null;
+  let servicesError = null;
+
+  try {
+    services = await getServices();
+  } catch (err) {
+    servicesError = err;
+  }
+
   return (
     <main>
       <BurgerMenu />
       <About />
-      <Services />
+      {services && <Services services={services} />}
       <TargetAudience />
       <Therapy />
       <Values />
