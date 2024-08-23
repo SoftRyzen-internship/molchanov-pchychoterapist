@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
 import data from '@/data/common.json';
+import { Header } from '@/layout/Header/header';
 
 export const metadata: Metadata = {
   title: `${data.metadataAdmin.title}`,
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
