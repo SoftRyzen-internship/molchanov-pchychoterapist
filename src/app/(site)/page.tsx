@@ -8,6 +8,7 @@ import { About } from '@/sections/about/about';
 import { Values } from '@/sections/values/values';
 import { FAQ } from '@/sections/faq/faq';
 import { Contact } from '@/sections/contact/contact';
+import { Reviews } from '@/sections/reviews/reviews';
 import { getServices } from '../../../sanity/api';
 import { ServiceData } from '@/sections/services/types';
 
@@ -20,6 +21,7 @@ const Home = async () => {
 
   return (
     <main>
+      <Reviews />
       <Hero />
 
       <About />

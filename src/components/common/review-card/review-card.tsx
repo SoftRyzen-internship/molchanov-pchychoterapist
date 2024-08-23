@@ -31,7 +31,7 @@ export const ReviewCard = ({ author, text }: ReviewCardProps) => {
     setModalIsOpen(true);
   };
   return (
-    <li className="min-h-[161px] md:min-h-[172px] xl:min-h-[217px] flex flex-col gap-4 md:gap-5 xl:gap-0 xl:w-[467px]">
+    <div className="min-h-[191px] md:min-h-[224px] xl:min-h-[290px] flex flex-col gap-4 md:gap-5 xl:gap-0 xl:w-[467px]">
       <p className={clsx(style, 'xl:mb-[37px] xl:text-xl xl:font-semibold')}>
         {author}
       </p>
@@ -61,6 +61,6 @@ export const ReviewCard = ({ author, text }: ReviewCardProps) => {
           <p className="text-blueDark md:text-base">{author}</p>
         </div>
       </Modal>
-    </li>
+    </div>
   );
 };
