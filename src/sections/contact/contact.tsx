@@ -7,7 +7,7 @@ export const Contact = () => {
   const { title, image } = contactData;
 
   return (
-    <section id="contact" className="py-[90px] md:py-[60px] xl:py-[70px]">
+    <section id="contacts" className="py-[90px] md:py-[60px] xl:py-[70px]">
       <div className="container flex flex-col items-center gap-10 md:gap-[74px] xl:flex-row xl:gap-[70px]">
         <div className="xl:max-w-[609px]">
           <h2 className="mb-[60px]">{title}</h2>
