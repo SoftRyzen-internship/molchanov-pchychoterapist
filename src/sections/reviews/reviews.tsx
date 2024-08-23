@@ -1,4 +1,4 @@
-import { ReviewsSlider } from '@/components/common/reviews-slider/reviews-slider';
+import { ReviewsBlock } from '@/components/common/reviews-bkock/reviews-block';
 import reviews from '@/data/reviews.json';
 import Image from 'next/image';
 
@@ -7,7 +7,7 @@ export const Reviews = () => {
     <section className="pt-[45px] md:pt-[50px] xl:pt-[70px]">
       <div className="container">
         <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between">
-          <ReviewsSlider />
+          <ReviewsBlock />
 
           <Image
             src={reviews.image.path}

@@ -4,7 +4,7 @@ import reviews from '@/data/reviews.json';
 import { ReviewCard } from '@/components/common/review-card/review-card';
 import Image from 'next/image';
 
-export const ReviewsSlider: FC = () => {
+export const ReviewsBlock: FC = () => {
   return (
     <div className="xl:w-1/2">
       <Image
