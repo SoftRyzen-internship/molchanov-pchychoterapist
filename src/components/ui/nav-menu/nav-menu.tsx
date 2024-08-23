@@ -40,7 +40,7 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
       linkClassName = 'text-[16px] text-greenDarkText';
       break;
   }
-  console.log(nav.navList[2]);
+
   return (
     <ul className={ulClassName}>
       {navList.map((i: NavItem) => (
