@@ -26,10 +26,10 @@ const Home = async () => {
       {services && <Services services={services} />}
       <TargetAudience />
       <Therapy />
-      <About />   
-    
+      <About />
+
       <Values />
-      {faqs && <FAQ faqs={faqs}/>}
+      {faqs && <FAQ faqs={faqs} />}
       <Contact />
     </main>
   );
