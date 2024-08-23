@@ -1,3 +1,5 @@
+'use client';
+
 import { FC, useState, useEffect, useRef, Children } from 'react';
 import { Swiper as SwiperClass } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
