@@ -18,7 +18,6 @@ const Home = async () => {
 
   return (
     <main>
-      <BurgerMenu />
       <About />
       {services && <Services services={services} />}
       <TargetAudience />
