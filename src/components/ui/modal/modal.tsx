@@ -1,6 +1,6 @@
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react';
 
-import { IModalProps } from './type';
+import { IModalProps } from './types';
 
 import CloseIcon from '@/../public/assets/images/icons/icon-close.svg';
 
@@ -15,6 +15,7 @@ export const Modal = ({ children, isOpen, setIsOpen }: IModalProps) => {
       <div className="fixed inset-0 flex w-screen items-center justify-center px-5">
         <DialogPanel className="w-full max-w-screen-sm max-h-[90vh] overflow-hidden bg-white p-6 rounded-lg md:max-w-none md:w-[704px] xl:w-[1068px]">
           <button
+            type="button"
             onClick={() => setIsOpen(false)}
             className="flex ml-auto mb-6 rounded-lg focus:outline-blue focus:text-blue transition-all duration-300"
             aria-label="button close modal"
