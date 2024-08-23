@@ -21,20 +21,20 @@ const Home = async () => {
 
   return (
     <>
-    <main>
-      <Hero />
+      <main>
+        <Hero />
 
-      <About />
-      {services && <Services services={services} />}
+        <About />
+        {services && <Services services={services} />}
 
-      <TargetAudience />
-      <Therapy />
-      <Values />
-      <FAQ />
-      <Contact />
-    </main>
-         <Footer />
-         </>
+        <TargetAudience />
+        <Therapy />
+        <Values />
+        <FAQ />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 };
 
