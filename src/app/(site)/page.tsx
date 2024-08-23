@@ -22,12 +22,12 @@ const Home = async () => {
   } catch (err) {}
 
   return (
-    <main>   
+    <main>
       <Hero />
       {services && <Services services={services} />}
       <TargetAudience />
       <Therapy />
-      <About />      
+      <About />
       <Values />
       <Reviews />
       {faqs && <FAQ faqs={faqs} />}
