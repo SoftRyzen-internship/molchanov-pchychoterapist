@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export const About = () => {
   return (
-    <section className="py-[45px] md:py-[50px] xl:py-[105px]">
+    <section id="about" className="py-[45px] md:py-[50px] xl:py-[105px]">
       <div className="container xl:relative">
         <h2 className="h2 mb-10 md:mb-[60px] xl:mb-5">{aboutData.title}</h2>
 
