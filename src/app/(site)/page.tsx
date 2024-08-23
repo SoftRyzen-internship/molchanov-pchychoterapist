@@ -10,7 +10,6 @@ import { BurgerMenu } from '@/components/ui/burger-menu';
 const Home = () => {
   return (
     <main>
-      <BurgerMenu />
       <About />
       <Services />
       <TargetAudience />
