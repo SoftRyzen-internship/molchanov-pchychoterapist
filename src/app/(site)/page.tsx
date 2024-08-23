@@ -8,7 +8,6 @@ import { About } from '@/sections/about/about';
 import { Values } from '@/sections/values/values';
 import { FAQ } from '@/sections/faq/faq';
 import { Contact } from '@/sections/contact/contact';
-import { BurgerMenu } from '@/components/ui/burger-menu';
 
 const Home = () => {
   return (
