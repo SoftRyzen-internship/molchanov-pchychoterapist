@@ -1,21 +1,16 @@
 'use client';
 
 import nav from '@/data/common.json';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { NavItem, NavMenuProps } from './types';
+import { useIsHomePage } from '@/hooks/use-is-home-page';
 const { navList } = nav;
 
 export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
-  const [isHomePage, setIsHomePage] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setIsHomePage(window.location.pathname === '/');
-    }
-  }, []);
+  const isHomePage = useIsHomePage();
 
   let ulClassName = '';
   let linkClassName = '';
@@ -57,7 +52,7 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
               smooth={true}
               offset={0}
               duration={500}
-              onClick={toggleModal}
+              onClick={toggleModal} 
               tabIndex={0}
             >
               {i.name}
@@ -70,7 +65,7 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
                 'link-underline-animation',
                 'cursor-pointer '
               )}
-              onClick={toggleModal}
+              onClick={toggleModal} 
               tabIndex={0}
             >
               {i.name}

@@ -20,14 +20,14 @@ const Home = async () => {
   return (
     <>
       <main>
-        {/* <BurgerMenu />
+        <BurgerMenu />
         <About />
         {services && <Services services={services} />}
         <TargetAudience />
         <Therapy />
         <Values />
         <FAQ />
-        <Contact /> */}
+        <Contact />
       </main>
       <Footer />
     </>
