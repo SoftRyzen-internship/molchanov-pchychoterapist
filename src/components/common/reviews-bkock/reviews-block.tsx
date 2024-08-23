@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export const ReviewsBlock: FC = () => {
   return (
-    <div className="xl:w-1/2">
+    <div className="xl:w-[467px]">
       <Image
         src={reviews.quotes.path}
         width={32}

@@ -1,3 +1,4 @@
+
 import { ReviewsBlock } from '@/components/common/reviews-bkock/reviews-block';
 import reviews from '@/data/reviews.json';
 import Image from 'next/image';
@@ -23,3 +24,31 @@ export const Reviews = () => {
     </section>
   );
 };
+
+// import { ReviewsBlock } from '@/components/common/reviews-bkock/reviews-block';
+// import reviews from '@/data/reviews.json';
+// import Image from 'next/image';
+
+// export const Reviews = () => {
+//   return (
+//     <section className="pt-[45px] md:pt-[50px] xl:pt-[70px]">
+//       <div className="container">
+//         <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between">
+//           <ReviewsBlock />
+
+//           <div className='relative w-full  md:h-[488px] xl:h-[574px] overflow-hidden max-w-[480px] md:max-w-[633px] xl:max-w-[607px]' 
+//           >
+//             <Image
+//               src={reviews.image.path}
+//               alt={reviews.image.alt}
+//               layout="fill" 
+//               objectFit="cover"
+//               objectPosition="center" 
+//               className="w-full h-auto  sm:object-center"
+//             />
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
