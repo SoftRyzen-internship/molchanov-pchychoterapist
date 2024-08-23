@@ -15,7 +15,6 @@ export const Reviews = () => {
               width={770.5}
               height={594}
               alt={reviews.image.alt}
-              objectFit="cover"
               className="object-cover w-fill h-auto
                 md:w-[633px] md:h-[488px] mdOnly:mx-auto 
                 xl:ml-auto xl:w-[607px] xl:h-[574px] xl:object-[left]"
