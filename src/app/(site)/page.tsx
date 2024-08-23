@@ -9,6 +9,7 @@ import { Values } from '@/sections/values/values';
 import { FAQ } from '@/sections/faq/faq';
 import { Contact } from '@/sections/contact/contact';
 import { getFaq, getServices } from '../../../sanity/api';
+import { Reviews } from '@/sections/reviews/reviews';
 import { ServiceData } from '@/sections/services/types';
 import { FaqItem } from '@/components/common/accordion/types';
 
@@ -21,14 +22,14 @@ const Home = async () => {
   } catch (err) {}
 
   return (
-    <main>
+    <main>   
       <Hero />
       {services && <Services services={services} />}
       <TargetAudience />
       <Therapy />
-      <About />
-
+      <About />      
       <Values />
+      <Reviews />
       {faqs && <FAQ faqs={faqs} />}
       <Contact />
     </main>
