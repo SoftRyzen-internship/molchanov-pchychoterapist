@@ -6,7 +6,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/sections/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/**/*.{js,ts,jsx,tsx}', 
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     screens: {
