@@ -52,7 +52,7 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
               smooth={true}
               offset={0}
               duration={500}
-              onClick={toggleModal} 
+              onClick={toggleModal}
               tabIndex={0}
             >
               {i.name}
@@ -65,7 +65,7 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
                 'link-underline-animation',
                 'cursor-pointer '
               )}
-              onClick={toggleModal} 
+              onClick={toggleModal}
               tabIndex={0}
             >
               {i.name}
