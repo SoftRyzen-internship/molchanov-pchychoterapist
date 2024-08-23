@@ -19,7 +19,7 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
 
   let ulClassName = '';
   let linkClassName = '';
-
+  let liClassName = '';
   switch (section) {
     case 'footer':
       ulClassName =
@@ -33,17 +33,18 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
     case 'header':
       ulClassName = 'hidden xl:flex xl:gap-x-[30px]';
       linkClassName = 'text-[16px] text-greenDarkText';
+      liClassName = 'flex items-center';
       break;
     default:
       ulClassName = 'flex flex-col gap-y-8 xl:hidden';
       linkClassName = 'text-[16px] text-greenDarkText';
       break;
   }
-
+  console.log(nav.navList[2]);
   return (
     <ul className={ulClassName}>
       {navList.map((i: NavItem) => (
-        <li key={i.id}>
+        <li key={i.id} className={liClassName}>
           {isHomePage ? (
             <ScrollLink
               className={clsx(
