@@ -66,6 +66,9 @@
     }
   },
   "burger": {
-    "ariaLabel": "button open burger menu"
+    "btnBurgerAriaLabel": "Кнопка відкриття бургер меню",
+    "btnBurgerIconAriaLabel": "Іконка бургер меню",
+    "btnCloseMobMenuAriaLabel": "Кнопка закриття мобільного меню",
+    "btnCloseIconAriaLabel": "Іконка закриття мобільного меню"
   }
 }

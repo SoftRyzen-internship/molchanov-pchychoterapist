@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react';
@@ -17,9 +19,13 @@ export const BurgerMenu = () => {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        aria-label={data.burger.ariaLabel}
+        aria-label={data.burger.btnBurgerAriaLabel}
       >
-        <BurgerButton width={32} height={32} />
+        <BurgerButton
+          width={32}
+          height={32}
+          aria-label={data.burger.btnBurgerIconAriaLabel}
+        />
       </button>
 
       <Dialog
@@ -35,12 +41,13 @@ export const BurgerMenu = () => {
               <button
                 onClick={() => setIsOpen(false)}
                 className="focus:outline-blue focus:text-blue transition-all duration-300"
-                aria-label="button close modal"
+                aria-label={data.burger.btnCloseMobMenuAriaLabel}
               >
                 <CloseIcon
                   width={24}
                   height={24}
                   className="text-greenDarkText hover:text-blue transition-colors duration-300"
+                  aria-label={data.burger.btnCloseIconAriaLabel}
                 />
               </button>
             </div>
