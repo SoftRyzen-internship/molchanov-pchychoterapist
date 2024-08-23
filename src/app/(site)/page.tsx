@@ -11,13 +11,10 @@ import { ServiceData } from '@/sections/services/types';
 
 const Home = async () => {
   let services: ServiceData[] | null = null;
-  let servicesError = null;
 
   try {
     services = await getServices();
-  } catch (err) {
-    servicesError = err;
-  }
+  } catch (err) {}
 
   return (
     <main>
