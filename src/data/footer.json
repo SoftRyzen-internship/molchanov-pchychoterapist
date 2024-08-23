@@ -1,5 +1,13 @@
 {
   "supportTitle": "Створено при підтримці",
   "privacyPolicyTitle": "Політика конфіденційності",
-  "copyrightTitle": "© 2024 SPILNO. Всі права захищені."
+  "copyrightTitle": "© 2024 SPILNO. Всі права захищені.",
+  "imqGoIt": {
+    "path": "/assets/images/icons/go-it.svg",
+    "alt": "Go-It logo."
+  },
+  "imgSoftRyzen": {
+    "path": "/assets/images/icons/softryzen.svg",
+    "alt": "SoftRyzen logo."
+  }
 }
