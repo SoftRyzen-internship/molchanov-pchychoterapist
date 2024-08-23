@@ -4,6 +4,6 @@ export type FaqItem = {
   answer: string;
 };
 
-export type  AccordionProps = {
+export type AccordionProps = {
   faqs: FaqItem[];
-}
+};

@@ -11,7 +11,7 @@ import clsx from 'clsx';
 import { AccordionProps } from './types';
 
 export const Accordion: React.FC<AccordionProps> = ({ faqs }) => {
- const [activeDisclosurePanel, setActiveDisclosurePanel] = useState<{
+  const [activeDisclosurePanel, setActiveDisclosurePanel] = useState<{
     key: number;
     open: boolean;
     close?: () => void;
