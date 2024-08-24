@@ -37,6 +37,7 @@
     "react-input-mask-next": "^3.0.0-alpha.12",
     "react-scroll": "^1.9.0",
     "sanity": "^3.53.0",
+    "sanity-plugin-vercel-deploy": "^3.3.4",
     "styled-components": "^6.1.12",
     "swiper": "^11.1.9",
     "yup": "^1.4.0"
