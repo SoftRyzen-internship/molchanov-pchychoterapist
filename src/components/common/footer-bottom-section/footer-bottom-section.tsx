@@ -6,7 +6,15 @@ import GoItSvg from '@/../../public/assets/images/icons/go-it.svg';
 import SoftRyzenSvg from '@/../../public/assets/images/icons/softryzen.svg';
 import { useIsHomePage } from '@/hooks/use-is-home-page';
 
-const { supportTitle, privacyPolicyTitle, copyrightTitle, toHomePage, pathToGoIt, pathToSoftRyzen, ariaLabels } = footer;
+const {
+  supportTitle,
+  privacyPolicyTitle,
+  copyrightTitle,
+  toHomePage,
+  pathToGoIt,
+  pathToSoftRyzen,
+  ariaLabels,
+} = footer;
 
 export const FooterBottomSection = () => {
   const isHomePage = useIsHomePage();

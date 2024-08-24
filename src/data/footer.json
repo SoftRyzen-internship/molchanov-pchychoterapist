@@ -6,9 +6,9 @@
   "pathToGoIt": "https://goit.global/ua/",
   "pathToSoftRyzen": "https://www.softryzen.com/",
   "ariaLabels": {
-  "goIt": "Відвідати вебсайт GoIT",
-  "softRyzen": "Відвідати вебсайт SoftRyzen",
-  "privacyPolicy": "Перейти на сторінку Політики конфіденційності",
-  "homePage": "Перейти на головну сторінку"
-}
+    "goIt": "Відвідати вебсайт GoIT",
+    "softRyzen": "Відвідати вебсайт SoftRyzen",
+    "privacyPolicy": "Перейти на сторінку Політики конфіденційності",
+    "homePage": "Перейти на головну сторінку"
+  }
 }

@@ -5,7 +5,7 @@ import { FooterBottomSection } from '@/components/common/footer-bottom-section/f
 
 export const Footer = () => {
   return (
-    <footer className="bg-blue text-white"> 
+    <footer className="bg-blue text-white">
       <FooterTopSection />
       <div className="w-full h-[1px] bg-white "></div>
       <FooterBottomSection />
