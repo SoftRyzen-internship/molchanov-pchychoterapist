@@ -3,12 +3,12 @@
   "privacyPolicyTitle": "Політика конфіденційності",
   "copyrightTitle": "© 2024 SPILNO. Всі права захищені.",
   "toHomePage": "Головна",
-  "imqGoIt": {
-    "path": "/assets/images/icons/go-it.svg",
-    "alt": "Go-It logo."
-  },
-  "imgSoftRyzen": {
-    "path": "/assets/images/icons/softryzen.svg",
-    "alt": "SoftRyzen logo."
-  }
+  "pathToGoIt": "https://goit.global/ua/",
+  "pathToSoftRyzen": "https://www.softryzen.com/",
+  "ariaLabels": {
+  "goIt": "Відвідати вебсайт GoIT",
+  "softRyzen": "Відвідати вебсайт SoftRyzen",
+  "privacyPolicy": "Перейти на сторінку Політики конфіденційності",
+  "homePage": "Перейти на головну сторінку"
+}
 }

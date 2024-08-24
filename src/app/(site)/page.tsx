@@ -25,7 +25,7 @@ const Home = async () => {
   return (
     <>
       <main>
-        <Hero />
+        {/* <Hero />
         {services && <Services services={services} />}
         <TargetAudience />
         <Therapy />
@@ -33,7 +33,7 @@ const Home = async () => {
         <Values />
         <Reviews />
         {faqs && <FAQ faqs={faqs} />}
-        <Contact />
+        <Contact /> */}
       </main>
       <Footer />
     </>
