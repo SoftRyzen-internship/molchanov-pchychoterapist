@@ -7,6 +7,7 @@
 The **Serhiy Molchanov** website presents a unique psychotherapy program that combines elements of bodywork and dance movements to resolve conflicts. The website also offers the possibility to book a consultation.
 
 ### Main Services:
+
 - Assistance in building happy family relationships.
 - Working with the psychological causes of physical problems.
 - Psychological support in resolving anxiety and fears.
@@ -15,12 +16,14 @@ The **Serhiy Molchanov** website presents a unique psychotherapy program that co
 - Dance classes for adults: Salsa, Bachata, Kizomba.
 
 ### Target Audience:
+
 - Couples looking to improve their relationships and seeking advice.
 - People facing crisis situations like depression, anxiety, eating disorders, and more.
 - Teenagers and adults with special needs (autism, intellectual disabilities).
 - Those who wish to develop communication skills with others.
 
 ### Therapy Stages:
+
 1. **Application**: Submit an application and receive a 15-minute free consultation.
 2. **Start**: Begin sessions that will be held 1-2 times a week.
 3. **Tracking**: Follow recommendations, monitor and discuss results.
@@ -31,6 +34,7 @@ The **Serhiy Molchanov** website presents a unique psychotherapy program that co
 I am Serhiy Molchanov, a psychologist and psychotherapist. My mission is to be there in difficult times, help people understand themselves better, and find ways to overcome life’s challenges. My education and experience include body-oriented, dance movement, conflict-centered, and crisis therapy.
 
 ### Achievements:
+
 - Order "For Assistance to the Army" from Zaluzhny for psychological help.
 - Grand Prix at the national festival "Nova Nazva" in 2023 and 2024.
 - Gratitude from Mayor B. Filatov as a psychology teacher.
@@ -42,34 +46,39 @@ I am Serhiy Molchanov, a psychologist and psychotherapist. My mission is to be t
 3. **How does therapy work?** Therapy is carried out in several stages, starting with a free consultation.
 
 ## Getting Started
+
 To start working with the project locally, follow these steps:
 
 ### Clone the Repository:
+
 `git clone https://github.com/SoftRyzen-internship/molchanov-pchychoterapist/pull/72`
 
 ### Install Dependencies:
+
 `yarn install`
 
 ### Run the Application:
+
 `yarn dev`
 
 ### Open in Your Browser:
+
 [http://localhost:3000](http://localhost:3000)
 
-
 ## Technologies Used
+
 1. **Next.js** - A React framework for building modern web applications with server-side rendering and efficient routing.
-2. **Tailwind CSS**  - A utility-first CSS framework that accelerates the design and styling of web interfaces.
-3. **TypeScript**  - A strict syntactical superset of JavaScript providing optional static typing for better code clarity.
-4. **Swiper**  - A mobile-friendly touch slider with hardware-accelerated transitions and smooth interactions.
-5. **Sanity**  - A headless CMS for managing content with a flexible API and powerful features like real-time collaboration.
+2. **Tailwind CSS** - A utility-first CSS framework that accelerates the design and styling of web interfaces.
+3. **TypeScript** - A strict syntactical superset of JavaScript providing optional static typing for better code clarity.
+4. **Swiper** - A mobile-friendly touch slider with hardware-accelerated transitions and smooth interactions.
+5. **Sanity** - A headless CMS for managing content with a flexible API and powerful features like real-time collaboration.
 
 ## Design
 
 The design layout was created in Figma. You can view it [here](https://www.figma.com/design/boyRGW6pbLeSH5XkC9fc7a/Molchanov-Pchychoterapist?node-id=1-2&t=0VXuA4Bfhb61jF5v-0).
 
-
 ## Component API
+
 Each component in the project has its own API, which can be found in the corresponding component's folder.
 
 - #### component Socials
@@ -113,7 +122,6 @@ Each component in the project has its own API, which can be found in the corresp
 | Prop       | Type      | Default | Description                                                        |
 | ---------- | --------- | ------- | ------------------------------------------------------------------ |
 | `children` | ReactNode | --      | required, elements that will be displayed in the slider as slides. |
-
 
 ## Contact Information
 
