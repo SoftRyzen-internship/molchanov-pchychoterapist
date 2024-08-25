@@ -23,7 +23,7 @@ export const Header = () => {
       <div
         className={clsx('container', 'flex', 'items-center', {
           'justify-between': isHomePage,
-          'gap-[166px]': !isHomePage,
+          ' justify-between xl:justify-normal xl:gap-[166px]': !isHomePage,
         })}
       >
         <Logo />
