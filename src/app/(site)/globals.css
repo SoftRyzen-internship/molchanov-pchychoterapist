@@ -128,11 +128,14 @@ h3 {
   @apply bg-blue md:w-4 md:h-4 !important;
 }
 .policy li div {
-  @apply mb-10 font-medium;
+  @apply mb-10 font-medium text-base leading-[1.4];
+}
+.policy {
+  @apply text-greenDarkText;
 }
 .policy li h3,
 h4 {
-  @apply text-[16px] font-semibold leading-[1.4] text-greenDarkText
+  @apply text-[16px] font-semibold leading-[1.4] text-greenBodyText
     md:text-[20px] mb-6;
 }
 

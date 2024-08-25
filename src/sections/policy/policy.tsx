@@ -45,7 +45,7 @@ export const Policy = ({ politics }: PolicyProps) => {
                                   {sentence.split(emailMatch[0])[0]}
                                   <Link
                                     href={`mailto:${emailMatch[0]}`}
-                                    style={{ color: 'blue' }}
+                                    className="text-blue cursor-pointer  inline-block transition-all duration-300 hover:underline focus:underline"
                                   >
                                     {emailMatch[0]}
                                   </Link>
