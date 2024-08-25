@@ -71,7 +71,8 @@ To start working with the project locally, follow these steps:
 2. **Tailwind CSS** - A utility-first CSS framework that accelerates the design and styling of web interfaces.
 3. **TypeScript** - A strict syntactical superset of JavaScript providing optional static typing for better code clarity.
 4. **Swiper** - A mobile-friendly touch slider with hardware-accelerated transitions and smooth interactions.
-5. **Sanity** - A headless CMS for managing content with a flexible API and powerful features like real-time collaboration.
+5. **React Hook Form** - A library for managing form state in React applications.
+6. **Sanity** - A headless CMS for managing content with a flexible API and powerful features like real-time collaboration.
 
 ## Design
 
