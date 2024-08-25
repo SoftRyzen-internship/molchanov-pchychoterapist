@@ -1,10 +1,10 @@
 import React from 'react';
-import { PolicyProps } from './types';
-import { clsx } from 'clsx';
-import content from '@/data/policy.json';
 import Link from 'next/link';
+import content from '@/data/policy.json';
+import { PolicyProps } from './types';
+
 export const Policy = ({ politics }: PolicyProps) => {
-  console.log(politics);
+  
   return (
     <section className="pt-5 md:pt-[60px] xl:pt-24">
       <div className="px-8 xl:px-[136px] sm:w-[480px] md:w-[768px] xl:w-[1280px] mx-auto">

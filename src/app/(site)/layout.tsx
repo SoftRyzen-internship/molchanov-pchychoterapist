@@ -3,6 +3,7 @@ import './globals.css';
 import { Montserrat, Geologica } from 'next/font/google';
 import clsx from 'clsx';
 import { Header } from '@/layout/Header/header';
+import { Footer } from '@/layout/Footer/footer';
 
 export const metadata: Metadata = {
   title: '',
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className={clsx(montserrat.variable, geologica.variable)}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

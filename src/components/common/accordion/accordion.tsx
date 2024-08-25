@@ -6,28 +6,16 @@ import {
   DisclosurePanel,
 } from '@headlessui/react';
 import Arrow from '@/../public/assets/images/icons/down-arrow.svg';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import clsx from 'clsx';
-import { getFaq } from '../../../../sanity/api';
-import { FaqItem } from './types';
+import { AccordionProps } from './types';
 
-export const Accordion: React.FC = () => {
-  const [faqs, setFaqs] = useState<FaqItem[]>([]);
-
+export const Accordion: React.FC<AccordionProps> = ({ faqs }) => {
   const [activeDisclosurePanel, setActiveDisclosurePanel] = useState<{
     key: number;
     open: boolean;
     close?: () => void;
   } | null>(null);
-
-  useEffect(() => {
-    async function fetchFaqs() {
-      const data = await getFaq();
-      setFaqs(data);
-    }
-
-    fetchFaqs();
-  }, []);
 
   function togglePanels(newPanel: { key: number; open: boolean }) {
     if (activeDisclosurePanel && activeDisclosurePanel.close) {

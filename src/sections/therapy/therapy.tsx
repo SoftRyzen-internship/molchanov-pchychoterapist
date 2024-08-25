@@ -10,7 +10,7 @@ export const Therapy = () => {
   return (
     <section
       id="process"
-      className="  py-[45px] md:py-[50px] xl:pt-[77px] xl:pb-[106px]"
+      className="py-[45px] md:py-[50px] xl:pt-[77px] xl:pb-[106px]"
     >
       <div className="container">
         <h2 className="mb-10 mdOnly:w-[505px] md:mb-[60px] xl:text-center">

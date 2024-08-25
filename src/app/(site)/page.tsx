@@ -8,31 +8,34 @@ import { About } from '@/sections/about/about';
 import { Values } from '@/sections/values/values';
 import { FAQ } from '@/sections/faq/faq';
 import { Contact } from '@/sections/contact/contact';
-import { getServices } from '../../../sanity/api';
+import { getFaq, getServices } from '../../../sanity/api';
+import { Reviews } from '@/sections/reviews/reviews';
 import { ServiceData } from '@/sections/services/types';
-import Link from 'next/link';
+
+import { FaqItem } from '@/components/common/accordion/types';
 
 const Home = async () => {
   let services: ServiceData[] | null = null;
-
+  let faqs: FaqItem[] | null = null;
   try {
     services = await getServices();
+    faqs = await getFaq();
   } catch (err) {}
 
   return (
-    <main>
-      <Hero />
-
-      <About />
-      {services && <Services services={services} />}
-
-      <TargetAudience />
-      <Therapy />
-      <Values />
-      <FAQ />
-      <Contact />
-      <Link href="/policy">Page 2</Link>
-    </main>
+    <>
+      <main>
+        <Hero />
+        {services && <Services services={services} />}
+        <TargetAudience />
+        <Therapy />
+        <About />
+        <Values />
+        <Reviews />
+        {faqs && <FAQ faqs={faqs} />}
+        <Contact />
+      </main>
+    </>
   );
 };
 
