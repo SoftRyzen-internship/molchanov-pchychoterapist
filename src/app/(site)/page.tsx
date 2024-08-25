@@ -10,6 +10,7 @@ import { FAQ } from '@/sections/faq/faq';
 import { Contact } from '@/sections/contact/contact';
 import { getServices } from '../../../sanity/api';
 import { ServiceData } from '@/sections/services/types';
+import Link from 'next/link';
 
 const Home = async () => {
   let services: ServiceData[] | null = null;
@@ -30,6 +31,7 @@ const Home = async () => {
       <Values />
       <FAQ />
       <Contact />
+      <Link href="/policy">Page 2</Link>
     </main>
   );
 };

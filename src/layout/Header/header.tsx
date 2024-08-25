@@ -19,7 +19,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="py-[30px] md:py-6 xl:py-4">
+    <header className="py-7 md:py-6 xl:py-4">
       <div className="container flex justify-between items-center">
         <Logo />
         {!isDesktop ? (
