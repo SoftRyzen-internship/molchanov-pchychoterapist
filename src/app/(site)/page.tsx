@@ -11,7 +11,7 @@ import { Contact } from '@/sections/contact/contact';
 import { getFaq, getServices } from '../../../sanity/api';
 import { Reviews } from '@/sections/reviews/reviews';
 import { ServiceData } from '@/sections/services/types';
-import { Footer } from '@/layout/Footer/footer';
+
 import { FaqItem } from '@/components/common/accordion/types';
 
 const Home = async () => {
@@ -35,7 +35,6 @@ const Home = async () => {
         {faqs && <FAQ faqs={faqs} />}
         <Contact />
       </main>
-      <Footer />
     </>
   );
 };

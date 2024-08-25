@@ -1,13 +1,13 @@
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export const useIsHomePage = () => {
   const [isHomePage, setIsHomePage] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setIsHomePage(window.location.pathname === '/');
-    }
-  }, []);
+    setIsHomePage(pathname === '/');
+  }, [pathname]);
 
   return isHomePage;
 };
