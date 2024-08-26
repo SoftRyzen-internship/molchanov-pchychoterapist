@@ -51,15 +51,21 @@ To start working with the project locally, follow these steps:
 
 ### Clone the Repository:
 
-`git clone https://github.com/SoftRyzen-internship/molchanov-pchychoterapist/pull/72`
+`git clone https://github.com/SoftRyzen-internship/molchanov-pchychoterapist`
 
 ### Install Dependencies:
-
+**Using Yarn:**
 `yarn install`
 
-### Run the Application:
+**Using npm:**
+`npm run dev`
 
+### Run the Application:
+**Using Yarn:**
 `yarn dev`
+
+**Using npm:**
+`npm install`
 
 ### Open in Your Browser:
 
@@ -95,14 +101,6 @@ Each component in the project has its own API, which can be found in the corresp
 | -------- | ------- | ----------- |
 | no props | --      |             |
 
-- #### component Button
-
-| Prop       | Type      | Default  | Description                                                                    |
-| ---------- | --------- | -------- | ------------------------------------------------------------------------------ |
-| `type`     | string    | 'button' | optional, sets the button type.                                                |
-| `onClick`  | function  | --       | required,function that will be called on click; scrolls to a specific section. |
-| `children` | ReactNode | --       | required, button content, can be text or element.                              |
-
 - #### component NavMenu
 
 | Prop          | Type     | Default | Description                                                                                           |
@@ -124,10 +122,48 @@ Each component in the project has its own API, which can be found in the corresp
 | ---------- | --------- | ------- | ------------------------------------------------------------------ |
 | `children` | ReactNode | --      | required, elements that will be displayed in the slider as slides. |
 
-## Contact Information
+- #### component SocialItem
 
-SoftRyzen is ready to answer your questions and provide additional information:
+| Prop          | Type                    | Default | Description                                                                      |
+| ------------- | ----------------------- | ------- | -------------------------------------------------------------------------------- |
+| `item`        | SocialItemProps['item'] | --      | an object containing information about a social network (name, link, aria-label) |
+| `iconsColors` | string                  | --      | optional, CSS classes for applying color styles to icons.                        |
 
-- **Website**: [softryzen.com](http://softryzen.com)
-- **Phone**: +380979769625
-- **Email**: [m.kozlov@softryzen.com](mailto:m.kozlov@softryzen.com)
+
+- #### component TextareaField
+
+| Prop         | Type                     | Default | Description                                                                 |
+| ------------ | ------------------------ | ------- | --------------------------------------------------------------------------- |
+| `id`         | string                   | --      | required, unique identifier for the textarea field.                         |
+| `label`      | string                   | --      | required, label text associated with the textarea.                          |
+| `name`       | string                   | --      | required, name attribute for the textarea, used for form handling.          |
+| `register`   | function                 | --      | required, function from `react-hook-form` to register the textarea.         |
+| `placeholder`| string                   | --      | optional, placeholder text for the textarea.                                |
+| `errors`     | Record<string, any>      | --      | optional, object containing form errors, used to display error messages.    |
+
+
+- #### component InputField
+
+| Prop          | Type                     | Default | Description                                                                 |
+| ------------- | ------------------------ | ------- | --------------------------------------------------------------------------- |
+| `id`          | string                   | --      | required, unique identifier for the input field.                            |
+| `label`       | string                   | --      | required, label text associated with the input field.                       |
+| `type`        | string                   | --      | required, the type of input (e.g., `text`, `email`, `tel`).                 |
+| `name`        | string                   | --      | required, name attribute for the input, used for form handling.             |
+| `register`    | function                 | --      | required, function from `react-hook-form` to register the input.            |
+| `errors`      | Record<string, any>      | --      | optional, object containing form errors, used to display error messages.    |
+| `placeholder` | string                   | --      | optional, placeholder text for the input field.                             |
+| `autoComplete`| string                   | --      | optional, specifies if the input should have autocomplete enabled.          |
+
+
+- #### component CheckboxField
+
+| Prop        | Type                     | Default | Description                                                                 |
+| ----------- | ------------------------ | ------- | --------------------------------------------------------------------------- |
+| `id`        | string                   | --      | required, unique identifier for the checkbox input field.                   |
+| `label`     | string                   | --      | required, label text associated with the checkbox input.                    |
+| `type`      | string                   | --      | required, the type of input, should be `'checkbox'`.                        |
+| `name`      | string                   | --      | required, name attribute for the checkbox, used for form handling.          |
+| `register`  | function                 | --      | required, function from `react-hook-form` to register the checkbox input.   |
+| `errors`    | Record<string, any>      | --      | optional, object containing form errors, used to display error messages.    |
+| `politics`  | string                   | --      | required, text for the link to the privacy policy or terms.                 |
