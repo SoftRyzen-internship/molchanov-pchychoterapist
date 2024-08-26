@@ -28,7 +28,7 @@ export const CheckboxField = ({
       >
         {label}
         <Link
-          href="/politics"
+          href="/policy"
           className="text-blue hover:underline focus:underline focus:outline-none"
         >
           {politics}
