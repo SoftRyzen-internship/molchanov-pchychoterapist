@@ -54,6 +54,7 @@ To start working with the project locally, follow these steps:
 `git clone https://github.com/SoftRyzen-internship/molchanov-pchychoterapist`
 
 ### Install Dependencies:
+
 **Using Yarn:**
 `yarn install`
 
@@ -61,6 +62,7 @@ To start working with the project locally, follow these steps:
 `npm run dev`
 
 ### Run the Application:
+
 **Using Yarn:**
 `yarn dev`
 
@@ -129,41 +131,38 @@ Each component in the project has its own API, which can be found in the corresp
 | `item`        | SocialItemProps['item'] | --      | an object containing information about a social network (name, link, aria-label) |
 | `iconsColors` | string                  | --      | optional, CSS classes for applying color styles to icons.                        |
 
-
 - #### component TextareaField
 
-| Prop         | Type                     | Default | Description                                                                 |
-| ------------ | ------------------------ | ------- | --------------------------------------------------------------------------- |
-| `id`         | string                   | --      | required, unique identifier for the textarea field.                         |
-| `label`      | string                   | --      | required, label text associated with the textarea.                          |
-| `name`       | string                   | --      | required, name attribute for the textarea, used for form handling.          |
-| `register`   | function                 | --      | required, function from `react-hook-form` to register the textarea.         |
-| `placeholder`| string                   | --      | optional, placeholder text for the textarea.                                |
-| `errors`     | Record<string, any>      | --      | optional, object containing form errors, used to display error messages.    |
-
+| Prop          | Type                | Default | Description                                                              |
+| ------------- | ------------------- | ------- | ------------------------------------------------------------------------ |
+| `id`          | string              | --      | required, unique identifier for the textarea field.                      |
+| `label`       | string              | --      | required, label text associated with the textarea.                       |
+| `name`        | string              | --      | required, name attribute for the textarea, used for form handling.       |
+| `register`    | function            | --      | required, function from `react-hook-form` to register the textarea.      |
+| `placeholder` | string              | --      | optional, placeholder text for the textarea.                             |
+| `errors`      | Record<string, any> | --      | optional, object containing form errors, used to display error messages. |
 
 - #### component InputField
 
-| Prop          | Type                     | Default | Description                                                                 |
-| ------------- | ------------------------ | ------- | --------------------------------------------------------------------------- |
-| `id`          | string                   | --      | required, unique identifier for the input field.                            |
-| `label`       | string                   | --      | required, label text associated with the input field.                       |
-| `type`        | string                   | --      | required, the type of input (e.g., `text`, `email`, `tel`).                 |
-| `name`        | string                   | --      | required, name attribute for the input, used for form handling.             |
-| `register`    | function                 | --      | required, function from `react-hook-form` to register the input.            |
-| `errors`      | Record<string, any>      | --      | optional, object containing form errors, used to display error messages.    |
-| `placeholder` | string                   | --      | optional, placeholder text for the input field.                             |
-| `autoComplete`| string                   | --      | optional, specifies if the input should have autocomplete enabled.          |
-
+| Prop           | Type                | Default | Description                                                              |
+| -------------- | ------------------- | ------- | ------------------------------------------------------------------------ |
+| `id`           | string              | --      | required, unique identifier for the input field.                         |
+| `label`        | string              | --      | required, label text associated with the input field.                    |
+| `type`         | string              | --      | required, the type of input (e.g., `text`, `email`, `tel`).              |
+| `name`         | string              | --      | required, name attribute for the input, used for form handling.          |
+| `register`     | function            | --      | required, function from `react-hook-form` to register the input.         |
+| `errors`       | Record<string, any> | --      | optional, object containing form errors, used to display error messages. |
+| `placeholder`  | string              | --      | optional, placeholder text for the input field.                          |
+| `autoComplete` | string              | --      | optional, specifies if the input should have autocomplete enabled.       |
 
 - #### component CheckboxField
 
-| Prop        | Type                     | Default | Description                                                                 |
-| ----------- | ------------------------ | ------- | --------------------------------------------------------------------------- |
-| `id`        | string                   | --      | required, unique identifier for the checkbox input field.                   |
-| `label`     | string                   | --      | required, label text associated with the checkbox input.                    |
-| `type`      | string                   | --      | required, the type of input, should be `'checkbox'`.                        |
-| `name`      | string                   | --      | required, name attribute for the checkbox, used for form handling.          |
-| `register`  | function                 | --      | required, function from `react-hook-form` to register the checkbox input.   |
-| `errors`    | Record<string, any>      | --      | optional, object containing form errors, used to display error messages.    |
-| `politics`  | string                   | --      | required, text for the link to the privacy policy or terms.                 |
+| Prop       | Type                | Default | Description                                                               |
+| ---------- | ------------------- | ------- | ------------------------------------------------------------------------- |
+| `id`       | string              | --      | required, unique identifier for the checkbox input field.                 |
+| `label`    | string              | --      | required, label text associated with the checkbox input.                  |
+| `type`     | string              | --      | required, the type of input, should be `'checkbox'`.                      |
+| `name`     | string              | --      | required, name attribute for the checkbox, used for form handling.        |
+| `register` | function            | --      | required, function from `react-hook-form` to register the checkbox input. |
+| `errors`   | Record<string, any> | --      | optional, object containing form errors, used to display error messages.  |
+| `politics` | string              | --      | required, text for the link to the privacy policy or terms.               |
