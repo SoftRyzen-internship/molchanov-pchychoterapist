@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import GoItSvg from '@/../../public/assets/images/icons/go-it.svg';
 import SoftRyzenSvg from '@/../../public/assets/images/icons/softryzen.svg';
@@ -20,9 +18,9 @@ export const FooterLinks = () => {
   return (
     <div className="flex items-center gap-4 stroke-white fill-white text-white">
       {links.map(
-        ({ href, ariaLabel, component: IconComponent, width, height }) => (
+        ({ key, href, ariaLabel, component: IconComponent, width, height }) => (
           <Link
-            key={href}
+            key={key}
             href={href}
             target="_blank"
             rel="noopener noreferrer nofollow"
