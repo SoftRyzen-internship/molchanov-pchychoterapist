@@ -16,7 +16,7 @@ import { Name } from '../../ui/input-field/types';
 import { FormData, Status } from './types';
 
 import { schema } from '@/utils';
-import { sendMessage } from '@/api/telegram';
+import { sendToTelegram } from '@/telegram/telegram';
 
 import contactData from '@/data/contact.json';
 
@@ -46,7 +46,7 @@ export const ContactForm = () => {
   const onSubmit = async ({ username, phone, comment }: FormData) => {
     try {
       const message = `Ім'я: ${username}\nТелефон: ${phone}\nПовідомлення: ${comment}`;
-      await sendMessage(message);
+      await sendToTelegram(message);
       setStatus('success');
       reset();
     } catch (error) {
