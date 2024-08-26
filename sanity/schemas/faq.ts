@@ -37,7 +37,7 @@ export const faq = {
               validation: (rule: Rule) => [
                 rule.required().error('Це поле обов`язкове для заповнення'),
                 rule.min(3).error('Мінімальна кількість символів 3'),
-                rule.max(250).error('Максимальна кількість символів 250'),
+                rule.max(250).error('Максимальна кількість символів 260'),
               ],
             },
           ],
