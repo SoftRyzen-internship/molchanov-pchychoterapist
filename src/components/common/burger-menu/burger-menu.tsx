@@ -6,9 +6,9 @@ import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react';
 
 import BurgerButton from '@/../public/assets/images/icons/burger-menu.svg';
 import CloseIcon from '@/../public/assets/images/icons/icon-close.svg';
-import { Logo } from '../logo/logo';
-import { Socials } from '../socials/socials';
-import { NavMenu } from '../nav-menu/nav-menu';
+import { Logo } from '../../ui/logo/logo';
+import { Socials } from '../../ui/socials/socials';
+import { NavMenu } from '../../ui/nav-menu/nav-menu';
 
 import data from '@/data/common.json';
 
