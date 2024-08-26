@@ -3,8 +3,22 @@
   "privacyPolicyTitle": "Політика конфіденційності",
   "copyrightTitle": "© 2024 SPILNO. Всі права захищені.",
   "toHomePage": "Головна",
-  "pathToGoIt": "https://goit.global/ua/",
-  "pathToSoftRyzen": "https://www.softryzen.com/",
+  "links": [
+    {
+      "key": "goIt",
+      "href": "https://goit.global/ua/",
+      "ariaLabel": "Відвідати вебсайт GoIT",
+      "width": 64,
+      "height": 19
+    },
+    {
+      "key": "softRyzen",
+      "href": "https://www.softryzen.com/",
+      "ariaLabel": "Відвідати вебсайт SoftRyzen",
+      "width": 131,
+      "height": 19
+    }
+  ],
   "ariaLabels": {
     "goIt": "Відвідати вебсайт GoIT",
     "softRyzen": "Відвідати вебсайт SoftRyzen",
