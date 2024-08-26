@@ -1,12 +1,13 @@
 'use client';
 
-import nav from '@/data/common.json';
 import React from 'react';
-import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll';
 import clsx from 'clsx';
-import { NavItem, NavMenuProps } from './types';
 import { useIsHomePage } from '@/hooks/use-is-home-page';
+import { NavItem, NavMenuProps } from './types';
+import nav from '@/data/common.json';
+
 const { navList } = nav;
 
 export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {

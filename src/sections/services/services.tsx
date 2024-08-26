@@ -1,6 +1,6 @@
 import { ServicesList } from '@/components/common/services-list/services-list';
-import servicesData from '@/data/services.json';
 import { ServicesProps } from './types';
+import servicesData from '@/data/services.json';
 
 export const Services = ({ services }: ServicesProps) => {
   return (

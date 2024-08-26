@@ -13,7 +13,8 @@ export const About = () => {
             <Image
               src="/assets/images/webp/about/my-photo.webp"
               alt="Сергій Молчанов"
-              fill
+              width={575}
+              height={667}
               style={{ objectFit: 'cover', objectPosition: 'left' }}
               className="h-full w-full"
             />
