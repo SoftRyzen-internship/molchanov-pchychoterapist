@@ -1,10 +1,10 @@
 'use client';
 
-import footer from '@/data/footer.json';
 import Link from 'next/link';
+import { useIsHomePage } from '@/hooks/use-is-home-page';
+import footer from '@/data/footer.json';
 import GoItSvg from '@/../../public/assets/images/icons/go-it.svg';
 import SoftRyzenSvg from '@/../../public/assets/images/icons/softryzen.svg';
-import { useIsHomePage } from '@/hooks/use-is-home-page';
 
 const {
   supportTitle,

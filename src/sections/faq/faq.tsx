@@ -1,7 +1,7 @@
 import React from 'react';
-import faq from '@/data/faq.json';
 import { Accordion } from '@/components/common/accordion/accordion';
 import { AccordionProps } from '@/components/common/accordion/types';
+import faq from '@/data/faq.json';
 
 export const FAQ = ({ faqs }: AccordionProps) => {
   return (

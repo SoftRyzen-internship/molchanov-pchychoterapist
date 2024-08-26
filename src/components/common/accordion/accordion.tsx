@@ -1,14 +1,14 @@
 'use client';
 
+import { useState } from 'react';
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react';
-import Arrow from '@/../public/assets/images/icons/down-arrow.svg';
-import { useState } from 'react';
 import clsx from 'clsx';
 import { AccordionProps } from './types';
+import Arrow from '@/../public/assets/images/icons/down-arrow.svg';
 
 export const Accordion: React.FC<AccordionProps> = ({ faqs }) => {
   const [activeDisclosurePanel, setActiveDisclosurePanel] = useState<{
