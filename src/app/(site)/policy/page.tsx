@@ -11,7 +11,9 @@ const PolicyPage = async () => {
   } catch (err) {}
 
   return (
-    <main>{politics ? <Policy politics={politics} /> : <AlertMessage />}</main>
+    <main className="">
+      {politics ? <Policy politics={politics} /> : <AlertMessage />}
+    </main>
   );
 };
 export default PolicyPage;

@@ -72,5 +72,8 @@
     "btnBurgerIconAriaLabel": "Іконка бургер меню",
     "btnCloseMobMenuAriaLabel": "Кнопка закриття мобільного меню",
     "btnCloseIconAriaLabel": "Іконка закриття мобільного меню"
+  },
+  "policy": {
+    "text": "Спробуйте пізніше"
   }
 }

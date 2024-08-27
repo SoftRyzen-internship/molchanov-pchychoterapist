@@ -124,13 +124,13 @@ Each component in the project has its own API, which can be found in the corresp
 | ---------- | --------- | ------- | ------------------------------------------------------------------ |
 | `children` | ReactNode | --      | required, elements that will be displayed in the slider as slides. |
 
-
 - #### component ScrollButton
 
-| Prop       | Type      | Description                                                                            |
-| ---------- | --------- | -------------------------------------------------------------------------------------- |
-| `section`  | string    | optional, `string`, determines the color scheme based on the section (e.g., 'footer'). |
-| `children` | ReactNode | required, button content, can be text or element.                                      |
+| Prop       | Type      | Description                                                                                  |
+| ---------- | --------- | -------------------------------------------------------------------------------------------- |
+| `id`       | string    | required, unique identifier used to pinpoint sections of a page that need to be scrolled to. |
+| `section`  | string    | optional, `string`, determines the color scheme based on the section (e.g., 'footer').       |
+| `children` | ReactNode | required, button content, can be text or element.                                            |
 
 - #### component SocialItem
 
@@ -174,4 +174,3 @@ Each component in the project has its own API, which can be found in the corresp
 | `register` | function            | --      | required, function from `react-hook-form` to register the checkbox input. |
 | `errors`   | Record<string, any> | --      | optional, object containing form errors, used to display error messages.  |
 | `politics` | string              | --      | required, text for the link to the privacy policy or terms.               |
-

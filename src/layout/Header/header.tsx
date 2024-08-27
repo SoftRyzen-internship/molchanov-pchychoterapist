@@ -32,7 +32,9 @@ export const Header = () => {
           <>
             <NavMenu section="header" />
             {isHomePage && (
-              <ScrollButton section="header">{content.button}</ScrollButton>
+              <ScrollButton section="header" id={content.href}>
+                {content.button}
+              </ScrollButton>
             )}
           </>
         )}

@@ -23,7 +23,9 @@ export const Hero = () => {
             {content.title}
           </h1>
           <p className="mb-10 md:mb-12 md:px-6">{content.text}</p>
-          <ScrollButton section="hero">{content.button}</ScrollButton>
+          <ScrollButton section="hero" id={content.href}>
+            {content.button}
+          </ScrollButton>
         </div>
       </div>
     </section>

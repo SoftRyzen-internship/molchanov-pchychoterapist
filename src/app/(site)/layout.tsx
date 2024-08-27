@@ -63,7 +63,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(montserrat.variable, geologica.variable)}>
+      <body
+        className={clsx(montserrat.variable, geologica.variable, )}
+      >
         <Header />
         {children}
         <Footer />

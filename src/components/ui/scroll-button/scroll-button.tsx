@@ -1,10 +1,9 @@
 'use client';
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
-import content from '@/data/hero.json';
 import { ScrollButtonProps } from './types';
 
-export const ScrollButton = ({ children, section }: ScrollButtonProps) => {
+export const ScrollButton = ({ children, section, id }: ScrollButtonProps) => {
   let styles = '';
   switch (section) {
     case 'hero':
@@ -19,7 +18,7 @@ export const ScrollButton = ({ children, section }: ScrollButtonProps) => {
   }
   return (
     <ScrollLink
-      to={content.href}
+      to={id}
       smooth={true}
       offset={0}
       duration={500}
