@@ -45,7 +45,7 @@ export const ContactForm = () => {
 
   const onSubmit = async ({ username, phone, comment }: FormData) => {
     try {
-      const message = `Ім'я: ${username}\nТелефон: ${phone}\nПовідомлення: ${comment}\n`;
+      const message = `Ім'я: ${username}\n\nТелефон: ${phone}\n\nПовідомлення: ${comment}\n`;
       await sendTelegramData(message);
       setStatus('success');
       reset();

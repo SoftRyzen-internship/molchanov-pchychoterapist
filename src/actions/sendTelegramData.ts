@@ -1,7 +1,7 @@
 export type TelegramRes = { code: number };
 
 export const sendTelegramData = async (message: string) => {
-  const telegramMessageWithDate = `${message} Дата заповнення: ${new Date().toLocaleString()}`;
+  const telegramMessageWithDate = `${message}\nДата заповнення: ${new Date().toLocaleString()}`;
 
   try {
     const res: TelegramRes = await fetch('/api', {
