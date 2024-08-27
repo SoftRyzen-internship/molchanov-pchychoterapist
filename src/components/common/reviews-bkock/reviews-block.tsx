@@ -10,6 +10,7 @@ export const ReviewsBlock: FC = () => {
       <QuotesSvg
         width={70}
         height={67}
+        aria-label={reviews.quotes.alt}
         className="mb-5 w-8 h-[30px] md:w-[70px] md:h-[67px] md:mb-8 xl:mb-[57px]"
       />
       <Slider>
