@@ -5,7 +5,7 @@ const { year, link, text } = footer.copyright;
 
 export const CopyrightText = () => {
   return (
-    <p className='flex '>
+    <p className="flex ">
       {year}&nbsp;
       <Link
         href={link.href}
