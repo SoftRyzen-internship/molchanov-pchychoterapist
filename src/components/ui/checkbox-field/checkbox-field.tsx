@@ -24,7 +24,7 @@ export const CheckboxField = ({
       </div>
       <label
         htmlFor={id}
-        className="block pl-7 text-sm font-medium leading-[1.4] text-greenBodyText"
+        className="block pl-7 text-sm font-medium leading-[1.4] text-greenBodyText select-none cursor-pointer"
       >
         {label}
         <Link

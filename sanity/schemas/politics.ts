@@ -25,6 +25,44 @@ export const politics = {
             { title: 'H3', value: 'h3' },
             { title: 'H4', value: 'h4' },
           ],
+          marks: {
+            annotations: [
+              {
+                name: 'link',
+                type: 'object',
+                title: 'Link',
+                fields: [
+                  {
+                    name: 'href',
+                    type: 'url',
+                    title: 'URL',
+                    validation: (rule: Rule) =>
+                      rule
+                        .uri({
+                          scheme: ['http', 'https', 'mailto'],
+                        })
+                        .error('Невірне посилання'),
+                  },
+                  {
+                    name: 'target',
+                    type: 'string',
+                    title: 'Target',
+                    options: {
+                      list: [{ title: '_blank', value: '_blank' }],
+                      layout: 'radio',
+                    },
+                    validation: (rule: Rule) =>
+                      rule.custom((value) => {
+                        if (value !== '_blank') {
+                          return 'Оберіть _blank';
+                        }
+                        return true;
+                      }),
+                  },
+                ],
+              },
+            ],
+          },
         },
       ],
     },
