@@ -94,7 +94,7 @@ h3 {
 }
 
 .link-underline-animation {
-  @apply relative inline-block overflow-hidden transition-colors duration-300;
+  @apply relative inline-block overflow-hidden transition-colors duration-300 ;
 }
 .link-underline-animation::after {
   content: '';
