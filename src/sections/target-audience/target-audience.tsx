@@ -1,6 +1,6 @@
 import React from 'react';
-import content from '@/data/target-audience.json';
 import { UtilityCardList } from '@/components/common/utility-card-list/utility-card-list';
+import content from '@/data/target-audience.json';
 
 export const TargetAudience = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import values from '@/data/values.json';
 import { ValuesList } from '@/components/common/values-list/values-list';
+import values from '@/data/values.json';
 
 export const Values = () => {
   return (

@@ -41,7 +41,7 @@ h3 {
 
 .custom-button {
   @apply text-greenDarkText text-xl font-semibold tracking-[0.02em] h-[56px] min-w-[190px] px-[31px]
-    rounded-lg inline-block cursor-pointer transition-colors duration-300;
+    rounded-lg inline-flex items-center  justify-center  cursor-pointer transition-colors duration-300;
 }
 .custom-button-no-border {
   @apply bg-pinkLight;
@@ -126,4 +126,18 @@ h3 {
 }
 .swiper-pagination-bullet-active {
   @apply bg-blue md:w-4 md:h-4 !important;
+}
+.policy li p {
+  @apply mb-10 font-medium text-base leading-[1.4];
+}
+.policy {
+  @apply text-greenDarkText;
+}
+.policy li h3,
+h4 {
+  @apply text-[16px] font-semibold leading-[1.4] text-greenBodyText
+    md:text-[20px] mb-6;
+}
+.policy li p a {
+  @apply cursor-pointer inline-block transition-all duration-300 hover:underline focus:underline text-blue;
 }

@@ -1,5 +1,12 @@
 {
   "button": "Читати далі",
+  "quotes": {
+    "alt": "Лапки, що символізують цитати."
+  },
+  "image": {
+    "path": "/assets/images/icons/reviews.svg",
+    "alt": "Дівчина збирає пазли як відгуки."
+  },
   "reviews": [
     {
       "id": "1",

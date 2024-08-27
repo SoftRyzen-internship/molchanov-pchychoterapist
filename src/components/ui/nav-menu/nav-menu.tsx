@@ -1,25 +1,21 @@
 'use client';
 
-import nav from '@/data/common.json';
-import React, { useEffect, useState } from 'react';
-import { Link as ScrollLink } from 'react-scroll';
+import React from 'react';
 import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll';
 import clsx from 'clsx';
+import { useIsHomePage } from '@/hooks/use-is-home-page';
 import { NavItem, NavMenuProps } from './types';
+import nav from '@/data/common.json';
+
 const { navList } = nav;
 
 export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
-  const [isHomePage, setIsHomePage] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setIsHomePage(window.location.pathname === '/');
-    }
-  }, []);
+  const isHomePage = useIsHomePage();
 
   let ulClassName = '';
   let linkClassName = '';
-
+  let liClassName = '';
   switch (section) {
     case 'footer':
       ulClassName =
@@ -33,6 +29,7 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
     case 'header':
       ulClassName = 'hidden xl:flex xl:gap-x-[30px]';
       linkClassName = 'text-[16px] text-greenDarkText';
+      liClassName = 'flex items-center';
       break;
     default:
       ulClassName = 'flex flex-col gap-y-8 xl:hidden';
@@ -43,7 +40,7 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
   return (
     <ul className={ulClassName}>
       {navList.map((i: NavItem) => (
-        <li key={i.id}>
+        <li key={i.id} className={liClassName}>
           {isHomePage ? (
             <ScrollLink
               className={clsx(
