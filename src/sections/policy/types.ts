@@ -1,4 +1,4 @@
-export type PolicyData = {
+export type PolicyDescription = {
   markDefs: any[];
   children: {
     _type: string;
@@ -11,6 +11,10 @@ export type PolicyData = {
   _key: string;
 };
 
+export type PolicyData = {
+  title: string;
+  description: PolicyDescription[];
+};
 export type PolicyProps = {
-  politics: PolicyData[];
+  politics: PolicyData;
 };

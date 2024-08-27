@@ -1,16 +1,17 @@
 'use client';
 import clsx from 'clsx';
-import { Link as ScrollLink } from 'react-scroll';
+
 import React from 'react';
 import { Logo } from '@/components/ui/logo/logo';
 import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
 import { BurgerMenu } from '@/components/common/burger-menu';
+import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
 import { useDeviceType } from '@/hooks/use-device-type';
 import { useIsHomePage } from '@/hooks/use-is-home-page';
 import content from '@/data/header.json';
 
 export const Header = () => {
-  const { isDesktop } = useDeviceType();
+  const { isDesktop, isTablet, isMobile } = useDeviceType();
   const isHomePage = useIsHomePage();
 
   return (
@@ -27,24 +28,17 @@ export const Header = () => {
         })}
       >
         <Logo />
-        {!isDesktop ? (
-          <BurgerMenu />
-        ) : (
+        {isDesktop && (
           <>
             <NavMenu section="header" />
             {isHomePage && (
-              <ScrollLink
-                className="custom-button custom-button-border "
-                to={content.href}
-                duration={500}
-                smooth={true}
-                offset={0}
-              >
+              <ScrollButton section="header" id={content.href}>
                 {content.button}
-              </ScrollLink>
+              </ScrollButton>
             )}
           </>
         )}
+        {(isTablet || isMobile) && <BurgerMenu />}
       </div>
     </header>
   );

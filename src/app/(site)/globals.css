@@ -127,7 +127,7 @@ h3 {
 .swiper-pagination-bullet-active {
   @apply bg-blue md:w-4 md:h-4 !important;
 }
-.policy li div {
+.policy li p {
   @apply mb-10 font-medium text-base leading-[1.4];
 }
 .policy {
@@ -138,23 +138,6 @@ h4 {
   @apply text-[16px] font-semibold leading-[1.4] text-greenBodyText
     md:text-[20px] mb-6;
 }
-
-.policy li:first-of-type div span:nth-of-type(-n + 3) {
-  @apply inline mb-0;
-}
-.policy li:first-of-type div span:nth-of-type(-n + 2) {
-  @apply mr-1;
-}
-.policy li:first-of-type div span:nth-of-type(4) {
-  @apply mt-4;
-}
-.policy li div .dashed {
-  @apply mb-0;
-}
-
-.policy li div .dashed:nth-child(6) {
-  @apply mb-4;
-}
-.policy li div span {
-  @apply block mb-4;
+.policy li p a {
+  @apply cursor-pointer inline-block transition-all duration-300 hover:underline focus:underline text-blue;
 }

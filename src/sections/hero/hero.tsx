@@ -1,7 +1,6 @@
-'use client';
 import Image from 'next/image';
 import React from 'react';
-import { Link as ScrollLink } from 'react-scroll';
+import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
 import content from '@/data/hero.json';
 
 export const Hero = () => {
@@ -24,15 +23,9 @@ export const Hero = () => {
             {content.title}
           </h1>
           <p className="mb-10 md:mb-12 md:px-6">{content.text}</p>
-          <ScrollLink
-            to={content.href}
-            smooth={true}
-            offset={0}
-            duration={500}
-            className="custom-button custom-button-no-border smOnly:w-full"
-          >
+          <ScrollButton section="hero" id={content.href}>
             {content.button}
-          </ScrollLink>
+          </ScrollButton>
         </div>
       </div>
     </section>
