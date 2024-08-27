@@ -1,11 +1,7 @@
 import Link from 'next/link';
 import footer from '@/data/footer.json';
 
-const {
-  year,
-  link,
-  text,
-} = footer.copyright;
+const { year, link, text } = footer.copyright;
 
 export const CopyrightText = () => {
   return (
@@ -19,7 +15,8 @@ export const CopyrightText = () => {
         aria-label={link.ariaLabel}
       >
         {link.text}
-      </Link>. {text}
+      </Link>
+      . {text}
     </p>
   );
 };

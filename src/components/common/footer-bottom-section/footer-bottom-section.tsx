@@ -3,9 +3,7 @@ import { FooterLinks } from '../footer-links/footer-links';
 import { CopyrightText } from '../copyright-text/copyright-text';
 import { PolicyOrHomeLink } from '../policy-or-home-link/policy-or-home-link';
 
-const {
-  supportTitle,
-} = footer;
+const { supportTitle } = footer;
 
 export const FooterBottomSection = () => {
   return (
