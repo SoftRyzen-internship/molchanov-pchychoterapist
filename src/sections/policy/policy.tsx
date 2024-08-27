@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import content from '@/data/policy.json';
+
 import { PolicyProps } from './types';
 import { PortableText } from 'next-sanity';
 
