@@ -9,23 +9,21 @@ const { privacyPolicyTitle, toHomePage, ariaLabels } = footer;
 export const PolicyOrHomeLink = () => {
   const isHomePage = useIsHomePage();
 
-  return (
-    isHomePage ? (
-      <Link
-        href="/policy"
-        className="link-underline-animation smOnly:w-[201px]"
-        aria-label={ariaLabels.privacyPolicy}
-      >
-        {privacyPolicyTitle}
-      </Link>
-    ) : (
-      <Link
-        href="/"
-        className="link-underline-animation smOnly:w-[60px]"
-        aria-label={ariaLabels.homePage}
-      >
-        {toHomePage}
-      </Link>
-    )
-  )
+  return isHomePage ? (
+    <Link
+      href="/policy"
+      className="link-underline-animation smOnly:w-[201px]"
+      aria-label={ariaLabels.privacyPolicy}
+    >
+      {privacyPolicyTitle}
+    </Link>
+  ) : (
+    <Link
+      href="/"
+      className="link-underline-animation smOnly:w-[60px]"
+      aria-label={ariaLabels.homePage}
+    >
+      {toHomePage}
+    </Link>
+  );
 };

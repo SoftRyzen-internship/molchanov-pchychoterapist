@@ -16,7 +16,7 @@ const links = footer.links.map((link) => ({
 
 export const FooterLinks = () => {
   return (
-    <div className="flex items-center gap-4 stroke-white fill-white text-white">
+    <div className="flex items-center gap-4 text-white">
       {links.map(
         ({ key, href, ariaLabel, component: IconComponent, width, height }) => (
           <Link
@@ -30,7 +30,7 @@ export const FooterLinks = () => {
             <IconComponent
               width={width}
               height={height}
-              className="group-hover:fill-pinkLight group-hover:stroke-pinkLight group-focus:fill-pinkLight group-focus:stroke-pinkLight transition-colors duration-300"
+              className="group-hover:text-pinkLight group-focus:text-pinkLight transition-colors duration-300"
             />
           </Link>
         )
