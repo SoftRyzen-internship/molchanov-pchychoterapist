@@ -76,3 +76,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 | Prop       | Type      | Default | Description                                                        |
 | ---------- | --------- | ------- | ------------------------------------------------------------------ |
 | `children` | ReactNode | --      | required, elements that will be displayed in the slider as slides. |
+
+- #### component ScrollButton
+
+| Prop       | Type      | Description                                                                            |
+| ---------- | --------- | -------------------------------------------------------------------------------------- |
+| `section`  | string    | optional, `string`, determines the color scheme based on the section (e.g., 'footer'). |
+| `children` | ReactNode | required, button content, can be text or element.                                      |
