@@ -13,10 +13,9 @@ export const About = () => {
             <Image
               src="/assets/images/webp/about/my-photo.webp"
               alt="Сергій Молчанов"
-              width={575}
-              height={667}
-              style={{ objectFit: 'cover', objectPosition: 'left' }}
-              className="h-full w-full"
+              fill
+              sizes="(max-width: 360px) 320px, (max-width: 767px) 440px, (max-width: 1279px) 575px, 505px"
+              className="h-full w-full object-cover object-left"
             />
           </div>
 
@@ -26,7 +25,8 @@ export const About = () => {
                 src="/assets/images/webp/about/therapy-meeting.webp"
                 alt="Сеанс терапії Сергія Молчанова з групою клієнтів"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                sizes="(max-width: 360px) 227px, (max-width: 767px) 347px, (max-width: 1279px) 339px, 295px"
+                className="object-cover object-center"
               />
             </div>
           </div>
