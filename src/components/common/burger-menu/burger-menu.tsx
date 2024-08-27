@@ -36,9 +36,9 @@ export const BurgerMenu = () => {
       >
         <DialogBackdrop className="fixed inset-0 bg-black/50 backdrop-blur-md" />
         <div className="fixed inset-0 flex w-screen items-stretch justify-center md:justify-end">
-          <DialogPanel className="w-screen bg-white px-5 md:w-96">
-            <div className="max-w-screen-sm h-full flex flex-col mx-auto">
-              <div className="flex justify-between items-center py-6 mb-6">
+          <DialogPanel className="w-screen bg-white md:w-96">
+            <div className="max-w-screen-sm h-full flex flex-col px-5 mx-auto">
+              <div className="flex justify-between items-center py-[30px] mb-6">
                 <Logo />
                 <button
                   onClick={() => setIsOpen(false)}
