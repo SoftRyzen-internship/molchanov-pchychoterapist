@@ -1,7 +1,15 @@
 {
   "supportTitle": "Створено при підтримці",
   "privacyPolicyTitle": "Політика конфіденційності",
-  "copyrightTitle": "© 2024 SPILNO. Всі права захищені.",
+  "copyright": {
+    "year": "© 2024 ",
+    "text": "Всі права захищені.",
+    "link": {
+      "text": "SPILNO",
+      "href": "https://spilno.group",
+      "ariaLabel": "Visit SPILNO website"
+    }
+  },
   "toHomePage": "Головна",
   "links": [
     {
