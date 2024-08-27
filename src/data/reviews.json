@@ -1,7 +1,6 @@
 {
   "button": "Читати далі",
   "quotes": {
-    "path": "/assets/images/icons/quotes-left.svg",
     "alt": "Лапки, що символізують цитати."
   },
   "image": {
