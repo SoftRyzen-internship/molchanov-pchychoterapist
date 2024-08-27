@@ -1,13 +1,14 @@
 'use client';
 import clsx from 'clsx';
+
 import React from 'react';
 import { Logo } from '@/components/ui/logo/logo';
 import { NavMenu } from '@/components/ui/nav-menu/nav-menu';
-import { BurgerMenu } from '@/components/ui/burger-menu';
+import { BurgerMenu } from '@/components/common/burger-menu';
 import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
 import { useDeviceType } from '@/hooks/use-device-type';
-import content from '@/data/header.json';
 import { useIsHomePage } from '@/hooks/use-is-home-page';
+import content from '@/data/header.json';
 
 export const Header = () => {
   const { isDesktop, isTablet, isMobile } = useDeviceType();

@@ -1,6 +1,6 @@
+import Image from 'next/image';
 import { ReviewsBlock } from '@/components/common/reviews-bkock/reviews-block';
 import reviews from '@/data/reviews.json';
-import Image from 'next/image';
 
 export const Reviews = () => {
   return (
