@@ -9,14 +9,15 @@
   "navList": [
     {
       "id": 1,
-      "href": "about",
-      "name": "Про мене"
-    },
-    {
-      "id": 2,
       "href": "services",
       "name": "Послуги"
     },
+    {
+      "id": 2,
+      "href": "about",
+      "name": "Про мене"
+    },
+
     {
       "id": 3,
       "href": "process",

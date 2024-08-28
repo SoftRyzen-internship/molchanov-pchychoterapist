@@ -38,8 +38,8 @@ export const BurgerMenu = () => {
         <DialogBackdrop className="fixed inset-0 bg-black/50 backdrop-blur-md" />
         <div className="fixed inset-0 flex w-screen items-stretch justify-center md:justify-end">
           <DialogPanel className="w-screen bg-white md:w-96">
-            <div className="max-w-screen-sm h-full flex flex-col px-5 mx-auto">
-              <div className="flex justify-between items-center py-[30px] mb-6">
+            <div className="max-w-screen-sm h-full flex flex-col px-5 md:px-8 mx-auto font-medium">
+              <div className="flex justify-between items-center py-[30px]  md:py-6 mb-6 md:mb-[36px]">
                 <Logo />
                 <button
                   onClick={() => setIsOpen(false)}
@@ -49,7 +49,7 @@ export const BurgerMenu = () => {
                   <CloseIcon
                     width={24}
                     height={24}
-                    className="text-greenDarkText hover:text-blue transition-colors duration-300"
+                    className="text-greenDarkText hover:text-blue transition-colors duration-300 md:w-8 md:h-8"
                     aria-label={data.burger.btnCloseIconAriaLabel}
                   />
                 </button>
