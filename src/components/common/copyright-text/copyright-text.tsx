@@ -5,13 +5,13 @@ const { year, link, text } = footer.copyright;
 
 export const CopyrightText = () => {
   return (
-    <p>
-      {year}{' '}
+    <p className="flex ">
+      {year}&nbsp;
       <Link
         href={link.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="link-underline-animation align-middle"
+        className="link-underline-animation"
         aria-label={link.ariaLabel}
       >
         {link.text}
