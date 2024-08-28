@@ -5,7 +5,7 @@ import content from '@/data/hero.json';
 
 export const Hero = () => {
   return (
-    <section className="pt-11 pb-[45px] md:pb-[50px] md:pt-[90px] xl:pt-[96px] xl:pb-[70px]">
+    <section className="pt-11 pb-[45px] md:pb-[50px] md:pt-[90px] xl:pt-[109px] xl:pb-[70px]">
       <div className="container  flex flex-col md:gap-20 xl:gap-[37px]">
         <div className="smOnly:-mx-5 md:order-2 ">
           <Image
