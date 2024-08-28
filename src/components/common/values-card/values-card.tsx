@@ -33,7 +33,7 @@ export const ValuesCard = ({ id, name, title, text }: ValuesCardProps) => {
       <h3 className="mt-6 mb-4 xl:mt-9">{title}</h3>
       <p
         className="text-base
-font-medium leading-[1.4]"
+font-medium leading-[1.4] max-w-[546px] xl:max-w-[278px]"
       >
         {text}
       </p>

@@ -1,3 +1,6 @@
 {
-  "title": "Мої послуги"
+  "title": "Мої послуги",
+  "icon": {
+    "ariaLabel": "Verified check icon"
+  }
 }
