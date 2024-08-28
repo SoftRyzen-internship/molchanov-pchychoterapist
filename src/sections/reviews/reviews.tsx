@@ -12,7 +12,7 @@ export const Reviews = () => {
           <div className="smOnly:px-[33px] smOnly:mt-4 w-full mdOnly:mt-[60px]">
             <Image
               src={reviews.image.path}
-              width={770.5}
+              width={770}
               height={594}
               alt={reviews.image.alt}
               className="object-cover w-fill h-auto
