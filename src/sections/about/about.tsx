@@ -21,7 +21,7 @@ export const About = () => {
             />
           </div>
 
-          <div className="absolute -bottom-20 left-0 w-full smOnly:max-w-[440px] pl-[72px] pr-[21px] md:pr-0 md:pl-[367px] xl:w-[505px] xl:pl-[196px] xl:pr-[14px] xl:bottom-[-156px]">
+          <div className="absolute -bottom-20 left-0 w-full smOnly:max-w-[440px] pl-[72px] pr-[21px] md:pr-0 md:pl-[367px] md:bottom-[-88px] xl:w-[505px] xl:pl-[196px] xl:pr-[14px] xl:bottom-[-156px]">
             <div className="relative w-full md:w-[339px] xl:w-[295px] h-[152px] md:h-[252px] xl:h-[209px] rounded-lg overflow-hidden">
               <Image
                 src={aboutData.images.secondaryImage.src}
