@@ -23,7 +23,7 @@ export const Modal = ({ children, isOpen, setIsOpen }: IModalProps) => {
             <CloseIcon
               width={32}
               height={32}
-              className=" w-6 h-6 text-greenDarkText hover:text-blue md:w-8 md:h-8 transition-colors duration-300"              
+              className=" w-6 h-6 text-greenDarkText hover:text-blue md:w-8 md:h-8 transition-colors duration-300"
             />
           </button>
           <div className="max-h-[calc(80vh-48px)] overflow-y-auto">
