@@ -26,6 +26,7 @@ export const BurgerMenu = () => {
           width={32}
           height={32}
           aria-label={data.burger.btnBurgerIconAriaLabel}
+          className="w-6 h-6 md:w-8 md:h-8"
         />
       </button>
 
