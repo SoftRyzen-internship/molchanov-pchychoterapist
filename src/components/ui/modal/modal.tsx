@@ -1,10 +1,10 @@
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react';
-
 import { IModalProps } from './types';
-
 import CloseIcon from '@/../public/assets/images/icons/icon-close.svg';
+import common from '@/data/common.json';
 
 export const Modal = ({ children, isOpen, setIsOpen }: IModalProps) => {
+  const closeIconAriaLabel = common.modalCloseIcon.ariaLabel;
   return (
     <Dialog
       open={isOpen}
@@ -18,12 +18,12 @@ export const Modal = ({ children, isOpen, setIsOpen }: IModalProps) => {
             type="button"
             onClick={() => setIsOpen(false)}
             className="flex ml-auto mb-6 rounded-lg focus:outline-blue focus:text-blue transition-all duration-300"
-            aria-label="button close modal"
+            aria-label={closeIconAriaLabel}
           >
             <CloseIcon
-              width={24}
-              height={24}
-              className="text-greenDarkText hover:text-blue transition-colors duration-300"
+              width={32}
+              height={32}
+              className=" w-6 h-6 text-greenDarkText hover:text-blue md:w-8 md:h-8 transition-colors duration-300"              
             />
           </button>
           <div className="max-h-[calc(80vh-48px)] overflow-y-auto">

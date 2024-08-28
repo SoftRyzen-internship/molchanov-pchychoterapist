@@ -3,12 +3,7 @@ import SuccessImage from '@/../public/assets/images/icons/submit-success.svg';
 import ErrorImage from '@/../public/assets/images/icons/submit-failed.svg';
 import commonData from '@/data/common.json';
 import clsx from 'clsx';
-
-type Status = 'success' | 'failed';
-
-type FormFeedbackMessageProps = {
-  status: Status;
-};
+import { FormFeedbackMessageProps } from './types';
 
 const { feedbackMessages } = commonData;
 
@@ -19,7 +14,7 @@ export const FormFeedbackMessage = ({ status }: FormFeedbackMessageProps) => {
 
   return (
     <div className="flex flex-col gap-4 md:gap-6 items-center pb-10">
-      {status === 'success' ? (
+      {status == 'success' ? (
         <SuccessImage
           className="w-[175px] h-[238px] md:w-[208px] md:h-[283px] xl:w-[202px] xl:h-[273px]"
           width={175}
