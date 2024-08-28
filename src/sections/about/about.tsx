@@ -6,7 +6,9 @@ export const About = () => {
   return (
     <section id="about" className="py-[45px] md:py-[50px] xl:py-[105px]">
       <div className="container xl:relative">
-        <h2 className="h2 mb-10 md:w-[607px] md:mb-[60px] xl:mb-5">{aboutData.title}</h2>
+        <h2 className="h2 mb-10 md:w-[607px] md:mb-[60px] xl:mb-5">
+          {aboutData.title}
+        </h2>
 
         <div className="relative smOnly:mb-[120px] mdOnly:mb-[130px] xl:absolute xl:top-0.5 xl:left-[754px]">
           <div className="relative w-full md:w-[575px] xl:w-[505px] h-[411px] md:h-[667px] xl:h-[586px] rounded-lg overflow-hidden">
