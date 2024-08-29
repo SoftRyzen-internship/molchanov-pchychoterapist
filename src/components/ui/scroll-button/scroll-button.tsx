@@ -19,7 +19,7 @@ export const ScrollButton = ({ children, section, id }: ScrollButtonProps) => {
   return (
     <ScrollLink
       to={id}
-      href={id}
+      href=""
       smooth={true}
       offset={0}
       duration={500}
