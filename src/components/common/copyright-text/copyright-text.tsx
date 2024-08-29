@@ -10,7 +10,7 @@ export const CopyrightText = () => {
       <Link
         href={link.href}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener noreferrer nofollow"
         className="link-underline-animation"
         aria-label={link.ariaLabel}
       >
