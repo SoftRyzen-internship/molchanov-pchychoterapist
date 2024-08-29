@@ -14,6 +14,7 @@ export const Hero = () => {
             height={450}
             priority
             alt={content.image.alt}
+            sizes="(max-width: 360px) 360px, (max-width: 767px) 480px, (max-width: 1279px) 704px, 939px"
             className="md:left-0 md:right-0 md:h-[362px]  xl:h-[450px] xl:w-[939px] xl:mx-auto"
           />
         </div>
