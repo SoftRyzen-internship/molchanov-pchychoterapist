@@ -138,6 +138,9 @@ h4 {
   @apply text-[16px] font-semibold leading-[1.4] text-greenBodyText
     md:text-[20px] mb-6;
 }
+.policy li h4 {
+  @apply text-[20px] font-semibold leading-[1.4] text-greenBodyText mb-6;
+}
 .policy li p a {
   @apply cursor-pointer inline-block transition-all duration-300 hover:underline focus:underline text-blue;
 }
