@@ -1,15 +1,7 @@
 {
   "supportTitle": "Створено при підтримці",
   "privacyPolicyTitle": "Політика конфіденційності",
-  "copyright": {
-    "year": "© 2024 ",
-    "text": "Всі права захищені.",
-    "link": {
-      "text": "SPILNO",
-      "href": "https://spilno.group",
-      "ariaLabel": "Visit SPILNO website"
-    }
-  },
+  "copyright": "© 2024 SPILNO. Всі права захищені.",
   "toHomePage": "Головна",
   "links": [
     {
@@ -21,15 +13,13 @@
     },
     {
       "key": "softRyzen",
-      "href": "https://www.softryzen.com/",
-      "ariaLabel": "Відвідати вебсайт SoftRyzen",
+      "href": "https://spilno.group",
+      "ariaLabel": "Відвідати вебсайт Spilno",
       "width": 131,
       "height": 19
     }
   ],
   "ariaLabels": {
-    "goIt": "Відвідати вебсайт GoIT",
-    "softRyzen": "Відвідати вебсайт SoftRyzen",
     "privacyPolicy": "Перейти на сторінку Політики конфіденційності",
     "homePage": "Перейти на головну сторінку"
   }
