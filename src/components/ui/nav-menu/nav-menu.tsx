@@ -25,7 +25,8 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
       break;
     case 'burger':
       ulClassName = 'flex flex-col gap-y-8 xl:hidden';
-      linkClassName = 'text-[16px] text-greenDarkText';
+      linkClassName = 'text-[16px] ';
+      liClassName = 'leading-[1.1]';
       break;
     case 'header':
       ulClassName = 'hidden xl:flex xl:gap-x-[30px]';
