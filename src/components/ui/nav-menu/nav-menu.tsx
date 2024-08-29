@@ -52,6 +52,7 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
               )}
               activeClass="active"
               to={i.href}
+              href={i.href}
               spy={true}
               smooth={true}
               offset={0}
