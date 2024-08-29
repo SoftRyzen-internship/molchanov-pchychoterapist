@@ -20,7 +20,8 @@ export const NavMenu: React.FC<NavMenuProps> = ({ section, toggleModal }) => {
     case 'footer':
       ulClassName =
         'flex flex-col smOnly:gap-y-4 md:flex-row md:flex md:items-center md:gap-x-[30px]';
-      linkClassName = 'text-[14px] text-white';
+      linkClassName = 'text-sm  text-white ';
+      liClassName = 'leading-[0.5]';
       break;
     case 'burger':
       ulClassName = 'flex flex-col gap-y-8 xl:hidden';
